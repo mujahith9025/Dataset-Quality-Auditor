@@ -2,10 +2,17 @@
 
 > **Enterprise Tabular Health Scanner, ML Baseline Benchmarking, Distribution Drift Detector, Custom Rule Assertions & AI Data Doctor**
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dataset-quality-auditor-htzg4xsmh5qmnb433ypd3e.streamlit.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit%20Cloud-FF4B4B.svg)](https://dataset-quality-auditor-htzg4xsmh5qmnb433ypd3e.streamlit.app/)
 [![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/streamlit-1.40+-FF4B4B.svg)](https://streamlit.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
 [![Tests: Pytest](https://img.shields.io/badge/tests-100%25%20passing-brightgreen.svg)](tests/)
+
+---
+
+### 🌐 Live Cloud Application
+🚀 **Try the live web app in your browser:**  
+👉 **[https://dataset-quality-auditor-htzg4xsmh5qmnb433ypd3e.streamlit.app/](https://dataset-quality-auditor-htzg4xsmh5qmnb433ypd3e.streamlit.app/)**
 
 ---
 
