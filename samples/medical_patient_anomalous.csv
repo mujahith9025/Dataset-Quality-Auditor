@@ -1,0 +1,811 @@
+patient_id,age,systolic_bp,diastolic_bp,bmi,glucose,smoking_status,hospital_system,readmitted
+PAT-30000,37,115.7,74.7,26.7,74.0,Unknown,MetroHealth Network,0
+PAT-30001,41,126.5,79.7,33.0,92.9,Never,MetroHealth Network,0
+PAT-30002,78,112.8,75.5,25.7,162.4,CURRENT,MetroHealth Network,0
+PAT-30003,58,119.7,78.9,29.7,123.3,never,MetroHealth Network,0
+PAT-30004,59,92.6,61.2,25.2,125.0,never,MetroHealth Network,1
+PAT-30005,75,-120.0,80.0,29.3,146.8,Unknown,MetroHealth Network,0
+PAT-30006,25,124.2,80.8,25.8,123.2,Unknown,MetroHealth Network,0
+PAT-30007,19,153.3,102.1,25.3,168.9,Unknown,MetroHealth Network,0
+PAT-30008,89,119.7,75.0,27.4,79.5,CURRENT,MetroHealth Network,0
+PAT-30009,66,103.1,64.6,33.7,147.6,Never,MetroHealth Network,1
+PAT-30010,32,127.1,83.0,20.5,106.0,Never,MetroHealth Network,0
+PAT-30011,37,123.3,75.2,26.3,179.3,Never,MetroHealth Network,0
+PAT-30012,27,113.2,75.1,36.4,133.8,never,MetroHealth Network,0
+PAT-30013,48,112.5,75.4,26.5,135.2,,MetroHealth Network,0
+PAT-30014,54,136.4,93.3,22.1,99.3, former ,MetroHealth Network,0
+PAT-30015,70,127.6,-80.0,19.6,54.3,Unknown,MetroHealth Network,0
+PAT-30016,38,98.1,63.1,27.0,92.2,Unknown,MetroHealth Network,0
+PAT-30017,27,122.9,82.6,26.8,69.1,Unknown,MetroHealth Network,0
+PAT-30018,61,156.7,108.7,24.1,,,MetroHealth Network,0
+PAT-30019,70,143.4,91.1,28.3,71.4,never,MetroHealth Network,0
+PAT-30020,85,137.1,84.4,23.6,90.7, former ,MetroHealth Network,0
+PAT-30021,21,108.6,70.4,30.9,,Unknown,MetroHealth Network,0
+PAT-30022,67,118.3,75.4,28.9,110.7,CURRENT,MetroHealth Network,0
+PAT-30023,70,153.0,104.1,28.5,108.4, former ,MetroHealth Network,0
+PAT-30024,28,150.6,97.2,31.5,104.2,,MetroHealth Network,0
+PAT-30025,76,133.4,88.0,999.9,107.3,Never,MetroHealth Network,0
+PAT-30026,27,107.8,68.0,22.8,135.6,,MetroHealth Network,0
+PAT-30027,85,122.7,78.2,22.7,102.6,Unknown,MetroHealth Network,0
+PAT-30028,28,149.8,99.6,24.4,68.1,Unknown,MetroHealth Network,0
+PAT-30029,27,148.4,94.4,32.5,156.4,,MetroHealth Network,0
+PAT-30030,88,138.3,93.2,30.7,, former ,MetroHealth Network,0
+PAT-30031,87,130.5,84.4,19.9,78.2,Unknown,MetroHealth Network,0
+PAT-30032,55,113.4,76.0,33.7,81.9,CURRENT,MetroHealth Network,0
+PAT-30033,40,134.0,91.5,17.2,87.4,Unknown,MetroHealth Network,0
+PAT-30034,21,110.3,69.9,30.8,108.9,,MetroHealth Network,0
+PAT-30035,999,119.2,75.9,25.9,95.6,,MetroHealth Network,0
+PAT-30036,41,132.3,79.9,22.9,120.4,Unknown,MetroHealth Network,0
+PAT-30037,60,120.2,78.3,27.4,97.1,CURRENT,MetroHealth Network,1
+PAT-30038,64,122.6,75.7,25.8,132.5,CURRENT,MetroHealth Network,0
+PAT-30039,76,126.8,76.9,26.1,131.7, former ,MetroHealth Network,0
+PAT-30040,57,132.4,81.6,16.0,157.3,,MetroHealth Network,0
+PAT-30041,30,115.8,85.5,29.3,84.8,Never,MetroHealth Network,0
+PAT-30042,41,107.4,64.6,22.3,83.8, former ,MetroHealth Network,0
+PAT-30043,63,111.1,60.2,28.3,108.8, former ,MetroHealth Network,0
+PAT-30044,69,123.3,75.9,29.1,129.6,CURRENT,MetroHealth Network,0
+PAT-30045,71,140.9,97.4,26.1,-999.0,,MetroHealth Network,0
+PAT-30046,25,122.1,80.4,27.2,126.7,Never,MetroHealth Network,1
+PAT-30047,76,133.9,87.5,24.4,140.7, former ,MetroHealth Network,0
+PAT-30048,47,122.8,76.5,19.4,94.0,,MetroHealth Network,0
+PAT-30049,81,97.9,68.5,18.3,143.1,Never,MetroHealth Network,0
+PAT-30050,71,133.1,81.3,25.9,88.3,Never,MetroHealth Network,0
+PAT-30051,44,108.0,64.8,25.1,141.9, former ,MetroHealth Network,0
+PAT-30052,46,137.2,95.1,28.4,132.7, former ,MetroHealth Network,0
+PAT-30053,71,141.8,87.1,23.1,53.5,never,MetroHealth Network,1
+PAT-30054,22,124.4,69.0,29.0,103.6,,MetroHealth Network,0
+PAT-30055,25,94.2,66.0,19.1,102.7,never,MetroHealth Network,0
+PAT-30056,21,96.6,57.7,23.6,100.0,Never,MetroHealth Network,0
+PAT-30057,46,106.5,67.9,31.3,109.2, former ,MetroHealth Network,0
+PAT-30058,24,152.4,97.9,19.9,104.2,CURRENT,MetroHealth Network,0
+PAT-30059,72,147.1,96.9,28.7,148.8,Never,MetroHealth Network,1
+PAT-30060,44,125.8,72.8,26.2,120.5, former ,MetroHealth Network,0
+PAT-30061,56,116.5,77.3,34.7,62.4,Never,MetroHealth Network,0
+PAT-30062,65,109.4,69.6,27.8,58.5,,MetroHealth Network,0
+PAT-30063,47,130.9,86.9,31.6,145.7,never,MetroHealth Network,0
+PAT-30064,69,123.3,78.1,29.1,179.3, former ,MetroHealth Network,0
+PAT-30065,71,105.7,66.2,23.3,100.8,Unknown,MetroHealth Network,1
+PAT-30066,52,124.2,82.2,24.1,80.5,,MetroHealth Network,0
+PAT-30067,78,136.5,86.7,27.3,107.6,CURRENT,MetroHealth Network,0
+PAT-30068,38,122.5,81.7,24.8,124.3,CURRENT,MetroHealth Network,0
+PAT-30069,69,95.3,69.6,33.8,70.7,,MetroHealth Network,0
+PAT-30070,88,128.4,85.8,28.2,93.3,,MetroHealth Network,0
+PAT-30071,60,135.4,86.5,31.9,99.6,Never,MetroHealth Network,0
+PAT-30072,34,102.7,60.1,37.6,75.2,Unknown,MetroHealth Network,0
+PAT-30073,76,97.8,60.7,25.3,145.0,CURRENT,MetroHealth Network,0
+PAT-30074,84,140.1,93.7,34.5,,CURRENT,MetroHealth Network,0
+PAT-30075,71,104.2,69.1,22.1,102.7, former ,MetroHealth Network,0
+PAT-30076,71,112.9,71.3,34.2,,never,MetroHealth Network,1
+PAT-30077,24,113.4,75.8,31.2,56.0,CURRENT,MetroHealth Network,0
+PAT-30078,54,127.2,88.4,24.3,87.5,CURRENT,MetroHealth Network,0
+PAT-30079,44,148.8,100.6,28.1,83.3,Unknown,MetroHealth Network,0
+PAT-30080,79,128.3,85.2,25.3,54.2,CURRENT,MetroHealth Network,0
+PAT-30081,71,150.1,98.0,35.5,76.0,never,MetroHealth Network,0
+PAT-30082,80,126.4,80.4,15.1,120.8, former ,MetroHealth Network,0
+PAT-30083,19,132.2,95.8,24.8,102.1,Never,MetroHealth Network,0
+PAT-30084,68,109.6,68.0,26.3,87.8, former ,MetroHealth Network,0
+PAT-30085,89,122.8,82.5,26.7,68.2,Unknown,MetroHealth Network,0
+PAT-30086,66,113.9,75.0,28.9,101.6,CURRENT,MetroHealth Network,0
+PAT-30087,37,147.4,93.8,35.6,,Never,MetroHealth Network,1
+PAT-30088,26,128.7,84.2,24.0,150.1,CURRENT,MetroHealth Network,0
+PAT-30089,83,136.8,86.6,31.5,110.5,Never,MetroHealth Network,0
+PAT-30090,84,97.2,62.9,22.4,99.2,Unknown,MetroHealth Network,0
+PAT-30091,72,145.2,90.4,25.4,85.2,CURRENT,MetroHealth Network,1
+PAT-30092,64,133.7,87.1,36.9,155.6,Unknown,MetroHealth Network,0
+PAT-30093,44,113.7,72.6,23.7,79.8,CURRENT,MetroHealth Network,1
+PAT-30094,85,130.0,86.7,30.4,121.5, former ,MetroHealth Network,0
+PAT-30095,69,146.4,93.9,28.1,66.6,never,MetroHealth Network,0
+PAT-30096,18,142.0,92.4,35.0,136.8,,MetroHealth Network,1
+PAT-30097,49,133.3,83.6,26.6,124.9,Unknown,MetroHealth Network,0
+PAT-30098,26,125.6,83.5,16.4,137.1,Never,MetroHealth Network,0
+PAT-30099,78,130.9,84.3,30.9,,,MetroHealth Network,0
+PAT-30100,27,152.6,104.0,27.2,60.0, former ,MetroHealth Network,0
+PAT-30101,28,149.8,99.0,27.5,101.5,never,MetroHealth Network,0
+PAT-30102,34,127.5,81.8,25.1,67.4, former ,MetroHealth Network,0
+PAT-30103,21,78.8,55.8,17.0,109.8, former ,MetroHealth Network,0
+PAT-30104,23,124.6,75.7,27.7,152.0, former ,MetroHealth Network,0
+PAT-30105,27,100.8,68.8,29.4,,,MetroHealth Network,0
+PAT-30106,39,104.8,65.0,18.2,142.4,,MetroHealth Network,0
+PAT-30107,42,104.9,64.8,26.5,60.8,never,MetroHealth Network,0
+PAT-30108,21,117.0,77.0,27.7,95.2, former ,MetroHealth Network,0
+PAT-30109,53,128.1,83.7,27.7,118.6, former ,MetroHealth Network,0
+PAT-30110,62,125.6,80.8,24.5,130.5,Unknown,MetroHealth Network,0
+PAT-30111,49,110.8,68.3,24.8,49.5,CURRENT,MetroHealth Network,0
+PAT-30112,56,120.6,79.9,24.6,85.9,Unknown,MetroHealth Network,0
+PAT-30113,23,130.9,88.6,30.7,78.7, former ,MetroHealth Network,1
+PAT-30114,74,136.9,89.1,12.5,90.4,never,MetroHealth Network,0
+PAT-30115,72,137.7,91.9,29.4,, former ,MetroHealth Network,0
+PAT-30116,53,95.6,59.3,28.4,160.0,,MetroHealth Network,0
+PAT-30117,53,121.6,83.6,31.4,122.7,Never,MetroHealth Network,0
+PAT-30118,30,117.1,74.7,16.5,110.0,Never,MetroHealth Network,0
+PAT-30119,83,107.1,66.5,24.6,,never,MetroHealth Network,0
+PAT-30120,36,151.3,92.6,30.0,73.1,,MetroHealth Network,0
+PAT-30121,74,147.5,94.0,37.5,143.2,Never,MetroHealth Network,0
+PAT-30122,35,123.7,83.9,31.2,102.9,,MetroHealth Network,0
+PAT-30123,32,163.1,99.6,33.7,102.2,Never,MetroHealth Network,1
+PAT-30124,65,102.4,67.6,33.4,121.9,Unknown,MetroHealth Network,0
+PAT-30125,51,167.5,104.7,34.8,121.2,never,MetroHealth Network,0
+PAT-30126,59,137.0,97.5,19.9,117.0,Never,MetroHealth Network,0
+PAT-30127,75,128.5,86.4,24.1,110.2,,MetroHealth Network,0
+PAT-30128,54,100.7,63.8,23.5,, former ,MetroHealth Network,1
+PAT-30129,81,153.5,96.3,22.3,76.5, former ,MetroHealth Network,1
+PAT-30130,34,122.6,83.3,21.4,87.0,never,MetroHealth Network,0
+PAT-30131,85,128.1,79.4,30.8,49.8,Never,MetroHealth Network,0
+PAT-30132,30,125.9,87.5,27.0,103.8,Unknown,MetroHealth Network,1
+PAT-30133,38,118.1,80.9,34.4,102.8,Unknown,MetroHealth Network,0
+PAT-30134,55,134.1,96.3,23.3,107.3,Unknown,MetroHealth Network,0
+PAT-30135,71,122.2,82.8,31.3,138.8, former ,MetroHealth Network,0
+PAT-30136,63,125.7,82.9,27.8,79.6,Never,MetroHealth Network,0
+PAT-30137,56,93.3,54.9,24.8,146.6,Unknown,MetroHealth Network,0
+PAT-30138,37,156.9,88.8,33.1,121.1,,MetroHealth Network,0
+PAT-30139,89,98.7,66.4,24.6,101.0,,MetroHealth Network,0
+PAT-30140,75,108.4,65.1,30.9,, former ,MetroHealth Network,0
+PAT-30141,75,118.3,85.7,25.8,79.4,,MetroHealth Network,1
+PAT-30142,24,139.5,84.7,30.8,58.8, former ,MetroHealth Network,1
+PAT-30143,61,115.6,71.3,30.1,83.5,Never,MetroHealth Network,0
+PAT-30144,42,160.8,107.5,21.9,, former ,MetroHealth Network,1
+PAT-30145,86,129.4,80.2,26.6,78.1,Unknown,MetroHealth Network,1
+PAT-30146,28,122.4,85.6,17.9,74.6,Never,MetroHealth Network,0
+PAT-30147,64,121.6,81.9,18.8,47.1,CURRENT,MetroHealth Network,0
+PAT-30148,76,78.9,54.8,24.3,69.1, former ,MetroHealth Network,0
+PAT-30149,41,136.7,93.3,31.1,130.8,never,MetroHealth Network,0
+PAT-30150,74,140.1,89.6,12.6,97.9,,MetroHealth Network,0
+PAT-30151,79,148.9,94.4,32.7,58.5,CURRENT,MetroHealth Network,0
+PAT-30152,19,139.4,95.5,20.3,82.9,never,MetroHealth Network,0
+PAT-30153,36,139.3,88.9,30.3,130.8, former ,MetroHealth Network,0
+PAT-30154,45,110.5,73.5,36.1,86.5,CURRENT,MetroHealth Network,0
+PAT-30155,38,131.8,75.9,25.5,,never,MetroHealth Network,1
+PAT-30156,19,141.7,90.6,30.6,90.5,Never,MetroHealth Network,0
+PAT-30157,55,139.9,85.9,19.1,92.2,CURRENT,MetroHealth Network,0
+PAT-30158,20,79.9,50.1,34.8,91.4,Unknown,MetroHealth Network,0
+PAT-30159,57,126.5,79.2,23.3,89.6,never,MetroHealth Network,0
+PAT-30160,72,110.7,67.5,27.1,70.2,never,MetroHealth Network,0
+PAT-30161,21,112.1,77.3,29.4,78.5,,MetroHealth Network,0
+PAT-30162,22,125.2,80.7,24.0,102.9,never,MetroHealth Network,0
+PAT-30163,53,110.6,79.1,27.4,143.8, former ,MetroHealth Network,0
+PAT-30164,27,123.3,77.0,31.5,98.5,never,MetroHealth Network,0
+PAT-30165,66,146.8,97.9,30.9,110.3, former ,MetroHealth Network,0
+PAT-30166,36,109.9,77.2,32.4,117.8,never,MetroHealth Network,0
+PAT-30167,63,137.6,90.0,26.5,95.1,never,MetroHealth Network,0
+PAT-30168,54,162.8,107.4,24.2,114.0, former ,MetroHealth Network,0
+PAT-30169,29,148.3,95.7,33.4,129.6,never,MetroHealth Network,0
+PAT-30170,27,121.8,76.5,27.9,104.8,never,MetroHealth Network,0
+PAT-30171,70,120.6,79.2,22.9,140.4, former ,MetroHealth Network,0
+PAT-30172,25,89.6,57.6,26.5,82.2,Unknown,MetroHealth Network,0
+PAT-30173,66,86.8,56.0,22.0,100.3,never,MetroHealth Network,0
+PAT-30174,35,95.6,60.0,28.9,50.4,CURRENT,MetroHealth Network,0
+PAT-30175,36,135.1,92.9,31.1,88.6, former ,MetroHealth Network,0
+PAT-30176,53,144.6,93.9,15.5,147.5,Never,MetroHealth Network,0
+PAT-30177,45,160.8,105.1,27.7,141.7,,MetroHealth Network,0
+PAT-30178,61,92.8,62.7,25.5,117.2, former ,MetroHealth Network,1
+PAT-30179,62,120.7,81.6,20.8,148.5,Unknown,MetroHealth Network,0
+PAT-30180,61,124.5,70.6,31.2,150.4,Never,MetroHealth Network,0
+PAT-30181,86,132.1,86.9,25.8,101.0,CURRENT,MetroHealth Network,0
+PAT-30182,51,114.7,75.0,32.2,138.8,CURRENT,MetroHealth Network,0
+PAT-30183,18,90.6,66.6,24.0,101.2, former ,MetroHealth Network,0
+PAT-30184,78,128.1,82.2,35.6,100.0, former ,MetroHealth Network,0
+PAT-30185,68,136.6,87.0,18.7,132.0,Never,MetroHealth Network,1
+PAT-30186,65,146.7,95.9,29.1,23.5,Never,MetroHealth Network,0
+PAT-30187,51,111.4,70.0,31.8,107.1, former ,MetroHealth Network,0
+PAT-30188,22,129.7,84.6,23.4,118.3,CURRENT,MetroHealth Network,0
+PAT-30189,66,95.1,71.8,26.9,124.6, former ,MetroHealth Network,1
+PAT-30190,30,131.6,86.9,29.3,106.2,,MetroHealth Network,0
+PAT-30191,82,109.6,71.8,24.1,121.3,,MetroHealth Network,0
+PAT-30192,23,106.2,70.1,21.4,129.9,,MetroHealth Network,0
+PAT-30193,89,123.4,78.7,26.1,69.3,Unknown,MetroHealth Network,0
+PAT-30194,58,140.3,89.6,31.8,105.1,Unknown,MetroHealth Network,0
+PAT-30195,80,129.7,91.6,17.4,90.7,Never,MetroHealth Network,0
+PAT-30196,79,123.8,77.4,22.1,91.5,,MetroHealth Network,0
+PAT-30197,46,134.1,79.6,33.8,46.1,never,MetroHealth Network,0
+PAT-30198,37,147.4,97.5,38.4,95.5,Unknown,MetroHealth Network,0
+PAT-30199,30,122.1,84.8,28.3,133.4, former ,MetroHealth Network,0
+PAT-30200,47,116.4,76.2,30.3,120.2,CURRENT,MetroHealth Network,0
+PAT-30201,65,110.7,73.9,35.5,65.1,,MetroHealth Network,0
+PAT-30202,20,145.8,99.2,19.5,78.3,never,MetroHealth Network,1
+PAT-30203,70,149.7,99.4,27.8,127.2,Unknown,MetroHealth Network,0
+PAT-30204,44,110.5,76.3,23.2,48.6, former ,MetroHealth Network,0
+PAT-30205,26,128.0,80.5,25.4,128.9, former ,MetroHealth Network,0
+PAT-30206,25,97.1,63.2,22.1,,Unknown,MetroHealth Network,0
+PAT-30207,33,127.3,81.6,24.8,148.8,CURRENT,MetroHealth Network,0
+PAT-30208,44,116.5,74.1,26.7,111.5,CURRENT,MetroHealth Network,0
+PAT-30209,65,102.8,68.6,31.2,115.4,Unknown,MetroHealth Network,0
+PAT-30210,68,130.9,86.0,26.0,110.7,Unknown,MetroHealth Network,0
+PAT-30211,41,148.7,97.9,24.1,52.6,CURRENT,MetroHealth Network,1
+PAT-30212,42,159.9,103.8,32.9,75.2,CURRENT,MetroHealth Network,0
+PAT-30213,77,145.2,94.9,30.3,56.9,Never,MetroHealth Network,1
+PAT-30214,18,108.7,64.7,31.0,93.5,Never,MetroHealth Network,0
+PAT-30215,45,107.0,74.3,25.3,89.5,CURRENT,MetroHealth Network,0
+PAT-30216,50,143.4,91.7,27.3,126.1,Unknown,MetroHealth Network,0
+PAT-30217,39,147.1,89.8,29.5,102.6,Never,MetroHealth Network,0
+PAT-30218,41,130.7,79.7,32.7,132.3,Never,MetroHealth Network,0
+PAT-30219,30,130.0,82.2,21.7,72.3, former ,MetroHealth Network,0
+PAT-30220,72,131.0,87.7,28.8,111.6,,MetroHealth Network,0
+PAT-30221,76,135.7,87.6,19.3,11.7,never,MetroHealth Network,1
+PAT-30222,85,122.7,80.5,27.6,76.8,,MetroHealth Network,0
+PAT-30223,26,107.2,66.3,32.4,142.7,,MetroHealth Network,0
+PAT-30224,80,142.9,93.6,23.1,38.1, former ,MetroHealth Network,0
+PAT-30225,52,110.1,76.4,18.0,83.7,never,MetroHealth Network,0
+PAT-30226,76,130.1,90.2,13.7,151.8,never,MetroHealth Network,0
+PAT-30227,61,102.0,63.9,22.5,155.9,Never,MetroHealth Network,0
+PAT-30228,47,130.3,88.1,24.7,154.1,,MetroHealth Network,0
+PAT-30229,18,108.4,68.7,29.7,103.6,Unknown,MetroHealth Network,0
+PAT-30230,29,113.3,74.5,25.3,50.8,never,MetroHealth Network,0
+PAT-30231,64,142.9,98.6,30.9,124.5,Unknown,MetroHealth Network,0
+PAT-30232,37,110.3,74.3,33.4,73.6,,MetroHealth Network,0
+PAT-30233,23,152.9,93.6,24.1,117.2,CURRENT,MetroHealth Network,0
+PAT-30234,77,135.2,87.6,21.6,119.3, former ,MetroHealth Network,0
+PAT-30235,57,152.4,97.8,23.0,133.9,CURRENT,MetroHealth Network,0
+PAT-30236,23,127.8,89.4,31.0,118.1, former ,MetroHealth Network,0
+PAT-30237,87,134.8,89.9,24.7,96.4,,MetroHealth Network,0
+PAT-30238,76,102.7,66.2,30.9,120.8,Unknown,MetroHealth Network,0
+PAT-30239,89,171.4,105.4,30.8,102.6,never,MetroHealth Network,0
+PAT-30240,33,100.3,64.4,32.5,103.4,,MetroHealth Network,0
+PAT-30241,52,82.7,56.9,26.8,105.7,Unknown,MetroHealth Network,0
+PAT-30242,31,109.5,70.1,26.6,119.9,CURRENT,MetroHealth Network,0
+PAT-30243,27,132.9,81.0,24.9,,Unknown,MetroHealth Network,0
+PAT-30244,66,118.4,79.2,22.2,66.1,Never,MetroHealth Network,0
+PAT-30245,73,147.2,91.7,30.6,26.8,CURRENT,MetroHealth Network,0
+PAT-30246,27,112.2,78.8,27.4,84.2,,MetroHealth Network,0
+PAT-30247,80,125.0,85.5,23.4,78.2,,MetroHealth Network,0
+PAT-30248,80,114.1,71.8,29.6,76.4,never,MetroHealth Network,0
+PAT-30249,31,144.0,92.4,32.3,138.1,CURRENT,MetroHealth Network,0
+PAT-30250,27,116.8,75.9,25.2,95.9,,MetroHealth Network,0
+PAT-30251,75,102.7,65.3,18.8,148.9,,MetroHealth Network,0
+PAT-30252,26,156.4,106.2,32.6,84.5,Unknown,MetroHealth Network,0
+PAT-30253,64,121.9,80.9,20.9,93.5,,MetroHealth Network,0
+PAT-30254,27,114.6,74.6,16.0,,CURRENT,MetroHealth Network,0
+PAT-30255,74,150.7,100.8,27.4,123.8,Never,MetroHealth Network,0
+PAT-30256,21,74.4,42.8,24.4,111.4,CURRENT,MetroHealth Network,0
+PAT-30257,74,126.8,83.5,34.2,78.9,Unknown,MetroHealth Network,0
+PAT-30258,66,109.9,76.2,18.2,93.1,,MetroHealth Network,0
+PAT-30259,61,147.9,93.6,25.3,113.5,Never,MetroHealth Network,0
+PAT-30260,67,119.4,80.4,27.2,110.2,Unknown,MetroHealth Network,0
+PAT-30261,31,103.5,71.3,39.3,122.8,Unknown,MetroHealth Network,0
+PAT-30262,41,115.9,80.1,35.5,127.2,Unknown,MetroHealth Network,0
+PAT-30263,25,137.8,93.3,28.1,,Unknown,MetroHealth Network,0
+PAT-30264,51,165.0,110.9,29.4,105.3,Never,MetroHealth Network,0
+PAT-30265,63,154.4,102.6,22.7,120.3,Unknown,MetroHealth Network,1
+PAT-30266,20,74.1,57.0,34.2,91.1,CURRENT,MetroHealth Network,1
+PAT-30267,70,149.8,100.4,19.8,105.6,Unknown,MetroHealth Network,0
+PAT-30268,77,138.2,87.8,28.1,94.2,Unknown,MetroHealth Network,0
+PAT-30269,84,120.4,76.8,21.9,169.0,Unknown,MetroHealth Network,0
+PAT-30270,51,144.3,100.5,33.7,62.7,Unknown,MetroHealth Network,0
+PAT-30271,29,103.5,67.2,23.8,150.0, former ,MetroHealth Network,0
+PAT-30272,33,104.2,75.5,23.1,139.9,never,MetroHealth Network,0
+PAT-30273,73,130.2,83.2,27.6,104.9,CURRENT,MetroHealth Network,0
+PAT-30274,86,96.8,59.4,21.5,70.5,CURRENT,MetroHealth Network,0
+PAT-30275,57,118.0,71.1,21.7,137.1,,MetroHealth Network,1
+PAT-30276,86,139.1,92.0,29.3,82.8,CURRENT,MetroHealth Network,0
+PAT-30277,39,147.6,91.7,33.2,152.1,never,MetroHealth Network,0
+PAT-30278,66,114.1,75.6,21.7,114.0,never,MetroHealth Network,0
+PAT-30279,55,129.9,86.6,36.6,122.4,Unknown,MetroHealth Network,0
+PAT-30280,37,97.9,67.9,23.8,124.8, former ,MetroHealth Network,0
+PAT-30281,35,83.9,59.0,23.1,113.0, former ,MetroHealth Network,0
+PAT-30282,80,117.8,75.2,18.9,98.6,Unknown,MetroHealth Network,0
+PAT-30283,61,136.2,87.8,29.4,108.2,Unknown,MetroHealth Network,0
+PAT-30284,20,144.7,94.0,15.8,153.9,Never,MetroHealth Network,0
+PAT-30285,48,119.7,77.6,35.8,99.6,Unknown,MetroHealth Network,0
+PAT-30286,69,100.6,65.7,29.6,93.3,never,MetroHealth Network,0
+PAT-30287,71,130.4,84.2,20.1,,never,MetroHealth Network,0
+PAT-30288,46,145.5,95.7,22.6,, former ,MetroHealth Network,1
+PAT-30289,80,105.8,72.5,25.7,108.2,Unknown,MetroHealth Network,1
+PAT-30290,56,140.9,94.4,30.9,145.0,Unknown,MetroHealth Network,0
+PAT-30291,19,125.1,81.2,28.4,36.2,Unknown,MetroHealth Network,0
+PAT-30292,84,125.1,85.3,31.5,79.1,Unknown,MetroHealth Network,0
+PAT-30293,24,113.8,74.3,18.1,65.4,Never,MetroHealth Network,0
+PAT-30294,51,89.5,56.3,29.9,49.9,Unknown,MetroHealth Network,0
+PAT-30295,20,112.6,76.8,28.3,125.3,,MetroHealth Network,0
+PAT-30296,39,108.9,67.6,17.1,145.4,Never,MetroHealth Network,0
+PAT-30297,52,151.5,104.2,22.7,106.9,,MetroHealth Network,0
+PAT-30298,21,130.3,83.8,20.3,111.5, former ,MetroHealth Network,0
+PAT-30299,74,138.5,85.9,26.0,90.5,CURRENT,MetroHealth Network,0
+PAT-30300,23,150.6,106.4,31.8,125.8,never,MetroHealth Network,0
+PAT-30301,34,80.7,53.2,22.2,75.7,never,MetroHealth Network,0
+PAT-30302,21,133.5,89.1,15.9,76.2,Unknown,MetroHealth Network,0
+PAT-30303,22,124.2,81.9,25.5,, former ,MetroHealth Network,0
+PAT-30304,87,105.6,68.2,27.7,82.9,,MetroHealth Network,0
+PAT-30305,41,108.8,73.9,33.4,136.9,,MetroHealth Network,0
+PAT-30306,89,82.2,57.5,26.4,70.0,CURRENT,MetroHealth Network,0
+PAT-30307,45,136.3,86.5,24.3,112.6,Never,MetroHealth Network,0
+PAT-30308,39,119.1,82.7,30.2,69.9,Never,MetroHealth Network,0
+PAT-30309,53,136.5,91.4,19.7,38.7, former ,MetroHealth Network,0
+PAT-30310,66,116.9,78.7,29.3,90.2,Unknown,MetroHealth Network,0
+PAT-30311,42,139.2,87.1,28.0,103.8,Never,MetroHealth Network,0
+PAT-30312,53,136.0,87.3,28.7,88.8,Unknown,MetroHealth Network,0
+PAT-30313,75,111.3,72.3,20.1,133.3,Unknown,MetroHealth Network,0
+PAT-30314,73,116.2,73.3,18.6,82.7,,MetroHealth Network,0
+PAT-30315,55,104.7,70.5,32.3,129.2, former ,MetroHealth Network,0
+PAT-30316,58,125.4,85.4,26.1,137.7, former ,MetroHealth Network,0
+PAT-30317,61,143.9,94.8,27.3,61.5,,MetroHealth Network,0
+PAT-30318,21,128.7,86.3,32.3,117.0,never,MetroHealth Network,0
+PAT-30319,79,129.0,83.8,28.0,87.2, former ,MetroHealth Network,0
+PAT-30320,72,116.6,82.0,33.2,113.6,Unknown,MetroHealth Network,0
+PAT-30321,66,132.5,89.2,28.7,92.6,Unknown,MetroHealth Network,0
+PAT-30322,77,131.3,85.8,27.4,117.3,CURRENT,MetroHealth Network,0
+PAT-30323,32,156.7,104.1,27.8,127.0, former ,MetroHealth Network,0
+PAT-30324,84,114.5,74.2,24.9,113.8,Unknown,MetroHealth Network,0
+PAT-30325,32,97.2,65.2,31.1,79.9, former ,MetroHealth Network,0
+PAT-30326,25,125.6,75.1,32.0,156.6,Never,MetroHealth Network,0
+PAT-30327,31,128.5,81.0,25.1,108.6, former ,MetroHealth Network,0
+PAT-30328,47,114.8,75.7,28.6,136.6, former ,MetroHealth Network,0
+PAT-30329,63,151.5,91.7,38.3,122.0,Never,MetroHealth Network,0
+PAT-30330,19,120.3,83.2,31.7,65.1,Unknown,MetroHealth Network,0
+PAT-30331,47,145.8,88.4,29.5,147.4,CURRENT,MetroHealth Network,0
+PAT-30332,52,142.9,90.4,38.9,106.6,CURRENT,MetroHealth Network,0
+PAT-30333,67,141.4,85.2,24.9,125.1,,MetroHealth Network,0
+PAT-30334,33,109.6,62.3,24.2,120.6,Never,MetroHealth Network,0
+PAT-30335,22,126.3,85.7,27.5,, former ,MetroHealth Network,0
+PAT-30336,21,111.0,76.6,25.3,39.9,Unknown,MetroHealth Network,0
+PAT-30337,21,114.0,75.1,25.9,105.2, former ,MetroHealth Network,0
+PAT-30338,50,142.1,91.2,27.1,102.6,CURRENT,MetroHealth Network,0
+PAT-30339,62,91.2,65.1,28.7,98.3,never,MetroHealth Network,0
+PAT-30340,59,122.6,76.5,25.5,132.7,Never,MetroHealth Network,0
+PAT-30341,42,118.2,77.2,27.1,56.5,,MetroHealth Network,0
+PAT-30342,31,128.5,81.6,32.6,91.9,never,MetroHealth Network,0
+PAT-30343,44,105.8,66.7,24.2,100.5,Never,MetroHealth Network,0
+PAT-30344,82,130.3,78.1,20.2,57.9,never,MetroHealth Network,0
+PAT-30345,20,108.3,76.6,25.6,104.9,never,MetroHealth Network,0
+PAT-30346,84,124.5,85.5,39.0,80.8,Unknown,MetroHealth Network,0
+PAT-30347,35,151.8,100.3,20.7,104.3, former ,MetroHealth Network,0
+PAT-30348,57,122.3,80.6,29.2,93.0,Unknown,MetroHealth Network,0
+PAT-30349,61,116.0,72.7,21.9,105.6, former ,MetroHealth Network,0
+PAT-30350,36,118.2,79.5,23.8,130.8, former ,MetroHealth Network,1
+PAT-30351,34,104.5,65.6,22.3,,never,MetroHealth Network,0
+PAT-30352,76,102.2,66.2,31.1,115.3,,MetroHealth Network,0
+PAT-30353,79,126.1,84.8,29.7,92.7,Unknown,MetroHealth Network,0
+PAT-30354,81,84.1,51.3,25.2,100.0,Unknown,MetroHealth Network,0
+PAT-30355,88,108.9,71.4,23.3,96.7,Never,MetroHealth Network,0
+PAT-30356,51,150.9,94.5,25.4,74.1,Unknown,MetroHealth Network,0
+PAT-30357,88,103.4,70.1,27.0,96.7, former ,MetroHealth Network,0
+PAT-30358,56,127.2,77.9,23.4,156.3,CURRENT,MetroHealth Network,0
+PAT-30359,47,141.3,98.0,28.9,121.6,,MetroHealth Network,0
+PAT-30360,38,118.7,81.5,26.3,74.6,Unknown,MetroHealth Network,0
+PAT-30361,50,133.6,96.3,28.2,116.2, former ,MetroHealth Network,0
+PAT-30362,22,112.0,69.0,17.5,149.2,Unknown,MetroHealth Network,0
+PAT-30363,85,114.6,70.6,22.5,139.0,never,MetroHealth Network,0
+PAT-30364,26,100.9,59.3,26.0,84.6,Unknown,MetroHealth Network,0
+PAT-30365,62,106.2,70.0,17.6,106.9,CURRENT,MetroHealth Network,0
+PAT-30366,39,113.8,71.9,30.1,77.8,Unknown,MetroHealth Network,0
+PAT-30367,70,119.4,76.3,22.1,145.0, former ,MetroHealth Network,0
+PAT-30368,23,152.9,95.6,25.9,133.3,never,MetroHealth Network,0
+PAT-30369,62,116.3,74.8,19.4,60.9,never,MetroHealth Network,0
+PAT-30370,76,149.8,96.3,30.0,91.0,Unknown,MetroHealth Network,0
+PAT-30371,79,132.2,82.1,32.6,122.7,Unknown,MetroHealth Network,0
+PAT-30372,71,146.3,98.8,22.9,146.1,,MetroHealth Network,0
+PAT-30373,53,104.8,70.9,24.7,150.6,Unknown,MetroHealth Network,0
+PAT-30374,88,118.9,78.5,25.7,128.3,Never,MetroHealth Network,0
+PAT-30375,85,128.1,82.0,32.6,,never,MetroHealth Network,0
+PAT-30376,53,108.8,68.1,32.3,110.4,,MetroHealth Network,0
+PAT-30377,36,126.1,80.2,30.1,68.5,Never,MetroHealth Network,0
+PAT-30378,73,167.3,112.3,32.8,101.8,,MetroHealth Network,0
+PAT-30379,51,141.6,92.2,27.0,27.8,Unknown,MetroHealth Network,0
+PAT-30380,82,152.7,102.5,27.8,118.8,CURRENT,MetroHealth Network,0
+PAT-30381,86,129.3,86.3,27.5,86.1, former ,MetroHealth Network,0
+PAT-30382,78,108.4,73.5,32.8,92.0,Unknown,MetroHealth Network,0
+PAT-30383,76,110.9,68.6,25.6,,never,MetroHealth Network,0
+PAT-30384,70,128.6,88.0,27.6,79.5,never,MetroHealth Network,0
+PAT-30385,72,138.3,82.5,27.5,120.2,never,MetroHealth Network,0
+PAT-30386,58,122.4,71.9,17.4,50.7,Unknown,MetroHealth Network,0
+PAT-30387,43,133.6,90.6,36.3,, former ,MetroHealth Network,0
+PAT-30388,43,167.1,109.1,22.6,134.8,CURRENT,MetroHealth Network,0
+PAT-30389,36,120.0,77.1,24.8,117.8,Unknown,MetroHealth Network,0
+PAT-30390,44,101.8,73.1,24.9,112.5,,MetroHealth Network,0
+PAT-30391,39,149.9,103.5,26.7,109.6, former ,MetroHealth Network,0
+PAT-30392,34,153.5,101.9,23.2,82.4,never,MetroHealth Network,1
+PAT-30393,51,172.1,110.5,26.5,117.0,,MetroHealth Network,0
+PAT-30394,31,121.7,81.3,23.5,129.8,,MetroHealth Network,0
+PAT-30395,36,114.9,77.0,16.6,130.6,never,MetroHealth Network,0
+PAT-30396,25,119.7,81.8,30.1,103.6, former ,MetroHealth Network,0
+PAT-30397,53,110.4,70.2,28.6,83.0,CURRENT,MetroHealth Network,0
+PAT-30398,68,115.3,72.8,30.0,84.7,CURRENT,MetroHealth Network,0
+PAT-30399,29,132.2,85.5,25.6,116.5, former ,MetroHealth Network,0
+PAT-30400,53,130.3,78.7,30.4,108.8,CURRENT,MetroHealth Network,0
+PAT-30401,53,142.6,94.4,27.1,140.2,Never,MetroHealth Network,0
+PAT-30402,36,95.4,60.9,22.0,103.8,,MetroHealth Network,0
+PAT-30403,28,114.7,72.0,25.4,106.3,Unknown,MetroHealth Network,0
+PAT-30404,18,116.6,71.8,30.3,114.4,never,MetroHealth Network,0
+PAT-30405,32,117.4,76.9,32.9,100.7, former ,MetroHealth Network,0
+PAT-30406,45,150.5,91.7,20.5,76.4,Never,MetroHealth Network,0
+PAT-30407,86,91.0,63.1,24.3,78.3,CURRENT,MetroHealth Network,0
+PAT-30408,61,93.1,62.4,23.1,142.4,,MetroHealth Network,0
+PAT-30409,42,108.8,71.4,23.3,110.5,Unknown,MetroHealth Network,0
+PAT-30410,28,129.6,85.9,38.0,74.2,never,MetroHealth Network,0
+PAT-30411,70,99.4,62.2,21.8,116.0, former ,MetroHealth Network,1
+PAT-30412,83,104.8,72.0,22.5,91.2,Unknown,MetroHealth Network,0
+PAT-30413,80,117.3,76.5,28.5,93.4,,MetroHealth Network,0
+PAT-30414,42,108.9,71.4,34.8,71.1,,MetroHealth Network,0
+PAT-30415,58,144.2,96.9,33.6,88.8,CURRENT,MetroHealth Network,0
+PAT-30416,36,117.4,68.9,20.7,141.9,never,MetroHealth Network,1
+PAT-30417,62,110.2,69.1,33.5,88.5,,MetroHealth Network,0
+PAT-30418,69,120.9,80.5,27.9,107.8,Never,MetroHealth Network,1
+PAT-30419,47,115.5,79.3,30.4,110.9, former ,MetroHealth Network,0
+PAT-30420,22,129.4,76.7,30.8,136.4,Never,MetroHealth Network,0
+PAT-30421,84,96.2,59.6,35.6,,,MetroHealth Network,0
+PAT-30422,35,127.8,79.4,29.8,164.9,never,MetroHealth Network,0
+PAT-30423,40,110.0,61.8,28.1,130.1, former ,MetroHealth Network,0
+PAT-30424,36,148.2,94.3,29.0,103.5, former ,MetroHealth Network,0
+PAT-30425,84,148.8,95.4,29.8,149.4,never,MetroHealth Network,0
+PAT-30426,88,131.3,83.2,26.8,154.3, former ,MetroHealth Network,1
+PAT-30427,50,133.9,86.5,23.8,145.5, former ,MetroHealth Network,0
+PAT-30428,82,108.4,69.8,28.6,110.8,Unknown,MetroHealth Network,0
+PAT-30429,39,129.0,86.3,32.8,153.4,Unknown,MetroHealth Network,0
+PAT-30430,61,130.0,86.9,32.3,94.5,Never,MetroHealth Network,0
+PAT-30431,61,137.5,93.9,19.7,81.1,Unknown,MetroHealth Network,0
+PAT-30432,74,118.6,78.5,31.0,72.4,CURRENT,MetroHealth Network,1
+PAT-30433,66,125.6,85.8,23.2,76.0, former ,MetroHealth Network,0
+PAT-30434,47,116.4,75.1,27.0,103.1, former ,MetroHealth Network,0
+PAT-30435,54,108.9,74.6,30.0,,never,MetroHealth Network,0
+PAT-30436,29,143.3,86.4,21.9,139.1,CURRENT,MetroHealth Network,0
+PAT-30437,36,124.9,86.7,32.8,121.5,Never,MetroHealth Network,0
+PAT-30438,41,117.2,73.6,26.9,61.3,,MetroHealth Network,0
+PAT-30439,87,134.8,87.6,31.3,,,MetroHealth Network,0
+PAT-30440,52,93.6,61.3,23.4,81.6,,MetroHealth Network,0
+PAT-30441,80,86.6,52.0,28.9,,never,MetroHealth Network,0
+PAT-30442,32,125.4,86.4,36.6,79.9,Never,MetroHealth Network,1
+PAT-30443,50,103.9,65.8,35.9,98.6,CURRENT,MetroHealth Network,0
+PAT-30444,78,150.8,92.6,25.8,91.2,Unknown,MetroHealth Network,0
+PAT-30445,25,107.0,66.1,22.6,,never,MetroHealth Network,0
+PAT-30446,72,119.4,79.6,31.6,120.7,Never,MetroHealth Network,1
+PAT-30447,86,160.4,99.2,24.3,124.8,CURRENT,MetroHealth Network,0
+PAT-30448,18,150.4,99.9,35.2,129.9,,MetroHealth Network,0
+PAT-30449,89,143.9,95.9,16.3,150.4,never,MetroHealth Network,0
+PAT-30450,80,117.4,79.0,25.9,86.9,Unknown,MetroHealth Network,0
+PAT-30451,31,123.5,85.1,24.2,135.0,Unknown,MetroHealth Network,0
+PAT-30452,41,133.2,77.4,16.9,82.8, former ,MetroHealth Network,0
+PAT-30453,41,130.6,87.6,25.5,92.2,CURRENT,MetroHealth Network,0
+PAT-30454,40,150.2,101.3,23.6,145.9,Unknown,MetroHealth Network,0
+PAT-30455,75,146.6,97.2,27.1,111.5, former ,MetroHealth Network,0
+PAT-30456,66,123.0,81.2,28.2,92.1,Never,MetroHealth Network,0
+PAT-30457,20,122.8,89.4,25.5,75.3,never,MetroHealth Network,0
+PAT-30458,78,102.3,68.0,22.1,112.4,Unknown,MetroHealth Network,0
+PAT-30459,36,169.2,110.4,26.7,149.7,Never,MetroHealth Network,0
+PAT-30460,76,118.7,77.6,25.6,119.4,Never,MetroHealth Network,0
+PAT-30461,22,120.4,74.1,30.1,90.9,CURRENT,MetroHealth Network,0
+PAT-30462,53,145.5,99.3,27.9,82.0, former ,MetroHealth Network,0
+PAT-30463,32,108.9,71.5,31.3,123.6,Never,MetroHealth Network,0
+PAT-30464,82,120.9,85.5,26.6,85.3,Never,MetroHealth Network,1
+PAT-30465,69,145.5,93.5,27.2,96.2,Never,MetroHealth Network,1
+PAT-30466,62,112.8,75.8,24.0,95.5,CURRENT,MetroHealth Network,0
+PAT-30467,20,124.6,86.1,32.2,165.2,Never,MetroHealth Network,0
+PAT-30468,69,137.3,87.9,23.5,102.5,Unknown,MetroHealth Network,0
+PAT-30469,50,126.2,80.9,24.0,108.6,Unknown,MetroHealth Network,0
+PAT-30470,39,91.4,64.6,31.3,90.0,CURRENT,MetroHealth Network,0
+PAT-30471,81,128.3,85.5,36.5,73.7, former ,MetroHealth Network,0
+PAT-30472,18,141.5,92.3,30.3,70.8,Never,MetroHealth Network,0
+PAT-30473,66,113.6,74.2,22.9,60.9,CURRENT,MetroHealth Network,0
+PAT-30474,84,79.7,49.6,24.4,63.1, former ,MetroHealth Network,0
+PAT-30475,46,142.1,89.8,29.8,123.0,CURRENT,MetroHealth Network,1
+PAT-30476,65,140.2,85.3,33.9,100.8,Never,MetroHealth Network,0
+PAT-30477,60,161.7,102.2,19.5,87.4,never,MetroHealth Network,0
+PAT-30478,26,139.2,93.7,23.0,127.1, former ,MetroHealth Network,0
+PAT-30479,19,93.2,64.1,39.2,176.6,never,MetroHealth Network,1
+PAT-30480,77,129.9,92.1,21.5,56.3, former ,MetroHealth Network,0
+PAT-30481,69,114.2,79.6,29.0,94.3, former ,MetroHealth Network,0
+PAT-30482,26,96.5,62.4,21.7,137.1,never,MetroHealth Network,0
+PAT-30483,40,91.6,60.1,29.2,99.8,CURRENT,MetroHealth Network,1
+PAT-30484,49,150.7,106.6,32.1,140.6,Unknown,MetroHealth Network,0
+PAT-30485,24,126.7,89.9,32.0,118.9,never,MetroHealth Network,0
+PAT-30486,63,140.2,89.9,29.5,85.7,Unknown,MetroHealth Network,0
+PAT-30487,48,98.3,59.8,26.2,,Unknown,MetroHealth Network,1
+PAT-30488,35,131.1,86.0,17.8,129.0,Unknown,MetroHealth Network,0
+PAT-30489,78,119.6,75.6,21.0,52.7,never,MetroHealth Network,0
+PAT-30490,85,105.4,69.5,28.1,141.5,,MetroHealth Network,0
+PAT-30491,26,105.7,72.0,24.6,117.1,Unknown,MetroHealth Network,0
+PAT-30492,29,130.9,85.5,29.2,107.3,never,MetroHealth Network,0
+PAT-30493,18,125.8,79.6,25.5,67.9,Never,MetroHealth Network,0
+PAT-30494,38,127.0,72.7,28.0,134.0,Unknown,MetroHealth Network,0
+PAT-30495,76,129.9,75.4,26.6,96.1,never,MetroHealth Network,1
+PAT-30496,79,129.3,86.9,21.9,112.6,never,MetroHealth Network,0
+PAT-30497,82,102.0,62.2,24.8,118.4, former ,MetroHealth Network,0
+PAT-30498,33,119.1,73.1,34.3,55.1,Unknown,MetroHealth Network,0
+PAT-30499,39,143.1,94.6,26.4,92.2,,MetroHealth Network,0
+PAT-30500,79,139.8,88.4,24.9,135.0,,MetroHealth Network,0
+PAT-30501,52,146.0,94.8,25.2,75.9,Unknown,MetroHealth Network,0
+PAT-30502,72,130.7,84.5,27.9,73.3,,MetroHealth Network,0
+PAT-30503,70,128.5,81.8,22.0,80.6,,MetroHealth Network,1
+PAT-30504,48,172.3,116.6,28.1,91.8,,MetroHealth Network,1
+PAT-30505,83,162.3,107.1,29.5,110.8, former ,MetroHealth Network,0
+PAT-30506,40,157.5,98.5,37.8,160.2,Unknown,MetroHealth Network,0
+PAT-30507,48,139.3,89.7,29.2,77.5,CURRENT,MetroHealth Network,1
+PAT-30508,83,121.7,80.6,18.3,112.8,Unknown,MetroHealth Network,0
+PAT-30509,35,132.0,86.4,33.1,99.1, former ,MetroHealth Network,1
+PAT-30510,31,118.6,79.1,33.9,138.6,never,MetroHealth Network,0
+PAT-30511,87,104.8,65.5,26.0,150.4,CURRENT,MetroHealth Network,0
+PAT-30512,65,122.1,73.7,26.9,129.6,CURRENT,MetroHealth Network,0
+PAT-30513,58,127.1,78.8,29.4,53.1, former ,MetroHealth Network,0
+PAT-30514,63,110.5,67.2,30.2,149.2,Unknown,MetroHealth Network,0
+PAT-30515,65,106.9,70.5,28.7,117.4,,MetroHealth Network,0
+PAT-30516,78,134.4,83.9,37.0,127.5, former ,MetroHealth Network,0
+PAT-30517,53,130.5,88.9,28.0,126.8,,MetroHealth Network,0
+PAT-30518,26,129.6,89.6,29.2,146.1,,MetroHealth Network,0
+PAT-30519,26,137.1,87.9,29.4,111.3,,MetroHealth Network,0
+PAT-30520,41,151.4,98.1,17.7,83.8,Unknown,MetroHealth Network,0
+PAT-30521,44,127.8,81.7,32.6,60.6,CURRENT,MetroHealth Network,0
+PAT-30522,52,119.2,77.7,24.8,51.3,never,MetroHealth Network,0
+PAT-30523,81,137.2,84.6,37.9,,,MetroHealth Network,0
+PAT-30524,57,119.7,72.0,26.7,94.6,never,MetroHealth Network,1
+PAT-30525,18,144.4,91.5,24.4,105.1,never,MetroHealth Network,1
+PAT-30526,86,131.0,85.3,28.3,114.2,CURRENT,MetroHealth Network,1
+PAT-30527,87,107.2,70.8,13.8,179.5,CURRENT,MetroHealth Network,0
+PAT-30528,72,86.5,60.5,30.5,87.4,Never,MetroHealth Network,0
+PAT-30529,70,128.7,99.5,28.4,115.9,CURRENT,MetroHealth Network,0
+PAT-30530,53,122.0,76.2,22.5,29.3,,MetroHealth Network,0
+PAT-30531,31,142.3,92.8,28.8,63.7,CURRENT,MetroHealth Network,0
+PAT-30532,42,121.0,80.4,30.8,93.1,,MetroHealth Network,0
+PAT-30533,70,156.1,99.5,24.3,97.0, former ,MetroHealth Network,0
+PAT-30534,72,121.7,77.9,34.7,122.8,Unknown,MetroHealth Network,0
+PAT-30535,67,116.1,70.9,25.1,87.1, former ,MetroHealth Network,0
+PAT-30536,56,140.2,94.4,20.3,77.0,Unknown,MetroHealth Network,1
+PAT-30537,87,99.5,65.2,28.3,119.4,Unknown,MetroHealth Network,0
+PAT-30538,55,122.1,82.4,24.3,107.5,never,MetroHealth Network,0
+PAT-30539,65,131.2,83.2,12.8,183.0,Never,MetroHealth Network,0
+PAT-30540,72,125.9,80.8,35.4,104.7,never,MetroHealth Network,0
+PAT-30541,22,101.0,67.9,35.0,94.7,Never,MetroHealth Network,0
+PAT-30542,86,113.3,70.9,28.2,81.1, former ,MetroHealth Network,0
+PAT-30543,57,110.9,75.9,30.5,152.6,never,MetroHealth Network,0
+PAT-30544,40,115.2,74.1,32.8,93.0, former ,MetroHealth Network,0
+PAT-30545,37,114.6,78.0,29.2,133.6,CURRENT,MetroHealth Network,0
+PAT-30546,80,127.8,86.8,25.9,100.4,CURRENT,MetroHealth Network,0
+PAT-30547,75,112.5,79.9,31.8,114.2, former ,MetroHealth Network,0
+PAT-30548,24,133.0,87.1,28.7,75.1,CURRENT,MetroHealth Network,1
+PAT-30549,71,135.0,86.8,30.6,, former ,MetroHealth Network,0
+PAT-30550,47,119.1,75.8,33.7,,Unknown,MetroHealth Network,0
+PAT-30551,74,104.5,67.7,28.7,117.7,Never,MetroHealth Network,0
+PAT-30552,39,135.1,90.4,30.6,63.4,Never,MetroHealth Network,0
+PAT-30553,78,128.5,87.0,24.9,118.5,never,MetroHealth Network,1
+PAT-30554,44,127.0,81.8,25.6,127.5,Unknown,MetroHealth Network,1
+PAT-30555,31,125.8,84.5,24.4,50.8,,MetroHealth Network,0
+PAT-30556,48,109.7,74.2,19.5,157.2,Never,MetroHealth Network,0
+PAT-30557,82,100.9,71.2,35.5,59.9,,MetroHealth Network,1
+PAT-30558,66,108.5,69.7,28.6,128.4, former ,MetroHealth Network,0
+PAT-30559,87,112.1,76.9,32.7,110.6, former ,MetroHealth Network,0
+PAT-30560,55,101.0,67.2,29.8,95.2,CURRENT,MetroHealth Network,0
+PAT-30561,80,129.4,84.8,27.8,85.3,,MetroHealth Network,0
+PAT-30562,43,140.1,94.7,23.9,57.0,,MetroHealth Network,0
+PAT-30563,28,159.7,107.6,24.8,,CURRENT,MetroHealth Network,0
+PAT-30564,30,155.0,100.5,19.0,109.7,never,MetroHealth Network,0
+PAT-30565,69,136.5,88.3,30.8,73.5,Unknown,MetroHealth Network,0
+PAT-30566,88,138.0,94.3,33.2,87.8,Never,MetroHealth Network,0
+PAT-30567,83,112.9,75.3,23.1,56.7,never,MetroHealth Network,0
+PAT-30568,84,159.9,112.3,27.2,,Unknown,MetroHealth Network,0
+PAT-30569,39,109.2,72.2,31.9,142.4,,MetroHealth Network,0
+PAT-30570,78,144.2,88.5,44.9,22.9,,MetroHealth Network,1
+PAT-30571,58,118.4,77.9,27.8,98.7,never,MetroHealth Network,0
+PAT-30572,41,100.8,67.5,30.1,111.0,,MetroHealth Network,0
+PAT-30573,77,114.9,80.5,26.0,84.6,Unknown,MetroHealth Network,0
+PAT-30574,31,98.3,60.9,28.8,103.6,,MetroHealth Network,1
+PAT-30575,19,119.6,76.3,30.1,157.5,,MetroHealth Network,0
+PAT-30576,56,134.8,93.7,26.1,92.6,never,MetroHealth Network,0
+PAT-30577,18,121.0,80.5,18.4,104.3,CURRENT,MetroHealth Network,0
+PAT-30578,48,104.9,66.9,25.2,78.0,Never,MetroHealth Network,0
+PAT-30579,45,155.7,107.5,24.2,82.6,,MetroHealth Network,0
+PAT-30580,55,113.9,76.2,10.4,106.6,never,MetroHealth Network,0
+PAT-30581,35,122.8,67.7,18.6,102.7,Unknown,MetroHealth Network,0
+PAT-30582,27,149.6,101.9,22.9,143.1,Never,MetroHealth Network,1
+PAT-30583,55,113.4,65.2,35.1,115.4,Never,MetroHealth Network,0
+PAT-30584,65,136.2,78.5,30.4,114.0,,MetroHealth Network,0
+PAT-30585,42,100.7,68.6,39.4,42.8, former ,MetroHealth Network,0
+PAT-30586,80,118.7,77.9,23.1,147.2,,MetroHealth Network,0
+PAT-30587,65,124.0,85.7,27.7,112.1,CURRENT,MetroHealth Network,0
+PAT-30588,31,115.9,69.2,24.6,90.5,Unknown,MetroHealth Network,0
+PAT-30589,85,103.1,65.4,29.4,82.1,never,MetroHealth Network,0
+PAT-30590,31,142.1,95.5,19.8,109.9,Never,MetroHealth Network,1
+PAT-30591,70,120.6,74.7,29.1,108.4,Unknown,MetroHealth Network,0
+PAT-30592,89,112.0,73.6,28.1,122.3,CURRENT,MetroHealth Network,0
+PAT-30593,28,113.9,73.6,21.7,120.0,,MetroHealth Network,0
+PAT-30594,39,147.1,94.4,27.0,116.7,Never,MetroHealth Network,0
+PAT-30595,49,121.0,83.4,19.8,103.8,never,MetroHealth Network,1
+PAT-30596,63,118.0,80.3,18.7,59.1,,MetroHealth Network,0
+PAT-30597,72,98.6,67.3,19.8,104.6,Never,MetroHealth Network,0
+PAT-30598,68,117.8,77.3,20.8,111.6,never,MetroHealth Network,1
+PAT-30599,43,132.6,86.5,27.8,135.0,Never,MetroHealth Network,0
+PAT-30600,56,127.3,87.6,37.8,93.7,CURRENT,MetroHealth Network,1
+PAT-30601,70,119.3,65.5,31.7,134.9, former ,MetroHealth Network,0
+PAT-30602,33,132.1,85.4,28.4,103.5,CURRENT,MetroHealth Network,0
+PAT-30603,82,122.3,79.4,29.9,138.1,CURRENT,MetroHealth Network,0
+PAT-30604,40,108.7,67.3,24.8,68.8,,MetroHealth Network,0
+PAT-30605,63,133.0,93.9,34.7,134.8,Never,MetroHealth Network,0
+PAT-30606,59,102.1,62.8,34.4,102.0,CURRENT,MetroHealth Network,0
+PAT-30607,33,120.2,71.2,23.7,68.0,,MetroHealth Network,0
+PAT-30608,45,111.8,63.3,26.1,74.0,Unknown,MetroHealth Network,0
+PAT-30609,69,107.1,72.0,27.2,138.3,Unknown,MetroHealth Network,0
+PAT-30610,55,130.6,93.0,32.5,106.5,never,MetroHealth Network,0
+PAT-30611,53,94.0,54.2,27.4,88.7,,MetroHealth Network,0
+PAT-30612,51,100.1,56.5,20.1,,Never,MetroHealth Network,0
+PAT-30613,86,139.8,89.3,23.9,,Unknown,MetroHealth Network,0
+PAT-30614,43,105.2,70.4,26.0,83.1,CURRENT,MetroHealth Network,0
+PAT-30615,45,108.8,78.4,23.6,127.0,Unknown,MetroHealth Network,0
+PAT-30616,19,122.8,79.4,27.0,95.7, former ,MetroHealth Network,0
+PAT-30617,72,117.4,71.2,31.2,25.4,never,MetroHealth Network,0
+PAT-30618,20,142.5,89.8,34.0,98.3,CURRENT,MetroHealth Network,0
+PAT-30619,78,109.4,68.7,28.2,87.5,Unknown,MetroHealth Network,1
+PAT-30620,75,143.4,94.3,26.4,113.8,Never,MetroHealth Network,0
+PAT-30621,36,149.4,100.0,36.0,54.9,,MetroHealth Network,0
+PAT-30622,76,122.7,87.4,24.1,90.2,never,MetroHealth Network,0
+PAT-30623,44,133.2,86.9,28.7,80.7, former ,MetroHealth Network,0
+PAT-30624,37,137.9,85.8,36.0,112.0,CURRENT,MetroHealth Network,1
+PAT-30625,52,132.3,91.5,25.5,106.4,,MetroHealth Network,0
+PAT-30626,50,144.4,90.8,30.5,97.3,Never,MetroHealth Network,0
+PAT-30627,65,128.7,79.2,26.8,85.3,Never,MetroHealth Network,1
+PAT-30628,55,138.6,92.1,22.6,117.3,Never,MetroHealth Network,1
+PAT-30629,50,136.1,90.3,30.1,55.6,Never,MetroHealth Network,0
+PAT-30630,75,134.8,86.4,26.3,55.0,Never,MetroHealth Network,0
+PAT-30631,81,101.9,65.8,24.1,99.0, former ,MetroHealth Network,0
+PAT-30632,20,111.4,74.4,32.0,,Unknown,MetroHealth Network,0
+PAT-30633,66,143.5,100.4,32.8,113.4,CURRENT,MetroHealth Network,0
+PAT-30634,44,112.3,80.1,32.8,92.5,Unknown,MetroHealth Network,1
+PAT-30635,32,103.1,62.5,17.8,157.8, former ,MetroHealth Network,0
+PAT-30636,58,138.8,85.8,18.1,104.2,never,MetroHealth Network,0
+PAT-30637,57,118.0,70.0,24.7,121.4, former ,MetroHealth Network,0
+PAT-30638,79,159.6,110.1,34.8,146.1,never,MetroHealth Network,0
+PAT-30639,75,143.0,95.4,24.5,86.9,,MetroHealth Network,0
+PAT-30640,39,160.0,107.2,24.7,112.2,,MetroHealth Network,0
+PAT-30641,89,106.2,73.0,29.1,97.1,,MetroHealth Network,0
+PAT-30642,78,110.7,73.2,29.9,56.0, former ,MetroHealth Network,0
+PAT-30643,68,129.9,83.1,27.6,107.7, former ,MetroHealth Network,0
+PAT-30644,77,131.2,82.5,29.2,131.3,,MetroHealth Network,0
+PAT-30645,48,162.8,109.9,30.3,111.2,,MetroHealth Network,0
+PAT-30646,49,166.6,110.7,23.0,105.1,CURRENT,MetroHealth Network,0
+PAT-30647,26,137.8,91.2,23.4,144.2, former ,MetroHealth Network,0
+PAT-30648,88,126.7,81.6,21.2,110.2,CURRENT,MetroHealth Network,0
+PAT-30649,34,146.0,88.3,26.5,65.4,Never,MetroHealth Network,0
+PAT-30650,77,124.6,85.3,31.5,134.8,Never,MetroHealth Network,0
+PAT-30651,52,128.8,81.9,24.0,,,MetroHealth Network,0
+PAT-30652,74,118.8,78.6,21.2,142.6,,MetroHealth Network,0
+PAT-30653,46,136.5,89.2,26.8,139.2,,MetroHealth Network,0
+PAT-30654,79,125.0,77.5,34.9,156.7,Never,MetroHealth Network,1
+PAT-30655,53,114.5,75.1,30.4,129.0,,MetroHealth Network,0
+PAT-30656,77,129.3,84.5,17.3,84.2,Unknown,MetroHealth Network,0
+PAT-30657,67,102.3,67.9,21.9,63.8,never,MetroHealth Network,0
+PAT-30658,38,137.6,91.3,24.6,87.0,,MetroHealth Network,1
+PAT-30659,78,137.8,85.6,30.6,111.3,never,MetroHealth Network,0
+PAT-30660,66,107.5,74.5,33.6,96.0,,MetroHealth Network,0
+PAT-30661,49,102.5,68.5,30.8,113.2, former ,MetroHealth Network,0
+PAT-30662,59,148.2,87.1,32.6,102.6,,MetroHealth Network,1
+PAT-30663,71,121.6,77.5,27.7,72.2,,MetroHealth Network,0
+PAT-30664,73,101.4,64.0,26.6,,Unknown,MetroHealth Network,0
+PAT-30665,69,129.2,79.1,26.1,128.8,,MetroHealth Network,0
+PAT-30666,43,132.7,96.2,21.7,126.9,Never,MetroHealth Network,0
+PAT-30667,87,145.5,97.2,21.7,83.2,,MetroHealth Network,0
+PAT-30668,27,151.8,93.3,23.7,114.4,,MetroHealth Network,1
+PAT-30669,22,150.7,104.6,21.5,54.4,,MetroHealth Network,0
+PAT-30670,41,127.4,90.3,32.5,135.7,never,MetroHealth Network,0
+PAT-30671,53,135.0,82.9,27.9,67.4,,MetroHealth Network,0
+PAT-30672,82,129.6,82.5,26.7,112.2,never,MetroHealth Network,0
+PAT-30673,38,140.7,84.7,15.2,105.0, former ,MetroHealth Network,0
+PAT-30674,33,108.2,73.2,28.1,117.7,Unknown,MetroHealth Network,0
+PAT-30675,81,130.9,90.6,33.2,79.1,Unknown,MetroHealth Network,0
+PAT-30676,80,115.1,70.6,26.4,67.5,Unknown,MetroHealth Network,0
+PAT-30677,37,109.6,69.9,29.6,180.5,never,MetroHealth Network,0
+PAT-30678,34,103.3,69.8,20.6,167.8, former ,MetroHealth Network,0
+PAT-30679,38,128.1,87.3,23.9,95.8,Never,MetroHealth Network,0
+PAT-30680,34,114.0,70.6,32.8,79.9,Never,MetroHealth Network,0
+PAT-30681,67,113.6,75.0,24.8,127.3,Never,MetroHealth Network,0
+PAT-30682,60,126.0,83.9,30.5,116.9,Never,MetroHealth Network,0
+PAT-30683,70,139.8,85.2,27.0,80.1,CURRENT,MetroHealth Network,0
+PAT-30684,55,122.8,77.9,33.8,63.9, former ,MetroHealth Network,0
+PAT-30685,78,136.6,92.1,33.3,94.9,,MetroHealth Network,0
+PAT-30686,83,120.9,78.8,22.5,83.1,never,MetroHealth Network,0
+PAT-30687,84,121.9,79.7,29.1,114.5,,MetroHealth Network,0
+PAT-30688,38,142.0,92.5,31.9,111.6,,MetroHealth Network,0
+PAT-30689,24,120.7,75.5,27.6,,Unknown,MetroHealth Network,0
+PAT-30690,88,145.8,97.3,35.7,128.8, former ,MetroHealth Network,0
+PAT-30691,62,143.8,91.4,15.3,147.8,never,MetroHealth Network,0
+PAT-30692,56,138.3,98.1,22.3,, former ,MetroHealth Network,1
+PAT-30693,69,134.7,90.6,25.6,155.5, former ,MetroHealth Network,0
+PAT-30694,41,101.7,67.3,32.3,112.9,Unknown,MetroHealth Network,0
+PAT-30695,44,142.3,93.6,24.4,104.2,,MetroHealth Network,0
+PAT-30696,62,116.8,72.9,33.0,137.4, former ,MetroHealth Network,0
+PAT-30697,34,138.7,93.6,30.4,82.1,,MetroHealth Network,1
+PAT-30698,65,138.8,86.6,24.1,78.5,Never,MetroHealth Network,1
+PAT-30699,89,137.0,92.4,18.9,83.7,never,MetroHealth Network,0
+PAT-30700,89,152.6,101.9,30.5,127.7,,MetroHealth Network,0
+PAT-30701,53,129.5,81.3,23.9,129.5,never,MetroHealth Network,0
+PAT-30702,79,119.5,74.2,28.5,94.2,never,MetroHealth Network,0
+PAT-30703,44,140.4,82.2,24.9,85.2,CURRENT,MetroHealth Network,0
+PAT-30704,77,119.6,75.8,21.7,103.2, former ,MetroHealth Network,0
+PAT-30705,85,120.0,74.3,28.3,112.7,Unknown,MetroHealth Network,0
+PAT-30706,37,126.9,84.1,38.6,138.7, former ,MetroHealth Network,0
+PAT-30707,36,91.7,55.8,22.5,109.8,Never,MetroHealth Network,0
+PAT-30708,61,177.4,115.1,25.0,112.3,Unknown,MetroHealth Network,0
+PAT-30709,29,116.5,70.7,23.1,109.0,never,MetroHealth Network,0
+PAT-30710,57,113.7,73.6,34.2,152.9,,MetroHealth Network,0
+PAT-30711,85,138.7,91.5,22.2,128.2,Never,MetroHealth Network,1
+PAT-30712,43,120.5,79.0,30.5,78.9,never,MetroHealth Network,0
+PAT-30713,46,126.0,84.3,23.8,72.2,Unknown,MetroHealth Network,0
+PAT-30714,76,126.9,82.6,33.1,98.1, former ,MetroHealth Network,0
+PAT-30715,76,113.6,76.7,28.8,103.6, former ,MetroHealth Network,0
+PAT-30716,71,111.3,77.7,23.7,85.3,Never,MetroHealth Network,0
+PAT-30717,48,96.6,56.2,37.0,,,MetroHealth Network,0
+PAT-30718,31,113.5,72.9,36.1,100.4, former ,MetroHealth Network,0
+PAT-30719,70,141.0,94.1,33.4,101.0,never,MetroHealth Network,0
+PAT-30720,18,121.1,76.5,22.5,118.3,,MetroHealth Network,0
+PAT-30721,38,102.5,68.0,27.1,58.5,,MetroHealth Network,0
+PAT-30722,38,138.0,99.8,32.5,110.6,Never,MetroHealth Network,0
+PAT-30723,81,120.1,79.4,29.4,141.8,Never,MetroHealth Network,1
+PAT-30724,52,129.8,84.9,24.0,165.0,never,MetroHealth Network,0
+PAT-30725,65,141.1,91.1,23.5,87.1,,MetroHealth Network,0
+PAT-30726,65,136.2,90.0,23.4,130.2,Unknown,MetroHealth Network,0
+PAT-30727,72,111.1,73.0,23.3,103.8,CURRENT,MetroHealth Network,1
+PAT-30728,89,112.7,73.2,28.1,83.1, former ,MetroHealth Network,0
+PAT-30729,75,117.0,72.3,35.7,63.9,CURRENT,MetroHealth Network,0
+PAT-30730,44,108.5,72.8,22.2,64.0,CURRENT,MetroHealth Network,0
+PAT-30731,89,136.2,81.3,22.0,,CURRENT,MetroHealth Network,1
+PAT-30732,86,132.4,85.8,24.7,69.4,Never,MetroHealth Network,0
+PAT-30733,53,119.8,75.8,24.5,104.3,Never,MetroHealth Network,0
+PAT-30734,51,129.1,85.5,31.5,83.1,never,MetroHealth Network,1
+PAT-30735,25,106.1,64.6,24.6,141.3,,MetroHealth Network,0
+PAT-30736,80,121.8,79.6,19.2,174.6,,MetroHealth Network,0
+PAT-30737,39,104.5,64.1,20.4,120.6,CURRENT,MetroHealth Network,0
+PAT-30738,40,129.9,79.1,35.5,94.0,Never,MetroHealth Network,0
+PAT-30739,32,153.8,101.1,19.6,152.6, former ,MetroHealth Network,0
+PAT-30740,21,132.8,94.1,22.2,86.5,never,MetroHealth Network,0
+PAT-30741,37,139.5,89.4,27.6,104.8,CURRENT,MetroHealth Network,1
+PAT-30742,84,115.9,78.2,23.6,98.9,Never,MetroHealth Network,0
+PAT-30743,41,100.1,59.2,24.7,127.6, former ,MetroHealth Network,1
+PAT-30744,56,122.4,88.1,26.8,119.3,never,MetroHealth Network,0
+PAT-30745,28,86.0,56.6,26.5,143.3,Unknown,MetroHealth Network,0
+PAT-30746,88,135.5,86.8,18.8,91.1, former ,MetroHealth Network,0
+PAT-30747,89,117.8,80.9,29.4,102.9,Unknown,MetroHealth Network,0
+PAT-30748,87,145.6,88.4,21.5,152.5,Never,MetroHealth Network,0
+PAT-30749,71,101.5,70.7,31.1,114.4,Unknown,MetroHealth Network,0
+PAT-30750,62,111.2,70.9,25.4,,Unknown,MetroHealth Network,1
+PAT-30751,66,104.9,68.3,31.3,150.7,Never,MetroHealth Network,0
+PAT-30752,65,119.8,70.9,25.3,100.1,never,MetroHealth Network,0
+PAT-30753,20,121.2,74.0,20.1,111.3, former ,MetroHealth Network,0
+PAT-30754,43,116.3,77.0,27.3,126.1,Unknown,MetroHealth Network,0
+PAT-30755,82,123.3,82.3,18.8,101.6,Never,MetroHealth Network,0
+PAT-30756,51,125.2,85.0,22.0,120.2,Never,MetroHealth Network,0
+PAT-30757,33,96.5,67.6,25.8,80.6,Unknown,MetroHealth Network,0
+PAT-30758,21,134.5,86.6,27.7,114.7,never,MetroHealth Network,0
+PAT-30759,84,102.3,62.9,25.3,117.5, former ,MetroHealth Network,0
+PAT-30760,18,148.5,102.8,22.6,75.2,CURRENT,MetroHealth Network,0
+PAT-30761,22,133.7,81.6,16.0,, former ,MetroHealth Network,0
+PAT-30762,74,116.8,76.4,27.4,84.1,never,MetroHealth Network,0
+PAT-30763,71,139.1,88.1,21.0,54.1,,MetroHealth Network,0
+PAT-30764,81,131.8,83.6,29.6,114.1,Never,MetroHealth Network,1
+PAT-30765,39,119.4,86.6,22.1,121.9, former ,MetroHealth Network,0
+PAT-30766,25,127.6,78.8,23.9,111.4,,MetroHealth Network,0
+PAT-30767,28,141.7,90.5,23.6,138.0,CURRENT,MetroHealth Network,1
+PAT-30768,34,114.3,80.0,23.3,81.3,CURRENT,MetroHealth Network,0
+PAT-30769,19,128.4,80.0,24.4,80.0,never,MetroHealth Network,0
+PAT-30770,37,126.9,81.2,22.2,66.2,,MetroHealth Network,0
+PAT-30771,64,119.5,74.7,15.1,155.0,never,MetroHealth Network,0
+PAT-30772,71,140.7,94.8,19.5,97.0,CURRENT,MetroHealth Network,0
+PAT-30773,85,115.9,79.2,25.8,91.2,Never,MetroHealth Network,1
+PAT-30774,21,110.5,70.9,27.6,71.9,never,MetroHealth Network,0
+PAT-30775,47,130.7,86.8,30.8,,Unknown,MetroHealth Network,0
+PAT-30776,39,143.5,92.3,34.6,70.2,never,MetroHealth Network,0
+PAT-30777,43,145.4,101.5,32.3,91.4,,MetroHealth Network,0
+PAT-30778,23,123.1,82.6,31.8,,CURRENT,MetroHealth Network,0
+PAT-30779,19,132.6,77.3,26.5,138.4,never,MetroHealth Network,1
+PAT-30780,65,140.8,89.5,34.9,110.5, former ,MetroHealth Network,0
+PAT-30781,25,125.9,80.1,25.4,149.4,CURRENT,MetroHealth Network,0
+PAT-30782,48,132.3,86.1,20.3,153.3,Never,MetroHealth Network,0
+PAT-30783,45,109.4,67.7,28.3,145.8,Never,MetroHealth Network,0
+PAT-30784,28,97.0,60.9,31.6,86.4,never,MetroHealth Network,0
+PAT-30785,87,143.4,101.3,22.4,87.9,CURRENT,MetroHealth Network,0
+PAT-30786,74,103.8,72.7,27.2,90.0,never,MetroHealth Network,0
+PAT-30787,77,114.9,67.4,17.4,142.2,never,MetroHealth Network,0
+PAT-30788,37,128.6,86.8,31.3,97.6,,MetroHealth Network,0
+PAT-30789,31,153.6,97.2,27.3,43.7,,MetroHealth Network,0
+PAT-30790,82,126.5,85.6,25.7,16.5,Unknown,MetroHealth Network,0
+PAT-30791,28,143.8,90.8,30.1,151.3, former ,MetroHealth Network,1
+PAT-30792,68,140.3,89.8,25.5,95.3, former ,MetroHealth Network,0
+PAT-30793,72,116.5,72.6,17.2,101.1,Never,MetroHealth Network,0
+PAT-30794,49,111.4,71.8,26.9,110.0,Unknown,MetroHealth Network,1
+PAT-30795,35,128.7,80.0,21.4,89.5,Unknown,MetroHealth Network,0
+PAT-30796,79,137.8,91.5,29.5,122.0,never,MetroHealth Network,1
+PAT-30797,75,112.5,71.8,26.9,108.7,never,MetroHealth Network,0
+PAT-30798,27,141.2,93.7,19.5,127.3,never,MetroHealth Network,0
+PAT-30799,41,137.5,95.4,31.8,111.3,,MetroHealth Network,1
+PAT-30000,37,115.7,74.7,26.7,74.0,Unknown,MetroHealth Network,0
+PAT-30001,41,126.5,79.7,33.0,92.9,Never,MetroHealth Network,0
+PAT-30002,78,112.8,75.5,25.7,162.4,CURRENT,MetroHealth Network,0
+PAT-30003,58,119.7,78.9,29.7,123.3,never,MetroHealth Network,0
+PAT-30004,59,92.6,61.2,25.2,125.0,never,MetroHealth Network,1
+PAT-30005,75,-120.0,80.0,29.3,146.8,Unknown,MetroHealth Network,0
+PAT-30006,25,124.2,80.8,25.8,123.2,Unknown,MetroHealth Network,0
+PAT-30007,19,153.3,102.1,25.3,168.9,Unknown,MetroHealth Network,0
+PAT-30008,89,119.7,75.0,27.4,79.5,CURRENT,MetroHealth Network,0
+PAT-30009,66,103.1,64.6,33.7,147.6,Never,MetroHealth Network,1

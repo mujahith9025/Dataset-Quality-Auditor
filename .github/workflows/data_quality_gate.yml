@@ -1,0 +1,50 @@
+name: "Dataset Quality Gate CI/CD"
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  data-quality-audit:
+    name: "Audit Tabular Dataset Quality"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+
+      - name: "Set up Python 3.11"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: "Install Dependencies"
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: "Run Unit Tests"
+        run: |
+          python -m pytest tests/
+
+      - name: "Execute Dataset Quality Gate (Sample Benchmark)"
+        run: |
+          python cli.py audit samples/loan_approval_dirty.csv \
+            --target loan_status \
+            --fail-under 50.0 \
+            --export-html audit_report.html \
+            --export-json audit_report.json || true
+
+      - name: "Upload Quality Report Artifact"
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: data-quality-audit-reports
+          path: |
+            audit_report.html
+            audit_report.json

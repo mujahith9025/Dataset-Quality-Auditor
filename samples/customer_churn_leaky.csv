@@ -1,0 +1,1016 @@
+customer_id,tenure_months,monthly_charges,total_charges,contract_type,payment_method,cancellation_code,currency,account_status,churned
+CUST-20000,12,28.36,,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20001,71,75.16,5323.95,Two year,Credit card,102,USD,ACTIVE,1
+CUST-20002,64,33.05,2116.05,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20003,10,21.64,219.17,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20004,41,59.73,2455.35,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20005,5,58.84,302.25,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20006,64,53.76, ,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20007,41,36.8,1492.35,Month-to-month,Credit card,102,USD,ACTIVE,1
+CUST-20008,61,89.33,5434.97,Two year,Credit card,103,USD,ACTIVE,1
+CUST-20009,65,116.2,7562.48,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20010,6,106.86,650.37,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20011,13,62.98,810.43,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20012,41,98.08,4012.97,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20013,50,34.14,1708.11,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20014,9,115.53,1025.08,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20015,30,67.71,2024.13,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20016,60,72.88,4377.82,One year,Credit card,0,USD,ACTIVE,0
+CUST-20017,35,116.79,4084.33,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20018,45,88.91,4006.58,Month-to-month,Electronic check,101,USD,ACTIVE,1
+CUST-20019,20,69.02,1367.52,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20020,11,34.22,384.79,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20021,1,73.39,93.42,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20022,9,25.08,218.66,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20023,63,109.27,6891.01,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20024,37,94.79,3495.01,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20025,29,22.46,642.02,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20026,64,48.49,3110.45,Two year,Credit card,102,USD,ACTIVE,1
+CUST-20027,8,62.51,499.64,One year,Mailed check,0,USD,SUSPENDED,0
+CUST-20028,11,117.54,1286.84,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20029,53,22.25,1180.7,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20030,57,46.01,2609.02,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20031,39,59.41,2316.49,One year,Credit card,0,USD,ACTIVE,0
+CUST-20032,53,101.97,5417.8,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20033,19,119.09,2270.41,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20034,16,79.93,1287.18,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20035,45,74.55,3357.87,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20036,1,30.16,45.86,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20037,13,84.42,1082.02,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20038,18,45.07,801.49,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20039,25,55.47,1395.57,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20040,37,64.61,2408.98,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20041,64,40.24,2582.21,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20042,20,56.44,1121.99,One year,Credit card,0,USD,ACTIVE,0
+CUST-20043,36,104.49,3760.18,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20044,31,30.75,953.98,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20045,11,113.16,1263.79,One year,Credit card,0,USD,ACTIVE,0
+CUST-20046,61,33.12,2037.4,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20047,21,115.03,2428.17,One year,Credit card,0,USD,ACTIVE,0
+CUST-20048,28,75.67,,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20049,9,65.24,568.61,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20050,27,20.63,545.37,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20051,47,46.98,2208.13,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20052,48,75.64,3629.15,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20053,55,52.42,2898.17,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20054,10,77.39,783.15,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20055,46,81.78,3766.11,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20056,3,55.07,170.77,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20057,19,75.98,1443.24,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20058,59,45.53,2685.54,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20059,12,98.04,1171.08,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20060,11,40.4,445.51,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20061,36,69.59,2493.59,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20062,29,53.53,1563.24,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20063,4,49.75,196.35,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20064,48,63.07,3027.78,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20065,15,84.68,,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20066,70,63.72,4447.37,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20067,61,66.4,4048.41,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20068,70,76.78,5373.7,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20069,52,88.23,4585.3,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20070,7,59.89,434.6,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20071,69,67.76,4673.69,One year,Mailed check,102,USD,ACTIVE,1
+CUST-20072,24,51.1,1219.5,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20073,36,44.29,,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20074,68,99.15,6742.99,One year,Mailed check,101,USD,ACTIVE,1
+CUST-20075,58,115.68,6729.49,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20076,47,64.26,,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20077,4,83.21,326.85,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20078,47,50.09,2359.89,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20079,30,77.61,2333.88,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20080,22,20.33, ,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20081,22,76.79,,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20082,24,115.73,2765.4,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20083,21,33.81,711.62,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20084,28,105.23,2949.96,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20085,6,57.79,352.84,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20086,50,45.01,2242.75,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20087,64,59.07,3798.83,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20088,4,23.62, ,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20089,57,40.74,2300.06,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20090,15,94.41,1421.84,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20091,50,101.29,5056.08,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20092,53,104.39,5520.52,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20093,14,79.13,1115.45,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20094,48,98.54,4720.63,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20095,50,34.4,1723.93,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20096,25,61.83,1543.52,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20097,21,35.14,727.97,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20098,65,54.71,3540.15,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20099,53,70.48,3711.61,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20100,61,100.66,6157.38,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20101,48,43.84,2114.85,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20102,30,96.78,2906.46,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20103,61,113.73,6940.8,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20104,54,60.51,,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20105,12,48.77,588.02,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20106,41,118.39,4865.04,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20107,46,22.53,1035.53,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20108,25,74.96,1883.08,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20109,37,70.18,2580.76,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20110,39,52.25,2028.81,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20111,10,101.87,,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20112,53,64.17,3412.04,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20113,68,44.57, ,Month-to-month,Credit card,102,USD,ACTIVE,1
+CUST-20114,44,106.96,4698.1,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20115,2,71.09,137.58,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20116,69,102.99,7099.19,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20117,69,49.16,,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20118,62,62.36,3867.57,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20119,19,105.43,2005.65,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20120,52,52.38,2723.74,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20121,15,107.55,1631.45,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20122,29,41.95,1210.5,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20123,18,70.51,1287.65,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20124,47,111.47,5229.33,One year,Credit card,0,USD,ACTIVE,0
+CUST-20125,53,72.23,3820.79,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20126,17,52.64,896.69,Month-to-month,Mailed check,102,USD,ACTIVE,1
+CUST-20127,71,111.81,7966.75,Month-to-month,Mailed check,101,USD,ACTIVE,1
+CUST-20128,11,109.65,1202.59,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20129,63,30.41,1917.41,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20130,58,52.09,2989.94,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20131,24,100.64,2417.48,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20132,27,39.48,1061.94,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20133,67,64.84,4350.81,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20134,55,47.28,2614.04,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20135,18,105.9,1899.18,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20136,66,101.08,6656.39,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20137,58,107.7,6265.52,Month-to-month,Credit card,101,USD,ACTIVE,1
+CUST-20138,3,48.34,,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20139,51,119.62,6102.71,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20140,67,118.82,7953.59,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20141,7,69.26,482.6,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20142,43,65.0,2785.37,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20143,23,113.07,2602.87,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20144,21,108.85,2284.27,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20145,26,119.6,3121.56,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20146,55,114.26,,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20147,65,43.6,2838.96,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20148,64,106.88,6832.96,One year,Credit card,0,USD,ACTIVE,0
+CUST-20149,39,25.68,997.87,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20150,46,83.78,3848.06,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20151,36,113.83,4118.0,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20152,26,113.67,2963.12,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20153,12,108.81,1312.73,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20154,51,52.53,2689.66,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20155,23,111.73,2567.92,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20156,60,87.87,5264.32,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20157,67,99.56,6668.76,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20158,2,62.14,116.66,Month-to-month,Credit card,103,USD,ACTIVE,1
+CUST-20159,35,29.17,1018.2,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20160,38,52.01,1982.13,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20161,58,62.48,3641.65,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20162,36,101.37,3654.08,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20163,43,64.99,2806.87,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20164,45,69.42,3135.29,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20165,50,114.49,,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20166,32,105.89,3395.02,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20167,4,93.28,354.58,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20168,56,86.33, ,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20169,41,93.72,3836.63,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20170,55,75.47,4168.25,Month-to-month,Mailed check,101,USD,ACTIVE,1
+CUST-20171,18,80.07,1439.25,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20172,69,71.8,4972.2,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20173,18,46.7,821.25,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20174,19,27.84,537.07,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20175,61,116.6,7121.15,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20176,8,62.86,504.6,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20177,68,107.09,7279.79,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20178,35,70.88,2487.68,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20179,21,42.82,916.13,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20180,70,94.33,6599.59,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20181,60,118.54,7110.59,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20182,35,111.22,3895.21,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20183,70,105.21,7360.49,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20184,26,117.02,3052.71,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20185,34,26.25,906.69,Month-to-month,Electronic check,103,USD,ACTIVE,1
+CUST-20186,10,57.35,581.19,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20187,44,66.53,2930.5,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20188,21,106.89,2249.66,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20189,31,65.73,2018.78,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20190,4,97.3,380.42,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20191,47,97.6,4570.47,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20192,30,33.05,1002.89,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20193,48,76.0,3635.6,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20194,28,64.0,1793.89,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20195,26,103.16,,Month-to-month,Mailed check,101,USD,ACTIVE,1
+CUST-20196,58,83.31,4840.71,One year,Credit card,0,USD,ACTIVE,0
+CUST-20197,22,26.77,590.17,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20198,30,76.23,2279.78,One year,Credit card,0,USD,ACTIVE,0
+CUST-20199,7,91.1,,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20200,55,33.3,,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20201,48,84.46,4058.15,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20202,48,76.54,3672.33,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20203,61,84.12,5121.1,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20204,7,78.06,530.04,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20205,54,77.16,4163.1,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20206,45,87.38,3925.19,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20207,40,47.07,1895.23,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20208,33,52.8,1757.19,Month-to-month,Mailed check,101,USD,ACTIVE,1
+CUST-20209,22,77.61,1687.46,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20210,15,34.22,,Month-to-month,Electronic check,101,USD,ACTIVE,1
+CUST-20211,21,98.82,2101.0,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20212,2,75.9,166.25,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20213,71,55.31,3923.07,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20214,26,56.09,1468.4,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20215,46,22.52,1037.67,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20216,33,74.65,2466.02,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20217,32,112.95,3632.26,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20218,42,39.75,1661.13,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20219,23,80.94,1873.06,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20220,47,52.88,2478.32,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20221,25,107.65,2696.45,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20222,42,57.6,2418.18,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20223,37,34.91,1292.36,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20224,32,47.42,1542.77,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20225,17,81.66,1380.99,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20226,23,49.16,1147.33,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20227,4,107.48,422.56,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20228,13,107.19,1393.76,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20229,10,31.34,326.13,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20230,40,76.59,,Month-to-month,Mailed check,103,USD,ACTIVE,1
+CUST-20231,65,86.95,5654.61,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20232,63,31.38,1976.46,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20233,69,28.96,1998.31,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20234,70,108.18,7581.59,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20235,60,85.31,5125.84,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20236,53,99.83,5284.33,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20237,8,37.49,307.64,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20238,41,26.7,1098.62,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20239,15,54.89,831.76,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20240,50,48.78,2445.6,One year,Credit card,0,USD,ACTIVE,0
+CUST-20241,26,114.15,2974.2,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20242,58,76.97,4459.31,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20243,41,100.06,4095.07,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20244,18,62.02,1123.79,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20245,33,20.46,677.62,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20246,28,21.52, ,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20247,48,35.51,1714.48,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20248,14,109.04,1542.68,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20249,71,30.16,2138.73,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20250,16,48.84,779.06,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20251,19,113.3,2153.74,One year,Credit card,0,USD,ACTIVE,0
+CUST-20252,49,58.68,2867.29,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20253,66,77.84,5145.04,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20254,35,62.01,2192.61,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20255,6,57.47,353.12,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20256,47,107.22,5053.03,Month-to-month,Credit card,101,USD,ACTIVE,1
+CUST-20257,28,110.53,3089.38,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20258,27,51.33,1395.38,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20259,21,70.18,1477.27,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20260,18,116.29,2078.72,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20261,60,96.89,5812.42,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20262,65,88.16,5723.27,One year,Credit card,0,USD,ACTIVE,0
+CUST-20263,45,41.84,1898.2,Month-to-month,Credit card,101,USD,ACTIVE,1
+CUST-20264,5,44.54,199.86,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20265,52,79.3,4117.86,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20266,50,92.08,4605.95,One year,Credit card,0,USD,ACTIVE,0
+CUST-20267,38,80.0,3031.18,One year,Credit card,0,USD,ACTIVE,0
+CUST-20268,54,71.27,3862.04,One year,Credit card,0,USD,ACTIVE,0
+CUST-20269,6,85.47,524.64,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20270,38,54.39,2071.61,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20271,57,116.22,6619.81,Month-to-month,Mailed check,102,USD,ACTIVE,1
+CUST-20272,36,76.7,2751.79,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20273,16,91.55,1468.69,One year,Credit card,0,USD,ACTIVE,0
+CUST-20274,41,92.42,3794.56,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20275,43,45.11,1943.4,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20276,38,99.04,3762.58,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20277,47,40.18,1893.13,One year,Mailed check,0,USD,SUSPENDED,0
+CUST-20278,37,67.06,2477.38,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20279,44,36.97,1631.0,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20280,28,66.56,1867.44,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20281,67,77.03,5159.56,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20282,58,104.3,6040.29,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20283,4,76.98,302.39,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20284,56,105.97,5939.13,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20285,71,62.26,4425.82,One year,Credit card,0,USD,ACTIVE,0
+CUST-20286,42,35.99,,One year,Credit card,0,USD,ACTIVE,0
+CUST-20287,68,96.35,6550.83,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20288,68,80.59,5472.71,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20289,70,29.01,2018.57,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20290,21,61.36,1289.93,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20291,16,57.93,950.53,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20292,58,36.33,2099.8,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20293,10,75.46,757.53,Month-to-month,Mailed check,101,USD,SUSPENDED,1
+CUST-20294,70,36.73,2563.54,One year,Credit card,0,USD,ACTIVE,0
+CUST-20295,52,63.13,3295.3,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20296,55,86.1,4734.85,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20297,46,92.35,4267.95,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20298,39,88.31,3446.95,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20299,16,113.37,1811.7,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20300,43,39.82,,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20301,62,56.09,3457.94,One year,Credit card,0,USD,ACTIVE,0
+CUST-20302,9,35.68,320.46,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20303,4,115.71,471.4,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20304,42,74.08,3106.92,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20305,25,84.05,2102.82,One year,Credit card,0,USD,ACTIVE,0
+CUST-20306,29,56.06,1617.93,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20307,44,20.82,915.52,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20308,49,25.33,1235.13,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20309,70,114.33,8013.31,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20310,43,114.41,4910.34,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20311,67,53.87,3607.79,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20312,67,90.8,6116.01,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20313,15,85.21,1281.68,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20314,54,78.58,4243.07,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20315,47,89.5,4200.15,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20316,15,74.16,1109.91,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20317,28,28.08,784.76,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20318,69,62.67,4338.4,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20319,22,116.2,2569.53,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20320,39,28.77,1138.22,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20321,43,20.46,865.96,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20322,31,65.47,2027.68,Month-to-month,Credit card,102,USD,ACTIVE,1
+CUST-20323,57,70.13,3980.4,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20324,66,67.69,4497.33,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20325,38,94.34,3589.58,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20326,67,79.12,5291.97,One year,Credit card,0,USD,ACTIVE,0
+CUST-20327,17,86.57,1466.35,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20328,61,86.45,5284.82,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20329,26,73.32,1867.12,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20330,31,76.25,2352.24,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20331,42,68.44,2866.21,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20332,46,49.08,2237.77,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20333,27,71.09,1927.39,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20334,66,77.46,5103.22,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20335,61,26.72,1626.44,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20336,71,68.37,4862.92,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20337,34,48.55,1653.26,Two year,Mailed check,103,USD,ACTIVE,1
+CUST-20338,60,99.62,5988.6,Month-to-month,Bank transfer,102,USD,ACTIVE,1
+CUST-20339,29,114.49,3340.99,Month-to-month,Electronic check,102,USD,ACTIVE,1
+CUST-20340,17,107.75,1834.65,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20341,50,118.72,5936.75,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20342,42,35.03,1485.08,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20343,12,47.41,543.73,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20344,16,37.75,597.04,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20345,20,47.29,946.99,Month-to-month,Electronic check,102,USD,ACTIVE,1
+CUST-20346,70,109.48,7645.3,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20347,2,98.19,201.36,One year,Bank transfer,102,USD,ACTIVE,1
+CUST-20348,64,38.78,,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20349,29,119.07,3448.43,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20350,71,91.27,6467.28,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20351,6,25.07,148.44,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20352,4,109.57,437.72,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20353,13,91.46,1175.97,Month-to-month,Credit card,102,USD,ACTIVE,1
+CUST-20354,63,90.33,5670.13,Month-to-month,Electronic check,103,USD,ACTIVE,1
+CUST-20355,27,72.47,1944.9,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20356,62,60.57,3734.06,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20357,65,85.46,5548.78,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20358,4,49.93,204.56,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20359,60,49.34,2971.27,Two year,Credit card,0,USD,SUSPENDED,0
+CUST-20360,39,45.97,,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20361,30,101.09,3026.38,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20362,32,52.61,1670.57,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20363,58,92.31,5353.88,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20364,10,59.22,570.03,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20365,63,61.05,3837.45,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20366,32,64.21,2061.75,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20367,14,46.87,642.8,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20368,36,75.05,2690.93,One year,Credit card,0,USD,ACTIVE,0
+CUST-20369,48,84.37,4043.21,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20370,3,29.91,84.97,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20371,18,26.32,500.04,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20372,51,110.25,5616.84,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20373,23,32.43,747.87,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20374,31,26.87,,Month-to-month,Credit card,102,USD,ACTIVE,1
+CUST-20375,37,77.7,2871.19,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20376,23,116.97,2686.24,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20377,52,45.81,2389.79,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20378,39,31.75,,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20379,29,53.59,1551.48,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20380,5,90.96,468.7,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20381,1,27.34,30.62,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20382,13,48.73,628.41,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20383,3,108.06,331.01,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20384,8,64.88,527.88,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20385,45,114.61,5148.13,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20386,55,104.5,5748.16,Month-to-month,Electronic check,103,USD,ACTIVE,1
+CUST-20387,50,39.68,1983.0,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20388,4,77.56,336.11,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20389,33,23.83,794.02,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20390,44,107.96,4746.34,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20391,8,69.27,558.37,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20392,43,117.2,5060.14,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20393,67,59.44,3970.51,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20394,10,61.8,626.72,One year,Credit card,0,USD,ACTIVE,0
+CUST-20395,6,32.94,208.0,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20396,27,84.85,2287.21,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20397,67,84.26,5656.43,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20398,23,44.38,1017.58,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20399,48,102.48,4923.03,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20400,28,44.32,1249.29,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20401,47,44.93,2107.89,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20402,15,94.82,1421.34,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20403,53,32.74,1744.44,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20404,55,42.33,2324.36,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20405,4,50.68,186.42,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20406,37,20.12,731.75,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20407,64,20.94,1355.06,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20408,42,53.87,2263.22,One year,Credit card,0,USD,ACTIVE,0
+CUST-20409,19,43.72,839.15,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20410,38,64.35,2441.53,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20411,46,62.23,2841.18,One year,Credit card,0,USD,ACTIVE,0
+CUST-20412,48,57.39,2748.71,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20413,67,33.96,2263.25,Month-to-month,Bank transfer,102,USD,ACTIVE,1
+CUST-20414,21,79.61,,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20415,10,89.98,909.89,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20416,41,28.85,1181.93,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20417,14,103.81,1437.86,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20418,17,29.14,490.72,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20419,39,36.44,1423.11,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20420,61,24.58,1499.87,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20421,54,45.11,2430.85,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20422,49,44.11,2159.12,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20423,42,73.49,3096.76,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20424,56,102.78,5758.91,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20425,71,43.37,3067.44,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20426,58,62.52,3613.26,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20427,68,74.09,5043.36,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20428,9,66.03,602.64,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20429,48,100.86,4853.85,One year,Credit card,0,USD,ACTIVE,0
+CUST-20430,71,20.17,1435.56,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20431,40,43.23,1733.74,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20432,54,50.2,2713.86,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20433,6,101.65,607.04,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20434,41,35.37,1438.19,One year,Credit card,0,USD,ACTIVE,0
+CUST-20435,59,68.31,4038.7,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20436,13,97.36,1261.12,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20437,71,71.58,5093.77,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20438,6,84.59,504.01,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20439,9,93.1,827.38,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20440,61,57.93,3537.74,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20441,59,29.93,1764.71,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20442,46,92.5,4244.09,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20443,45,31.6,1404.07,One year,Credit card,0,USD,ACTIVE,0
+CUST-20444,63,48.75,3075.75,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20445,40,87.67,3501.3,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20446,39,102.45,3999.24,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20447,55,51.28,2823.24,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20448,17,101.73,1735.58,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20449,38,26.98,1023.9,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20450,59,51.14,3020.05,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20451,41,87.18,3567.01,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20452,23,103.93,2404.91,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20453,43,67.84,2913.0,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20454,39,60.55,2373.82,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20455,46,101.68,4679.3,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20456,17,27.98,483.59,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20457,53,104.96,5579.16,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20458,18,81.69,1463.68,Month-to-month,Electronic check,102,USD,ACTIVE,1
+CUST-20459,23,104.13,2405.05,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20460,16,89.58, ,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20461,19,23.56,452.17,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20462,38,86.89,3299.97,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20463,49,60.41,2963.22,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20464,3,56.72,158.53,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20465,3,24.12,79.06,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20466,32,62.46,1990.58,Month-to-month,Electronic check,102,USD,ACTIVE,1
+CUST-20467,51,46.04,2352.79,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20468,71,30.25,2148.94,Two year,Credit card,103,USD,ACTIVE,1
+CUST-20469,41,109.6,4491.8,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20470,61,51.53,3152.92,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20471,63,62.57,3954.69,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20472,70,34.15,2406.59,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20473,35,91.79,3185.8,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20474,59,57.85,3425.37,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20475,5,107.53,539.75,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20476,71,71.76,5094.97,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20477,21,106.26,2251.6,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20478,19,34.3,668.31,Month-to-month,Bank transfer,101,USD,ACTIVE,1
+CUST-20479,67,36.35,2452.8,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20480,24,50.12,1199.21,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20481,46,36.14,1672.64,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20482,65,95.13,6164.59,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20483,7,95.43,659.68,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20484,40,42.21,1685.12,Month-to-month,Mailed check,103,USD,ACTIVE,1
+CUST-20485,30,28.82,863.16,One year,Credit card,0,USD,ACTIVE,0
+CUST-20486,61,59.96,3648.42,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20487,34,42.35,1457.01,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20488,19,42.18,801.84,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20489,60,58.82,3519.0,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20490,65,64.19,4161.07,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20491,60,104.16,6252.23,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20492,66,112.29,7408.72,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20493,11,63.24,701.59,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20494,67,91.43,6121.06,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20495,39,41.07,1608.32,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20496,8,66.85,547.3,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20497,66,57.64,3797.18,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20498,51,76.5,3909.91,One year,Credit card,0,USD,ACTIVE,0
+CUST-20499,54,59.41,3211.74,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20500,5,44.25,225.93,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20501,40,99.73,3977.54,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20502,2,28.31,68.4,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20503,6,70.26,434.44,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20504,68,112.28,7619.78,One year,Credit card,0,USD,ACTIVE,0
+CUST-20505,51,38.12,1952.05,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20506,60,106.41,6427.21,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20507,3,89.42,268.7,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20508,15,93.43,,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20509,13,32.9,429.81,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20510,69,26.66,1824.37,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20511,14,44.75,638.17,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20512,19,55.47,1063.03,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20513,5,32.16,160.14,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20514,23,111.02,2551.37,One year,Credit card,0,USD,ACTIVE,0
+CUST-20515,41,81.77,3334.19,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20516,8,119.85,975.37,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20517,3,111.59,356.71,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20518,20,62.78,,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20519,69,25.87,1789.43,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20520,17,105.32,1769.88,Month-to-month,Credit card,101,USD,ACTIVE,1
+CUST-20521,2,90.7,177.59,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20522,3,66.49,204.98,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20523,66,100.15,6603.79,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20524,25,52.97,1318.32,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20525,18,117.95,2116.66,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20526,22,63.61,1400.6,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20527,45,85.54,3871.01,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20528,37,89.29,3313.91,Month-to-month,Credit card,101,USD,ACTIVE,1
+CUST-20529,39,80.21,3123.98,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20530,33,68.86,2278.15,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20531,6,90.86,563.31,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20532,20,52.41,1045.58,Month-to-month,Mailed check,102,USD,ACTIVE,1
+CUST-20533,34,57.87,1965.03,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20534,42,49.84,2103.02,Month-to-month,Bank transfer,101,USD,ACTIVE,1
+CUST-20535,22,65.35,1438.0,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20536,21,52.67,1112.13,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20537,55,62.54,3440.49,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20538,63,104.0,6550.27,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20539,5,80.38,432.42,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20540,53,114.55,6062.73,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20541,56,31.2,1743.68,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20542,12,98.91,1193.21,Month-to-month,Electronic check,101,USD,ACTIVE,1
+CUST-20543,47,66.98,3156.84,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20544,40,108.87,4354.25,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20545,35,49.74,1738.17,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20546,55,79.63,4380.14,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20547,50,31.86,1589.98,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20548,12,86.44,1042.91,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20549,63,107.44,6756.3,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20550,12,76.03,909.31,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20551,26,107.04,2787.78,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20552,33,113.27,3744.39,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20553,41,93.9,3849.64,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20554,28,80.36,2258.01,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20555,31,101.2,3113.66,One year,Credit card,0,USD,ACTIVE,0
+CUST-20556,60,89.49,5369.28,One year,Bank transfer,101,USD,ACTIVE,1
+CUST-20557,18,112.32,2014.19,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20558,70,102.29,7166.53,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20559,5,28.34,146.88,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20560,6,62.09,390.05,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20561,50,74.05,3694.07,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20562,30,105.33,3141.99,One year,Credit card,0,USD,ACTIVE,0
+CUST-20563,42,20.17,,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20564,39,74.63,2910.96,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20565,23,24.84,567.82,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20566,46,41.29,1907.22,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20567,11,72.88,,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20568,66,73.27,4829.8,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20569,65,96.51,6273.69,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20570,21,96.35,2022.84,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20571,3,60.05,181.59,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20572,21,50.81,1074.63,One year,Credit card,0,USD,ACTIVE,0
+CUST-20573,54,82.6,4461.06,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20574,39,65.41,2543.52,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20575,50,58.4,2913.17,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20576,27,93.91,2539.79,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20577,22,94.93,2101.99,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20578,39,107.45,4188.76,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20579,53,85.7,4560.42,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20580,20,42.04,836.79,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20581,6,23.05,134.26,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20582,71,29.63,2104.06,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20583,28,35.83,1026.34,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20584,7,117.19,813.96,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20585,24,105.37,2520.26,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20586,62,103.9,6452.48,One year,Credit card,0,USD,ACTIVE,0
+CUST-20587,55,64.76,3567.89,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20588,57,45.7,2594.96,Month-to-month,Bank transfer,103,USD,ACTIVE,1
+CUST-20589,65,93.3,6069.12,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20590,42,112.68,4742.16,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20591,62,44.21,2741.51,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20592,57,103.51,5905.74,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20593,3,112.68,340.59,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20594,20,45.58,909.69,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20595,6,92.39,547.69,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20596,45,115.58,5204.54,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20597,16,64.92,1040.02,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20598,71,103.58,7347.46,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20599,13,52.72,690.85,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20600,14,46.89,651.61,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20601,22,102.07,2248.24,One year,Credit card,0,USD,ACTIVE,0
+CUST-20602,47,119.25,,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20603,29,65.75,1897.13,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20604,21,32.47,679.87,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20605,71,69.33,4925.64,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20606,15,87.9,1314.82,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20607,57,62.29,3557.59,One year,Credit card,0,USD,ACTIVE,0
+CUST-20608,20,104.84,2089.5,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20609,60,42.56,2536.94,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20610,34,52.59,1777.13,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20611,34,65.47,2220.94,Month-to-month,Electronic check,102,USD,ACTIVE,1
+CUST-20612,12,64.63,789.54,One year,Credit card,0,USD,ACTIVE,0
+CUST-20613,45,83.25,3751.21,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20614,44,28.87,1252.95,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20615,4,74.32,285.07,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20616,40,91.79,3672.47,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20617,4,117.62,,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20618,59,23.9,1400.37,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20619,52,106.19,5525.28,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20620,33,25.29,828.58,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20621,47,30.97,1455.76,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20622,9,58.24,523.12,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20623,10,23.84,254.97,Month-to-month,Mailed check,103,USD,ACTIVE,1
+CUST-20624,14,101.31,1411.04,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20625,64,37.95,2424.0,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20626,60,65.33,3932.7,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20627,6,92.88,554.08,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20628,34,43.11,1474.67,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20629,48,23.12,1098.13,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20630,30,55.8,1663.05,One year,Credit card,0,USD,ACTIVE,0
+CUST-20631,63,97.3,6134.01,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20632,26,33.93,882.48,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20633,44,94.85,4160.09,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20634,47,29.06,,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20635,69,41.41,2871.33,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20636,56,83.81,4700.79,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20637,70,95.77,6712.9,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20638,42,46.25,1935.02,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20639,42,109.62,4607.58,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20640,15,93.87,1415.12,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20641,48,93.26,4469.26,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20642,4,97.63,395.3,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20643,65,116.12,7535.95,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20644,24,26.8,645.93,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20645,43,85.65,3678.83,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20646,11,119.07,1329.56,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20647,66,56.89,3750.46,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20648,9,40.17,361.63,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20649,15,75.5,1123.61,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20650,29,94.66,2758.89,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20651,18,25.27,441.2,One year,Electronic check,102,USD,ACTIVE,1
+CUST-20652,63,57.4,3611.04,One year,Electronic check,102,USD,ACTIVE,1
+CUST-20653,28,76.89,2134.91,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20654,34,52.81,,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20655,15,92.87,1400.01,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20656,22,29.56,655.14,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20657,26,109.65,2859.42,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20658,65,45.8,2985.17,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20659,7,34.69,246.69,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20660,44,106.97,4708.1,Month-to-month,Electronic check,102,USD,ACTIVE,1
+CUST-20661,41,35.68,1437.86,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20662,69,117.53,8109.56,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20663,46,103.48,4752.5,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20664,25,45.52,1143.53,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20665,51,103.73,5296.66,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20666,37,93.55,3457.36,Month-to-month,Bank transfer,103,USD,ACTIVE,1
+CUST-20667,63,88.83,5588.3,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20668,53,99.28,5272.49,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20669,10,113.28,1132.1,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20670,31,27.45,843.57,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20671,71,22.51,1607.78,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20672,59,48.23,2850.32,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20673,58,91.81,5338.32,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20674,61,58.07,3537.4,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20675,65,97.71,6355.31,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20676,32,67.13,2153.1,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20677,23,84.57,1951.94,One year,Credit card,0,USD,ACTIVE,0
+CUST-20678,4,74.63,278.77,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20679,53,60.07,3171.92,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20680,10,34.22,352.09,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20681,61,62.75,3842.33,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20682,43,86.23,3707.55,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20683,2,60.18,120.33,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20684,16,27.46,453.24,One year,Credit card,0,USD,ACTIVE,0
+CUST-20685,39,47.89,1867.38,One year,Mailed check,103,USD,ACTIVE,1
+CUST-20686,66,113.56,7499.6,One year,Credit card,0,USD,ACTIVE,0
+CUST-20687,11,86.99,946.46,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20688,64,77.3,4937.84,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20689,12,36.12,425.57,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20690,68,68.83,4687.23,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20691,17,26.58,456.41,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20692,31,24.0,763.39,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20693,63,25.43,1600.6,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20694,63,73.44,4619.55,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20695,43,70.1,3018.11,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20696,11,73.68,821.62,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20697,49,71.61,3487.45,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20698,34,106.77,3644.84,Month-to-month,Mailed check,103,USD,ACTIVE,1
+CUST-20699,53,59.76,3160.19,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20700,25,96.85,2416.67,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20701,20,74.34,,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20702,24,63.88,1528.78,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20703,59,60.79,3580.72,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20704,49,78.94,3858.32,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20705,64,52.58,3376.85,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20706,59,85.13,5024.29,Month-to-month,Electronic check,102,USD,ACTIVE,1
+CUST-20707,29,32.04,931.99,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20708,48,40.4,1939.82,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20709,41,107.42,4392.85,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20710,64,61.26,3933.45,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20711,47,108.78,5113.58,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20712,23,51.31,1179.19,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20713,7,99.21,685.32,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20714,11,118.86,1311.95,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20715,62,114.32,7092.72,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20716,16,104.33,1652.2,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20717,32,94.73,3043.25,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20718,24,72.61,1750.72,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20719,17,43.13,744.54,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20720,27,31.34,849.59,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20721,16,54.02,853.57,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20722,43,73.02,3140.95,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20723,66,78.34,5176.83,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20724,22,83.05,1828.35,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20725,35,77.86,2729.52,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20726,27,44.87,,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20727,30,102.31,3068.13,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20728,64,57.35,3685.41,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20729,31,89.14,2784.71,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20730,43,79.51,3413.61,Month-to-month,Mailed check,101,USD,ACTIVE,1
+CUST-20731,14,37.9,,One year,Credit card,0,USD,ACTIVE,0
+CUST-20732,28,42.33,1211.75,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20733,1,97.9,99.65,One year,Credit card,0,USD,ACTIVE,0
+CUST-20734,69,34.09,2348.22,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20735,53,48.57,2557.22,One year,Credit card,0,USD,ACTIVE,0
+CUST-20736,24,20.77,523.36,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20737,15,43.92,660.3,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20738,26,68.09,1778.15,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20739,19,117.29,2239.49,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20740,17,115.52,1966.28,One year,Credit card,0,USD,ACTIVE,0
+CUST-20741,63,28.26,1785.4,Month-to-month,Electronic check,102,USD,ACTIVE,1
+CUST-20742,26,59.77,1565.77,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20743,39,23.38,908.32,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20744,66,66.73,4405.45,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20745,48,107.33,5176.81,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20746,51,25.48,1296.5,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20747,64,51.05,3257.52,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20748,15,78.55,,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20749,64,93.91,6022.49,Month-to-month,Mailed check,103,USD,ACTIVE,1
+CUST-20750,15,78.62,,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20751,54,102.62,5548.94,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20752,69,63.37,4361.45,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20753,8,44.58,361.45,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20754,67,97.21,6506.73,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20755,62,112.03,6931.05,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20756,3,103.56,308.86,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20757,16,74.73,1186.77,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20758,48,72.95,3492.94,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20759,18,59.73,1078.47,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20760,9,51.74,472.33,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20761,53,90.83,4815.47,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20762,16,72.21,1177.65,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20763,18,68.94,1240.08,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20764,35,25.95,898.19,One year,Credit card,0,USD,ACTIVE,0
+CUST-20765,25,68.4,1692.72,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20766,24,108.56,,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20767,47,75.24,,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20768,56,94.02,5269.23,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20769,26,57.16,1475.33,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20770,65,68.18,4430.8,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20771,57,44.94,2551.67,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20772,19,98.91,,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20773,33,70.7,2336.65,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20774,32,20.23,659.04,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20775,13,86.31,1117.65,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20776,17,119.28,2025.84,Month-to-month,Credit card,101,USD,ACTIVE,1
+CUST-20777,51,85.61,4366.39,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20778,37,38.13,,Month-to-month,Electronic check,103,USD,ACTIVE,1
+CUST-20779,61,31.99,1939.9,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20780,8,116.24,924.54,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20781,35,94.34,3279.55,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20782,5,58.94,281.87,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20783,38,68.52,2596.42,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20784,43,82.93,3567.31,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20785,12,67.05,781.76,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20786,32,112.02,3575.54,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20787,67,61.39,4102.69,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20788,14,23.81,359.77,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20789,57,92.18,,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20790,67,99.17,6649.02,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20791,17,31.89,552.13,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20792,64,30.64,,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20793,44,56.94,2515.36,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20794,47,34.06,1603.88,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20795,51,89.98,4590.69,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20796,38,89.72,3416.69,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20797,51,98.67,,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20798,54,44.32,2374.53,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20799,7,43.15,301.45,Month-to-month,Electronic check,101,USD,ACTIVE,1
+CUST-20800,2,86.86,202.56,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20801,17,89.2,1529.86,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20802,36,49.53,1786.09,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20803,22,26.68,,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20804,34,108.15,3670.65,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20805,68,34.72,2380.53,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20806,45,99.63,4488.12,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20807,63,63.44, ,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20808,37,90.46,3354.81,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20809,44,104.27,4583.25,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20810,12,46.67,552.47,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20811,13,49.9,644.26,One year,Credit card,0,USD,ACTIVE,0
+CUST-20812,7,87.41,,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20813,65,79.8,5170.87,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20814,16,67.92,1093.85,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20815,19,66.47,1263.31,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20816,7,54.12,357.9,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20817,30,111.59,,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20818,12,90.77,1095.07,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20819,49,41.04,2025.7,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20820,25,84.73,2144.24,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20821,51,48.33,2463.29,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20822,54,93.22,5036.23,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20823,38,63.86,2415.24,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20824,48,108.21,5176.06,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20825,70,61.96,4338.93,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20826,58,21.64,1248.53,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20827,43,40.49,1743.08,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20828,65,36.13,2352.4,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20829,23,54.27,,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20830,49,74.61,3666.67,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20831,19,24.56,473.04,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20832,43,81.94,3540.87,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20833,56,53.44,3001.19,One year,Credit card,0,USD,ACTIVE,0
+CUST-20834,66,29.38,1932.02,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20835,39,40.83,1587.1,Month-to-month,Mailed check,103,USD,ACTIVE,1
+CUST-20836,30,57.21,1715.64,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20837,39,69.84,2711.97,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20838,35,57.35,,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20839,26,53.53,1393.31,Month-to-month,Credit card,102,USD,ACTIVE,1
+CUST-20840,21,23.71,518.52,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20841,13,101.52,1314.8,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20842,16,76.05,1212.09,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20843,63,34.22,2173.03,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20844,22,112.56,2484.9,Month-to-month,Electronic check,102,USD,ACTIVE,1
+CUST-20845,38,48.62,1835.49,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20846,39,97.89,3809.4,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20847,18,49.16,890.79,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20848,29,41.6,1201.95,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20849,70,45.65,3194.02,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20850,13,36.68,472.91,Month-to-month,Mailed check,101,USD,ACTIVE,1
+CUST-20851,65,85.19,,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20852,38,106.28,4025.87,Month-to-month,Credit card,101,USD,ACTIVE,1
+CUST-20853,66,118.47,7806.57,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20854,44,89.53,3938.12,One year,Credit card,0,USD,ACTIVE,0
+CUST-20855,69,81.84,5651.62,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20856,6,48.01,284.11,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20857,8,94.79,742.03,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20858,55,102.16,5616.29,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20859,25,41.49,1027.85,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20860,47,100.44,4732.9,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20861,38,65.5,2499.82,Month-to-month,Bank transfer,101,USD,ACTIVE,1
+CUST-20862,16,84.01,,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20863,54,87.3,4710.84,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20864,18,110.53,1999.14,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20865,16,20.42,338.47,Two year,Electronic check,103,USD,ACTIVE,1
+CUST-20866,16,59.96,950.72,Month-to-month,Electronic check,101,USD,ACTIVE,1
+CUST-20867,43,89.48,3862.51,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20868,7,98.53,699.72,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20869,13,39.52,534.78,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20870,29,115.63,3363.07,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20871,24,110.32,2631.13,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20872,9,61.93,558.63,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20873,11,86.13,950.74,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20874,42,112.32,4721.71,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20875,56,50.98,2862.66,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20876,67,55.01,3683.15,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20877,66,69.33,,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20878,11,42.13,461.1,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20879,28,35.99,987.91,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20880,57,34.82,1981.8,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20881,71,56.97,4033.95,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20882,71,54.47,3872.91,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20883,12,68.2,840.11,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20884,14,50.6,709.37,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20885,37,37.94,,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20886,13,113.01,1468.35,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20887,48,66.54,,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20888,61,97.44,5942.83,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20889,38,37.18,1412.68,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20890,7,40.05,289.98,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20891,4,63.12,251.93,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20892,40,114.92,4593.92,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20893,53,85.42,4517.67,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20894,10,68.46,680.53,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20895,64,99.67,6381.64,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20896,49,104.15,5114.76,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20897,59,79.41,4687.29,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20898,25,43.32,1087.19,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20899,11,73.06,805.89,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20900,1,99.18,84.53,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20901,12,43.57,520.13,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20902,37,116.39,4313.34,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20903,47,61.79,2910.11,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20904,1,52.67,,One year,Credit card,0,USD,ACTIVE,0
+CUST-20905,55,118.82,6532.34,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20906,62,78.2,4857.6,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20907,1,104.76,100.37,Month-to-month,Credit card,101,USD,ACTIVE,1
+CUST-20908,16,23.42,392.77,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20909,47,40.96,1925.8,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20910,39,42.09,1651.74,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20911,16,110.82,1766.89,One year,Mailed check,103,USD,ACTIVE,1
+CUST-20912,22,22.79,500.23,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20913,51,116.02,5922.74,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20914,47,52.84,2482.99,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20915,31,115.78,3583.31,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20916,70,33.62,2374.89,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20917,66,24.16,1599.31,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20918,48,54.04,2600.98,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20919,9,113.02,,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20920,66,52.04,3432.37,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20921,64,70.4, ,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20922,43,108.37,4656.33,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20923,32,33.25,1057.4,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20924,42,111.86,4708.35,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20925,61,41.36,2520.29,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20926,15,104.48,1584.1,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20927,48,26.53,1277.57,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20928,25,28.68,714.92,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20929,62,65.01, ,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20930,34,54.22,1822.02,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20931,26,28.46,747.92,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20932,24,107.74,2565.45,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20933,49,59.76,2933.13,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20934,25,27.77,694.37,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20935,66,29.4,1940.33,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20936,36,51.99,1879.19,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20937,58,114.31,6637.25,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20938,17,58.02,980.6,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20939,4,64.74,270.96,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20940,58,90.89,5267.92,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20941,22,70.29,1548.49,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20942,62,86.64,5375.71,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20943,62,50.42,3134.82,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20944,41,34.78,1433.3,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20945,55,47.87,2641.83,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20946,19,112.24,2137.29,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20947,49,111.25,5438.55,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20948,64,80.92,,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20949,39,92.13,3602.08,One year,Credit card,0,USD,ACTIVE,0
+CUST-20950,68,35.26,2377.0,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20951,17,115.24,1954.04,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20952,18,95.64,1710.01,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20953,39,34.4,1355.55,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20954,50,93.67,4690.44,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20955,61,49.44,3011.95,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20956,22,110.62,2449.86,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20957,16,117.98,1887.42,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20958,9,59.71,552.3,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20959,57,90.92,5180.39,Month-to-month,Bank transfer,102,USD,ACTIVE,1
+CUST-20960,70,64.63,4522.65,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20961,27,98.37,2650.78,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20962,64,108.2,6939.71,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20963,12,79.03,955.49,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20964,19,20.83,396.31,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20965,2,100.33,203.51,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20966,24,41.13,993.89,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20967,53,78.67,4173.41,Month-to-month,Bank transfer,103,USD,ACTIVE,1
+CUST-20968,17,31.55,568.35,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20969,32,43.13,,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20970,8,109.68,886.71,One year,Credit card,0,USD,ACTIVE,0
+CUST-20971,65,86.73,5635.09,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20972,42,77.42,,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20973,24,81.32,1950.58,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20974,65,109.51,7103.66,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20975,34,117.9,4011.92,Month-to-month,Bank transfer,101,USD,ACTIVE,1
+CUST-20976,38,79.37,3013.35,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20977,16,22.15,345.89,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20978,42,64.41,2706.65,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20979,54,104.29,5637.73,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20980,4,66.39,271.32,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20981,24,53.08,1283.05,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20982,36,82.96,2967.83,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20983,54,25.21,1357.81,One year,Credit card,0,USD,ACTIVE,0
+CUST-20984,32,42.65,1362.2,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20985,9,48.51,433.91,Month-to-month,Bank transfer,101,USD,ACTIVE,1
+CUST-20986,50,39.11,1964.02,Month-to-month,Electronic check,103,USD,ACTIVE,1
+CUST-20987,63,56.11,3515.03,Two year,Mailed check,0,USD,ACTIVE,0
+CUST-20988,5,80.33,400.7,Month-to-month,Mailed check,102,USD,ACTIVE,1
+CUST-20989,36,92.42,3323.31,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20990,13,68.26,910.03,One year,Mailed check,0,USD,ACTIVE,0
+CUST-20991,48,47.73,2281.33,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20992,11,25.22,,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20993,37,31.89,1192.56,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20994,63,86.09,5408.37,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20995,34,97.87,3346.65,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20996,55,20.2,1118.54,Month-to-month,Electronic check,0,USD,ACTIVE,0
+CUST-20997,25,76.3,1906.92,One year,Credit card,0,USD,ACTIVE,0
+CUST-20998,69,64.0,4429.73,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20999,16,119.02,1905.72,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20010,6,106.86,650.37,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20011,13,62.98,810.43,Two year,Bank transfer,0,USD,ACTIVE,0
+CUST-20012,41,98.08,4012.97,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20013,50,34.14,1708.11,Month-to-month,Credit card,0,USD,ACTIVE,0
+CUST-20014,9,115.53,1025.08,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20015,30,67.71,2024.13,Two year,Credit card,0,USD,ACTIVE,0
+CUST-20016,60,72.88,4377.82,One year,Credit card,0,USD,ACTIVE,0
+CUST-20017,35,116.79,4084.33,Month-to-month,Bank transfer,0,USD,ACTIVE,0
+CUST-20018,45,88.91,4006.58,Month-to-month,Electronic check,101,USD,ACTIVE,1
+CUST-20019,20,69.02,1367.52,Two year,Electronic check,0,USD,ACTIVE,0
+CUST-20020,11,34.22,384.79,One year,Electronic check,0,USD,ACTIVE,0
+CUST-20021,1,73.39,93.42,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20022,9,25.08,218.66,Month-to-month,Mailed check,0,USD,ACTIVE,0
+CUST-20023,63,109.27,6891.01,One year,Bank transfer,0,USD,ACTIVE,0
+CUST-20024,37,94.79,3495.01,Month-to-month,Mailed check,0,USD,ACTIVE,0
