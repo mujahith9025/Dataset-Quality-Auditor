@@ -133,7 +133,7 @@ class DatasetCleaner:
                     cleaned_df[col] = (
                         cleaned_df[col]
                         .astype(str)
-                        .str.replace(r'[\$,€£¥₹\s%]', '', regex=True)
+                        .str.replace(r'[\$,€£¥₹\s%,]', '', regex=True)
                     )
                     cleaned_df[col] = pd.to_numeric(cleaned_df[col], errors='coerce')
                     self.log.append(f"Cleaned formatted currency/symbols in '{col}' and converted to numeric float64.")

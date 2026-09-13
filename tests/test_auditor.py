@@ -1,7 +1,7 @@
 """
 Comprehensive Test Suite for Dataset Quality Auditor 2.0
 Tests the 9 Audit Checkers, Weighted Scoring, Auto-Remediation, ML Benchmark Uplift,
-Data Drift Detector, Custom Business Rules Engine, and AI Data Doctor.
+Data Drift Detector, Custom Business Rules Engine, AI Data Doctor, and Security Edge Cases.
 """
 
 import os
@@ -141,3 +141,53 @@ def test_data_doctor():
     assert diag.risk_level in ["LOW", "MODERATE", "HIGH", "CRITICAL"]
     assert len(diag.root_cause_vectors) > 0
     assert len(diag.remediation_roadmap) > 0
+
+
+def test_security_xss_and_html_escaping():
+    # Inject XSS payload into dataset name and column name
+    malicious_df = pd.DataFrame({
+        "<script>alert(1)</script>": [1, 2, 3],
+        "safe_col": ["a", "b", "<img src=x onerror=alert('xss')>"]
+    })
+    engine = AuditEngine()
+    report = engine.audit(malicious_df, dataset_name="<script>alert('xss')</script>")
+    
+    html_out = ReportGenerator.generate_html_report(report)
+    assert "<script>alert('xss')</script>" not in html_out
+    assert "&lt;script&gt;alert(&#x27;xss&#x27;)&lt;/script&gt;" in html_out or "&lt;script&gt;" in html_out
+
+
+def test_rules_engine_invalid_regex_safety():
+    df = pd.DataFrame({"email": ["test@example.com", "bad"]})
+    # Malformed regex
+    bad_rule = RuleDefinition(
+        rule_id="bad_reg",
+        rule_type="regex",
+        column="email",
+        description="Bad regex",
+        regex_pattern=r"([a-z+"  # unclosed parenthesis
+    )
+    engine = RulesEngine()
+    res = engine.evaluate_rule(df, bad_rule)
+    assert res.status == "FAILED"
+    assert "Invalid regular expression" in res.message
+
+
+def test_cleaner_comma_and_currency_parsing():
+    df = pd.DataFrame({
+        "revenue": ["$1,250,500.00", "€45,000", "12,000.50", "$99.99"],
+        "target": [1, 0, 1, 0]
+    })
+    cleaner = DatasetCleaner()
+    cleaned_df, stats = cleaner.clean(df, selected_actions=["clean_numeric_string:revenue"])
+    assert pd.api.types.is_numeric_dtype(cleaned_df["revenue"])
+    assert cleaned_df["revenue"].iloc[0] == 1250500.0
+    assert cleaned_df["revenue"].iloc[1] == 45000.0
+
+
+def test_degenerate_and_empty_edge_cases():
+    empty_df = pd.DataFrame()
+    engine = AuditEngine()
+    report = engine.audit(empty_df, dataset_name="Empty Test")
+    assert report.total_rows == 0
+    assert report.overall_score >= 70.0

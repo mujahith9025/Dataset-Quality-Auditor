@@ -91,8 +91,19 @@ class RulesEngine:
 
             elif rule.rule_type == "regex":
                 if rule.regex_pattern:
-                    compiled = re.compile(rule.regex_pattern)
-                    mask_passed = series.astype(str).apply(lambda x: bool(compiled.search(str(x))) if pd.notna(x) else False)
+                    try:
+                        compiled = re.compile(rule.regex_pattern)
+                        mask_passed = series.astype(str).apply(lambda x: bool(compiled.search(str(x))) if pd.notna(x) else False)
+                    except re.error as e:
+                        return RuleExecutionResult(
+                            rule=rule,
+                            status="FAILED",
+                            total_evaluated=len(df),
+                            passed_count=0,
+                            failed_count=len(df),
+                            pass_rate_pct=0.0,
+                            message=f"Invalid regular expression '{rule.regex_pattern}': {e}"
+                        )
 
             elif rule.rule_type == "unique":
                 mask_passed = ~series.duplicated(keep=False)

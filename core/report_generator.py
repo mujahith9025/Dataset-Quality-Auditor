@@ -5,6 +5,7 @@ Generates standalone interactive HTML reports, runnable Python data cleaning pip
 
 from typing import Any, Dict, List, Optional
 import json
+import html
 from models.schemas import AuditReport, SeverityEnum, DimensionEnum
 
 
@@ -28,45 +29,34 @@ class ReportGenerator:
             '',
             'import pandas as pd',
             'import numpy as np',
-            'import re',
-            '',
             '',
             'def clean_dataset(df: pd.DataFrame) -> pd.DataFrame:',
-            '    """Applies recommended quality remediations to dataset."""',
-            '    df = df.copy()',
-            '    print(f"Starting cleaning on dataset with shape: {df.shape}")',
+            '    """Applies verified automated remediation steps."""',
+            '    cleaned = df.copy()',
             ''
         ]
 
-        # Add steps from recommendations
+        # Deduplicate actions
         executed_actions = set()
         for rec in report.recommended_actions:
-            snippet = rec.get("code_snippet")
-            fix_action = rec.get("fix_action")
-            if not snippet or not rec.get("auto_fixable") or fix_action in executed_actions:
-                continue
-
-            executed_actions.add(fix_action)
-            code_lines.append(f"    # --- Step: {rec['title']} ({rec['severity']}) ---")
-            code_lines.append(f"    # {rec['action']}")
-            for line in snippet.strip().splitlines():
-                code_lines.append(f"    {line}")
-            code_lines.append("")
+            if rec.get("auto_fixable") and rec.get("suggested_code_snippet"):
+                snippet = rec["suggested_code_snippet"]
+                if snippet not in executed_actions:
+                    executed_actions.add(snippet)
+                    code_lines.append(f"    # Step: {rec['title']}")
+                    for line in snippet.splitlines():
+                        code_lines.append(f"    {line}")
+                    code_lines.append("")
 
         code_lines.extend([
-            '    print(f"Cleaning complete! Resulting shape: {df.shape}")',
-            '    return df',
-            '',
+            '    return cleaned',
             '',
             'if __name__ == "__main__":',
-            '    import sys',
-            '    input_file = sys.argv[1] if len(sys.argv) > 1 else "input_dataset.csv"',
-            '    output_file = sys.argv[2] if len(sys.argv) > 2 else "cleaned_dataset.csv"',
-            '    print(f"Loading {input_file}...")',
-            '    raw_df = pd.read_csv(input_file)',
-            '    cleaned = clean_dataset(raw_df)',
-            '    cleaned.to_csv(output_file, index=False)',
-            '    print(f"Saved cleaned dataset to {output_file}")',
+            '    # Example usage:',
+            '    # df = pd.read_csv("your_data.csv")',
+            '    # df_cleaned = clean_dataset(df)',
+            '    # df_cleaned.to_csv("cleaned_data.csv", index=False)',
+            '    pass',
             ''
         ])
 
@@ -80,9 +70,9 @@ class ReportGenerator:
         score = report.overall_score
         score_color = "#10B981" if score >= 85 else ("#F59E0B" if score >= 70 else "#EF4444")
         
-        # Build alert cards HTML
+        # Build alert cards HTML (sanitized)
         alerts_html = "".join([
-            f'<div class="alert-item"><span class="alert-icon">⚠</span> <span>{alert}</span></div>'
+            f'<div class="alert-item"><span class="alert-icon">⚠</span> <span>{html.escape(alert)}</span></div>'
             for alert in report.summary_alerts
         ])
 
@@ -93,8 +83,8 @@ class ReportGenerator:
             dimensions_html += f"""
             <div class="dim-card">
                 <div class="dim-header">
-                    <span class="dim-name">{dim_name}</span>
-                    <span class="dim-score" style="color: {dim_color};">{ds.score}/100 ({ds.grade})</span>
+                    <span class="dim-name">{html.escape(dim_name)}</span>
+                    <span class="dim-score" style="color: {dim_color};">{ds.score:.1f}/100 ({ds.grade})</span>
                 </div>
                 <div class="progress-bar-bg">
                     <div class="progress-bar-fill" style="width: {ds.score}%; background: {dim_color};"></div>
@@ -107,16 +97,16 @@ class ReportGenerator:
         recs_html = ""
         for rec in report.recommended_actions:
             sev_badge_class = f"badge-{rec['severity'].lower()}"
-            code_block = f"<pre><code>{rec['code_snippet']}</code></pre>" if rec.get('code_snippet') else ""
+            code_block = f"<pre><code>{html.escape(rec['code_snippet'])}</code></pre>" if rec.get('code_snippet') else ""
             recs_html += f"""
             <div class="rec-card">
                 <div class="rec-header">
                     <span class="rec-step">Step {rec['step']}</span>
-                    <span class="badge {sev_badge_class}">{rec['severity']}</span>
-                    <span class="rec-title">{rec['title']}</span>
+                    <span class="badge {sev_badge_class}">{html.escape(rec['severity'])}</span>
+                    <span class="rec-title">{html.escape(rec['title'])}</span>
                 </div>
                 <div class="rec-body">
-                    <p class="rec-action">{rec['action']}</p>
+                    <p class="rec-action">{html.escape(rec['action'])}</p>
                     {code_block}
                 </div>
             </div>
@@ -130,22 +120,23 @@ class ReportGenerator:
             samples_str = ", ".join(str(s) for s in prof.sample_values[:3])
             col_rows_html += f"""
             <tr>
-                <td><strong>{col_name}</strong> {'<span class="target-tag">TARGET</span>' if prof.is_target else ''}</td>
-                <td><span class="type-tag">{prof.inferred_type}</span></td>
+                <td><strong>{html.escape(col_name)}</strong> {'<span class="target-tag">TARGET</span>' if prof.is_target else ''}</td>
+                <td><span class="type-tag">{html.escape(prof.inferred_type)}</span></td>
                 <td style="color: {miss_color};">{prof.missing_count} ({prof.missing_percentage}%)</td>
                 <td>{prof.unique_count} ({prof.unique_percentage}%)</td>
-                <td class="sample-cell" title="{samples_str}">{samples_str[:40]}...</td>
+                <td class="sample-cell" title="{html.escape(samples_str)}">{html.escape(samples_str[:40])}...</td>
                 <td>{issues_badge}</td>
             </tr>
             """
 
+        escaped_ds_name = html.escape(report.dataset_name)
         # HTML Template
         html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dataset Quality Audit Report - {report.dataset_name}</title>
+    <title>Dataset Quality Audit Report - {escaped_ds_name}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -320,7 +311,7 @@ class ReportGenerator:
         <div class="header">
             <div>
                 <h1 class="title">Dataset Quality Audit Report</h1>
-                <div class="meta-info">Audited Dataset: <strong>{report.dataset_name}</strong> | ID: <code>{report.audit_id}</code> | Date: {report.created_at}</div>
+                <div class="meta-info">Audited Dataset: <strong>{escaped_ds_name}</strong> | ID: <code>{html.escape(report.audit_id)}</code> | Date: {html.escape(report.created_at)}</div>
             </div>
             <button onclick="window.print()" style="background: var(--primary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 0.5rem; cursor: pointer; font-weight: 600;">Print / Save PDF</button>
         </div>

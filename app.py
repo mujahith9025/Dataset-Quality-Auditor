@@ -6,6 +6,7 @@ An easy-to-use tabular data health scanner, auto-remediation tool, and ML benchm
 import os
 import io
 import json
+import html
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -295,17 +296,33 @@ with st.sidebar:
 # ---------------------------------------------------------
 # Helper Functions
 # ---------------------------------------------------------
-def load_uploaded_dataset(file) -> pd.DataFrame:
-    fname = file.name.lower()
+def load_uploaded_dataset(file, max_mb: int = 100) -> pd.DataFrame:
+    """Safely parses uploaded dataset with size limits and encoding fallbacks."""
+    # 1. File size check
+    if hasattr(file, "size") and file.size > max_mb * 1024 * 1024:
+        raise ValueError(f"File size exceeds maximum allowable limit of {max_mb} MB.")
+
+    fname = file.name.lower() if hasattr(file, "name") else "dataset.csv"
+    
+    # 2. Parse based on extension with encoding fallbacks
     if fname.endswith(".csv") or fname.endswith(".txt"):
-        return pd.read_csv(file)
+        try:
+            df = pd.read_csv(file)
+        except UnicodeDecodeError:
+            file.seek(0)
+            df = pd.read_csv(file, encoding="latin-1")
     elif fname.endswith(".xlsx") or fname.endswith(".xls"):
-        return pd.read_excel(file)
+        df = pd.read_excel(file)
     elif fname.endswith(".parquet"):
-        return pd.read_parquet(file)
+        df = pd.read_parquet(file)
     elif fname.endswith(".json"):
-        return pd.read_json(file)
-    return pd.read_csv(file)
+        df = pd.read_json(file)
+    else:
+        df = pd.read_csv(file)
+
+    if df is None or df.empty:
+        raise ValueError("The uploaded dataset contains zero records (empty dataset).")
+    return df
 
 
 # ---------------------------------------------------------
@@ -452,12 +469,14 @@ else:
     # Top Brand Bar
     top_col1, top_col2 = st.columns([4, 1])
     with top_col1:
+        escaped_title = html.escape(report.dataset_name)
+        escaped_target = html.escape(str(report.target_column or 'None (Exploratory)'))
         st.markdown(f"""
         <div class="brand-hero" style="margin-bottom: 0;">
             <div>
-                <h1 class="brand-title">📋 {report.dataset_name} {'<span style="color: #34D399; font-size: 0.95rem;">(Cleaned ✨)</span>' if is_cleaned else ''}</h1>
+                <h1 class="brand-title">📋 {escaped_title} {'<span style="color: #34D399; font-size: 0.95rem;">(Cleaned ✨)</span>' if is_cleaned else ''}</h1>
                 <p style="color: #94A3B8; font-size: 0.85rem; margin-top: 0.2rem;">
-                    Target Feature: <code style="color: #2DD4BF;">{report.target_column or 'None (Exploratory)'}</code> • {active_report.total_rows:,} rows • {active_report.total_columns} columns
+                    Target Feature: <code style="color: #2DD4BF;">{escaped_target}</code> • {active_report.total_rows:,} rows • {active_report.total_columns} columns
                 </p>
             </div>
             <div>
