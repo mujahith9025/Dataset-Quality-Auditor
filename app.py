@@ -1,5 +1,5 @@
 """
-Dataset Quality Auditor — Streamlit Application (Simple, Crisp & Beginner-Friendly Edition)
+Dataset Quality Auditor — Simple, Crisp & Professional Edition
 An easy-to-use tabular data health scanner, auto-remediation tool, and ML benchmarker.
 """
 
@@ -12,8 +12,8 @@ import numpy as np
 import streamlit as st
 import plotly.graph_objects as go
 import plotly.express as px
-
 import importlib
+
 from core.engine import AuditEngine
 from core.cleaner import DatasetCleaner
 from core.report_generator import ReportGenerator
@@ -35,28 +35,29 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------
-# Clean, Crisp CSS Styling
+# Clean, Professional CSS Styling
 # ---------------------------------------------------------
 st.markdown("""
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-    /* Clean Modern Typography & Gradient */
-    html, body, [class*="css"] {
+    /* Clean Typography & Deep Navy Theme */
+    html, body, [class*="css"], [data-testid="stAppViewContainer"], .stApp {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-    }
-    
-    .stApp {
-        background: radial-gradient(circle at top right, #0F172A, #0B1120, #030712);
-        color: #F8FAFC;
+        background: radial-gradient(circle at top right, #0F172A 0%, #0B1120 50%, #030712 100%) !important;
+        color: #F8FAFC !important;
     }
 
-    /* Crisp Brand Hero Banner */
+    code, pre, .font-mono, [data-testid="stMetricValue"] {
+        font-family: 'JetBrains Mono', monospace !important;
+    }
+
+    /* Professional Brand Header */
     .brand-hero {
         background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
-        border: 1px solid rgba(20, 184, 166, 0.3);
+        border: 1px solid rgba(20, 184, 166, 0.35);
         border-radius: 1rem;
         padding: 1.25rem 1.75rem;
         margin-bottom: 1.25rem;
@@ -67,8 +68,8 @@ st.markdown("""
     }
 
     .brand-title {
-        font-size: 1.5rem;
-        font-weight: 900;
+        font-size: 1.55rem;
+        font-weight: 800;
         letter-spacing: -0.02em;
         background: linear-gradient(to right, #FFFFFF, #E2E8F0, #94A3B8);
         -webkit-background-clip: text;
@@ -76,37 +77,34 @@ st.markdown("""
         margin: 0;
     }
 
-    /* Beginner Quick Tip Card */
+    /* Crisp Quick Card */
     .tip-box {
-        background: rgba(15, 23, 42, 0.65);
+        background: rgba(15, 23, 42, 0.75);
         border: 1px solid #334155;
         border-radius: 0.75rem;
-        padding: 0.85rem 1.15rem;
-        margin-bottom: 1rem;
+        padding: 0.9rem 1.15rem;
+        margin-bottom: 0.85rem;
         font-size: 0.875rem;
         color: #CBD5E1;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .tip-box:hover {
+        border-color: #14B8A6;
+        transform: translateY(-2px);
     }
 
-    /* Metric Cards */
+    /* Metric & Action Cards */
     .kpi-card {
-        background: rgba(15, 23, 42, 0.75);
-        border: 1px solid rgba(51, 65, 85, 0.7);
+        background: rgba(15, 23, 42, 0.8);
+        border: 1px solid rgba(51, 65, 85, 0.8);
         border-radius: 0.85rem;
-        padding: 1rem 1.25rem;
+        padding: 1.1rem 1.25rem;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        transition: transform 0.2s ease, border-color 0.2s ease;
     }
-    .kpi-label {
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        color: #94A3B8;
-        margin-bottom: 0.2rem;
-    }
-    .kpi-value {
-        font-size: 1.6rem;
-        font-weight: 900;
-        color: #FFFFFF;
+    .kpi-card:hover {
+        border-color: rgba(20, 184, 166, 0.5);
+        transform: translateY(-2px);
     }
 
     /* Grade Badges */
@@ -118,6 +116,7 @@ st.markdown("""
         border-radius: 9999px;
         font-weight: 800;
         font-size: 0.85rem;
+        font-family: 'JetBrains Mono', monospace;
     }
     .score-grade-a { background: rgba(16, 185, 129, 0.2); color: #34D399; border: 1px solid #10B981; }
     .score-grade-b { background: rgba(56, 189, 248, 0.2); color: #38BDF8; border: 1px solid #38BDF8; }
@@ -133,7 +132,7 @@ st.markdown("""
         margin-bottom: 0.45rem;
         color: #FEF3C7;
         font-size: 0.875rem;
-        font-weight: 600;
+        font-weight: 500;
     }
 
     .alert-card-success {
@@ -144,7 +143,17 @@ st.markdown("""
         margin-bottom: 0.45rem;
         color: #D1FAE5;
         font-size: 0.875rem;
-        font-weight: 600;
+        font-weight: 500;
+    }
+
+    /* Buttons */
+    div.stButton > button[kind="primary"] {
+        background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%) !important;
+        color: #003731 !important;
+        font-weight: 700 !important;
+        border: 1px solid #2DD4BF !important;
+        border-radius: 0.5rem !important;
+        box-shadow: 0 0 16px rgba(20, 184, 166, 0.3) !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -179,7 +188,7 @@ SAMPLES_DIR = os.path.join(os.path.dirname(__file__), "samples")
 
 
 # ---------------------------------------------------------
-# Clean Plotly Gauge Helper
+# Clean Plotly Chart Helpers
 # ---------------------------------------------------------
 def create_score_gauge(score: float, grade: str, delta: float = None) -> go.Figure:
     color = "#10B981" if score >= 85 else ("#38BDF8" if score >= 75 else ("#F59E0B" if score >= 60 else "#EF4444"))
@@ -188,7 +197,7 @@ def create_score_gauge(score: float, grade: str, delta: float = None) -> go.Figu
         mode="gauge+number" + ("+delta" if delta is not None else ""),
         value=score,
         delta={'reference': score - delta, 'increasing': {'color': "#10B981"}} if delta else None,
-        number={'suffix': " / 100", 'font': {'size': 34, 'color': "#FFFFFF", 'family': "Inter, sans-serif"}},
+        number={'suffix': " / 100", 'font': {'size': 36, 'color': "#FFFFFF", 'family': "JetBrains Mono, monospace"}},
         gauge={
             'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': "#94A3B8"},
             'bar': {'color': color, 'thickness': 0.3},
@@ -207,7 +216,7 @@ def create_score_gauge(score: float, grade: str, delta: float = None) -> go.Figu
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         margin=dict(l=15, r=15, t=20, b=5),
-        height=190,
+        height=200,
     )
     return fig
 
@@ -230,14 +239,14 @@ def create_radar_chart(dimension_scores: dict) -> go.Figure:
     ))
     fig.update_layout(
         polar=dict(
-            radialaxis=dict(visible=True, range=[0, 100], tickfont=dict(size=9, color='#94A3B8'), gridcolor='#334155'),
-            angularaxis=dict(tickfont=dict(size=11, color='#F8FAFC'), gridcolor='#334155'),
+            radialaxis=dict(visible=True, range=[0, 100], tickfont=dict(size=9, color='#94A3B8', family="JetBrains Mono"), gridcolor='#334155'),
+            angularaxis=dict(tickfont=dict(size=11, color='#F8FAFC', family="Inter"), gridcolor='#334155'),
             bgcolor='rgba(15, 23, 42, 0.6)'
         ),
         paper_bgcolor='rgba(0,0,0,0)',
         showlegend=False,
         margin=dict(l=30, r=30, t=20, b=20),
-        height=220
+        height=230
     )
     return fig
 
@@ -256,7 +265,7 @@ def create_comparison_bar_chart(initial_report, cleaned_report) -> go.Figure:
         title=dict(text="Score Improvement by Category (Before vs. After)", font=dict(color='#F8FAFC', size=13)),
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(15, 23, 42, 0.6)",
-        font=dict(color="#94A3B8"),
+        font=dict(color="#94A3B8", family="Inter"),
         xaxis=dict(gridcolor="#334155"),
         yaxis=dict(gridcolor="#334155", range=[0, 105]),
         legend=dict(font=dict(color="#F8FAFC")),
@@ -271,15 +280,15 @@ def create_comparison_bar_chart(initial_report, cleaned_report) -> go.Figure:
 # ---------------------------------------------------------
 with st.sidebar:
     st.markdown("### 🛡️ Dataset Auditor")
-    st.caption("Simple & Fast Data Quality Checker")
+    st.caption("Simple, Fast & Accurate Data Quality Scanner")
     st.divider()
 
-    st.markdown("##### 💡 Beginner Quick Guide:")
+    st.markdown("##### 💡 Beginner Score Guide:")
     st.markdown("""
-    - **90–100 (A)**: Excellent, ready for AI/ML!
-    - **75–89 (B)**: Good, minor fixes recommended.
-    - **60–74 (C)**: Needs auto-cleaning.
-    - **< 60 (D/F)**: Dirty data, cleaning required.
+    - **90–100 (Grade A)**: 🟢 Production ready!
+    - **75–89 (Grade B)**: 🔵 Good, minor fixes recommended.
+    - **60–74 (Grade C)**: 🟡 Needs auto-cleaning.
+    - **0–59 (Grade D/F)**: 🔴 Dirty data, cleaning required.
     """)
 
     st.divider()
@@ -293,7 +302,7 @@ with st.sidebar:
             st.session_state.benchmark_result = None
             st.rerun()
 
-    st.caption("Pure Python • Streamlit Edition")
+    st.caption("Pure Python • 100% Offline & Private")
 
 
 # ---------------------------------------------------------
@@ -301,13 +310,11 @@ with st.sidebar:
 # ---------------------------------------------------------
 def load_uploaded_dataset(file, max_mb: int = 100) -> pd.DataFrame:
     """Safely parses uploaded dataset with size limits and encoding fallbacks."""
-    # 1. File size check
     if hasattr(file, "size") and file.size > max_mb * 1024 * 1024:
         raise ValueError(f"File size exceeds maximum allowable limit of {max_mb} MB.")
 
     fname = file.name.lower() if hasattr(file, "name") else "dataset.csv"
     
-    # 2. Parse based on extension with encoding fallbacks
     if fname.endswith(".csv") or fname.endswith(".txt"):
         try:
             df = pd.read_csv(file)
@@ -336,36 +343,36 @@ df = st.session_state.df
 
 if report is None:
     # ---------------------------------------------------------
-    # MAIN PAGE: HERO UPLOADER (Clean & Simple)
+    # MAIN PAGE: HERO UPLOADER (Clean, Crisp & Engaging)
     # ---------------------------------------------------------
     st.markdown("""
     <div class="brand-hero">
         <div>
             <h1 class="brand-title">🛡️ Dataset Quality Auditor</h1>
-            <p style="color: #94A3B8; font-size: 0.9rem; margin-top: 0.2rem;">
-                Check your dataset health, fix errors in 1 click, and test machine learning readiness.
+            <p style="color: #94A3B8; font-size: 0.95rem; margin-top: 0.25rem; margin-bottom: 0;">
+                Scan data health, auto-remediate issues in 1 click, and test machine learning accuracy uplift.
             </p>
         </div>
-        <div style="background: rgba(20, 184, 166, 0.15); border: 1px solid #14B8A6; color: #2DD4BF; font-weight: 800; font-size: 0.75rem; padding: 0.3rem 0.75rem; border-radius: 9999px;">
-            v2.0 Simple Edition
+        <div style="background: rgba(20, 184, 166, 0.15); border: 1px solid #14B8A6; color: #2DD4BF; font-weight: 800; font-size: 0.75rem; padding: 0.35rem 0.85rem; border-radius: 9999px; font-family: 'JetBrains Mono', monospace;">
+            v2.0 CORE
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    # Simple 3-step banner
+    # 3-Step Simple Workflow Strip
     c_s1, c_s2, c_s3 = st.columns(3)
     with c_s1:
-        st.markdown("<div class='tip-box'><b>1. Upload File 📁</b><br>Drop your CSV, Excel, or Parquet file.</div>", unsafe_allow_html=True)
+        st.markdown("<div class='tip-box'><b>1. Upload File 📁</b><br>Drop any CSV, Excel, or Parquet file.</div>", unsafe_allow_html=True)
     with c_s2:
-        st.markdown("<div class='tip-box'><b>2. View Score 🎯</b><br>See your 0–100 Data Health Score instantly.</div>", unsafe_allow_html=True)
+        st.markdown("<div class='tip-box'><b>2. View Score 🎯</b><br>See your 0–100 Data Health Score across 5 pillars.</div>", unsafe_allow_html=True)
     with c_s3:
-        st.markdown("<div class='tip-box'><b>3. 1-Click Clean ✨</b><br>Auto-fix errors & download clean data.</div>", unsafe_allow_html=True)
+        st.markdown("<div class='tip-box'><b>3. 1-Click Clean ✨</b><br>Auto-fix errors & download clean data instantly.</div>", unsafe_allow_html=True)
 
     st.markdown("### 📤 Upload Your Dataset")
     
     with st.container():
         main_uploaded_file = st.file_uploader(
-            "Select or drop your CSV or Excel file:",
+            "Select or drop your dataset file (.csv, .xlsx, .parquet, .json):",
             type=["csv", "xlsx", "xls", "parquet", "json", "txt"],
             key="main_page_uploader"
         )
@@ -377,7 +384,7 @@ if report is None:
                 preview_df = load_uploaded_dataset(main_uploaded_file)
                 detected_cols = list(preview_df.columns)
                 st.success(f"📁 **Loaded:** `{main_uploaded_file.name}` ({len(preview_df):,} rows × {preview_df.shape[1]} columns)")
-                with st.expander("👀 Preview Top 5 Rows", expanded=False):
+                with st.expander("👀 Preview Top 5 Rows & Schema", expanded=False):
                     st.dataframe(preview_df.head(5), use_container_width=True)
             except Exception as e:
                 st.error(f"Error loading file: {e}")
@@ -387,7 +394,7 @@ if report is None:
             if detected_cols:
                 target_choice = st.selectbox(
                     "Target / Prediction Column (Optional):",
-                    options=["-- None (Just explore data) --"] + detected_cols,
+                    options=["-- None (Exploratory / Unsupervised) --"] + detected_cols,
                     key="main_target_select",
                     help="Choose the column you want AI to predict (e.g. loan_status, churn, price)."
                 )
@@ -423,45 +430,46 @@ if report is None:
         except Exception as e:
             st.error(f"Error: {e}")
 
-    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-top: 1.5rem;'></div>", unsafe_allow_html=True)
 
-    # 1-Click Sample Datasets
-    st.markdown("#### 🧪 Or Test with 1-Click Sample Datasets:")
+    # 1-Click Sample Datasets (Engaging Interactive Cards)
+    st.markdown("#### 🧪 Or Test Instantly with 1-Click Datasets:")
+    st.caption("No dataset on hand? Click any sample below to explore complete audit findings:")
     b1, b2, b3 = st.columns(3)
     with b1:
-        if st.button("📊 Loan Default Dataset (Dirty & Leaky)", use_container_width=True):
+        if st.button("💳 FinTech Loan Default\n(12.4k rows • Leaky & Outliers)", use_container_width=True):
             raw_df = pd.read_csv(os.path.join(SAMPLES_DIR, "loan_approval_dirty.csv"))
             engine = AuditEngine()
-            st.session_state.report = engine.audit(raw_df, dataset_name="Loan Approval Sample", target_col="loan_status")
+            st.session_state.report = engine.audit(raw_df, dataset_name="loan_approval.csv", target_col="loan_status")
             st.session_state.df = raw_df
-            st.session_state.dataset_name = "Loan Approval Sample"
+            st.session_state.dataset_name = "loan_approval.csv"
             st.session_state.target_col = "loan_status"
             st.session_state.benchmark_result = None
             st.rerun()
     with b2:
-        if st.button("📉 Telecom Churn Dataset (Imbalanced)", use_container_width=True):
+        if st.button("📡 Telecom Customer Churn\n(7.2k rows • Class Imbalance)", use_container_width=True):
             raw_df = pd.read_csv(os.path.join(SAMPLES_DIR, "customer_churn_leaky.csv"))
             engine = AuditEngine()
-            st.session_state.report = engine.audit(raw_df, dataset_name="Telecom Churn Sample", target_col="churned")
+            st.session_state.report = engine.audit(raw_df, dataset_name="customer_churn.csv", target_col="churned")
             st.session_state.df = raw_df
-            st.session_state.dataset_name = "Telecom Churn Sample"
+            st.session_state.dataset_name = "customer_churn.csv"
             st.session_state.target_col = "churned"
             st.session_state.benchmark_result = None
             st.rerun()
     with b3:
-        if st.button("🩺 Patient Health Dataset (Outliers)", use_container_width=True):
+        if st.button("🏥 Healthcare Patient Registry\n(10.0k rows • Anomalies & Missing)", use_container_width=True):
             raw_df = pd.read_csv(os.path.join(SAMPLES_DIR, "medical_patient_anomalous.csv"))
             engine = AuditEngine()
-            st.session_state.report = engine.audit(raw_df, dataset_name="Medical Patient Sample", target_col="readmitted")
+            st.session_state.report = engine.audit(raw_df, dataset_name="patient_registry.csv", target_col="readmitted")
             st.session_state.df = raw_df
-            st.session_state.dataset_name = "Medical Patient Sample"
+            st.session_state.dataset_name = "patient_registry.csv"
             st.session_state.target_col = "readmitted"
             st.session_state.benchmark_result = None
             st.rerun()
 
 else:
     # ---------------------------------------------------------
-    # ACTIVE AUDIT DASHBOARD (Crisp & Simple)
+    # ACTIVE AUDIT DASHBOARD (Crisp, Simple & Action-Oriented)
     # ---------------------------------------------------------
     is_cleaned = st.session_state.cleaned_report is not None
     active_report = st.session_state.cleaned_report if is_cleaned else report
@@ -478,8 +486,8 @@ else:
         <div class="brand-hero" style="margin-bottom: 0;">
             <div>
                 <h1 class="brand-title">📋 {escaped_title} {'<span style="color: #34D399; font-size: 0.95rem;">(Cleaned ✨)</span>' if is_cleaned else ''}</h1>
-                <p style="color: #94A3B8; font-size: 0.85rem; margin-top: 0.2rem;">
-                    Target Feature: <code style="color: #2DD4BF;">{escaped_target}</code> • {active_report.total_rows:,} rows • {active_report.total_columns} columns
+                <p style="color: #94A3B8; font-size: 0.85rem; margin-top: 0.2rem; font-family: 'JetBrains Mono', monospace;">
+                    Target: <span style="color: #2DD4BF;">{escaped_target}</span> &nbsp;•&nbsp; {active_report.total_rows:,} rows &nbsp;•&nbsp; {active_report.total_columns} columns
                 </p>
             </div>
             <div>
@@ -500,7 +508,7 @@ else:
             st.session_state.benchmark_result = None
             st.rerun()
 
-    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-top: 1rem;'></div>", unsafe_allow_html=True)
 
     # Score Gauge & Radar
     g_col1, g_col2 = st.columns([1, 1])
@@ -509,19 +517,26 @@ else:
     with g_col2:
         st.plotly_chart(create_radar_chart(active_report.dimension_scores), use_container_width=True)
 
-    # Key Summary Stats (4 Simple Cards)
+    # Key Summary Stats (4 Crisp Native Cards)
     k1, k2, k3, k4 = st.columns(4)
     with k1:
-        st.markdown(f"<div class='kpi-card'><div class='kpi-label'>Total Rows</div><div class='kpi-value'>{active_report.total_rows:,}</div></div>", unsafe_allow_html=True)
+        st.metric("Total Rows", f"{active_report.total_rows:,}", "100% Parsed")
     with k2:
-        st.markdown(f"<div class='kpi-card'><div class='kpi-label'>Total Columns</div><div class='kpi-value'>{active_report.total_columns}</div></div>", unsafe_allow_html=True)
+        num_c = len([p for p in active_report.column_profiles.values() if 'numeric' in p.inferred_type.lower()])
+        cat_c = len([p for p in active_report.column_profiles.values() if 'categorical' in p.inferred_type.lower()])
+        st.metric("Total Columns", f"{active_report.total_columns}", f"{num_c} Num • {cat_c} Cat")
     with k3:
-        st.markdown(f"<div class='kpi-card'><div class='kpi-label'>Issues Found</div><div class='kpi-value'>{active_report.total_issues_count}</div></div>", unsafe_allow_html=True)
+        st.metric("Issues Found", f"{active_report.total_issues_count}", f"{active_report.severity_counts.get('LOW', 0)} Low • {active_report.severity_counts.get('MEDIUM', 0)} Med")
     with k4:
         crit_high = active_report.severity_counts.get('CRITICAL', 0) + active_report.severity_counts.get('HIGH', 0)
-        st.markdown(f"<div class='kpi-card'><div class='kpi-label'>Critical Fixes</div><div class='kpi-value' style='color: {'#F87171' if crit_high > 0 else '#34D399'};'>{crit_high}</div></div>", unsafe_allow_html=True)
+        st.metric(
+            "Critical Fixes",
+            f"{crit_high}",
+            "Needs attention" if crit_high > 0 else "Clean",
+            delta_color="inverse" if crit_high > 0 else "normal"
+        )
 
-    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-top: 1rem;'></div>", unsafe_allow_html=True)
 
     # Top Alerts (Crisp 1-liners)
     st.markdown("##### ⚠️ What Needs Attention:")
@@ -532,7 +547,7 @@ else:
             clean_text = alert.replace("⚠", "").replace("[!]", "").replace("🚨", "").strip()
             st.markdown(f"<div class='alert-card-warning'>⚠️ {clean_text}</div>", unsafe_allow_html=True)
 
-    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-top: 1rem;'></div>", unsafe_allow_html=True)
 
     # ---------------------------------------------------------
     # 6 Crisp & Simple Tabs
@@ -550,7 +565,9 @@ else:
     # Tab 1: 9 Quality Checks
     # ---------------------------------------------------------
     with tab1:
-        st.markdown("#### 🔍 The 9 Quality Checks (Click to expand details)")
+        st.markdown("#### 🔍 The 9 Quality Checks")
+        st.caption("Click any check below to expand its findings and recommended fix:")
+        
         friendly_names = {
             "missing_values": ("Missing Data", "Empty cells or blank values"),
             "duplicate_rows": ("Duplicate Rows", "Repeated copycat rows"),
@@ -580,14 +597,15 @@ else:
     # Tab 2: Column Profiler & Explorer
     # ---------------------------------------------------------
     with tab2:
-        st.markdown("#### 📊 Quick Column Explorer")
+        st.markdown("#### 📊 Column Explorer & Schema Profiler")
+        st.caption("View data types, missing rates, uniqueness cardinality, and distributions:")
         
         prof_rows = [{
             "Column": p.name,
             "Type": p.inferred_type.capitalize(),
-            "Missing": f"{p.missing_count} ({p.missing_percentage}%)",
-            "Unique Values": p.unique_count,
-            "Issues": "⚠️ " + str(p.issues_count) if p.issues_count > 0 else "✅ 0"
+            "Missing": f"{p.missing_count} ({p.missing_percentage:.1f}%)",
+            "Unique Values": f"{p.unique_count:,}",
+            "Issues": f"⚠️ {p.issues_count}" if p.issues_count > 0 else "✅ Clean"
         } for p in active_report.column_profiles.values()]
         st.dataframe(pd.DataFrame(prof_rows), use_container_width=True)
 
@@ -624,7 +642,7 @@ else:
                     fixable_actions.append(r)
 
         if fixable_actions:
-            st.write(f"**Found {len(fixable_actions)} automatic fixes:**")
+            st.write(f"**Found {len(fixable_actions)} automatic fixes ready to apply:**")
             sel_all = st.checkbox("Select All Fixes", value=True, key="clean_sel_all")
 
             chosen_actions = []
@@ -664,7 +682,7 @@ else:
                     st.download_button(
                         label="📄 Download Cleaned CSV",
                         data=csv_buf.getvalue(),
-                        file_name=f"{report.dataset_name.lower()}_cleaned.csv",
+                        file_name=f"{report.dataset_name.lower().replace('.csv', '')}_cleaned.csv",
                         mime="text/csv",
                         use_container_width=True
                     )
@@ -675,12 +693,12 @@ else:
                     st.download_button(
                         label="📊 Download Cleaned Excel (.xlsx)",
                         data=excel_buf.getvalue(),
-                        file_name=f"{report.dataset_name.lower()}_cleaned.xlsx",
+                        file_name=f"{report.dataset_name.lower().replace('.csv', '')}_cleaned.xlsx",
                         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                         use_container_width=True
                     )
         else:
-            st.success("Your dataset is already clean! No automated cleaning needed.")
+            st.success("Your dataset is already in optimal condition! Zero automated cleaning needed.")
 
     # ---------------------------------------------------------
     # Tab 4: Machine Learning Test (Accuracy Boost)
@@ -692,7 +710,7 @@ else:
         if not report.target_column:
             st.info("💡 Please choose a **Target Column** to run this test:")
             q_target = st.selectbox("Select Target Feature:", list(df.columns), key="ml_pick_target")
-            if st.button("Set Target & Test"):
+            if st.button("Set Target & Test", type="primary"):
                 st.session_state.target_col = q_target
                 engine = AuditEngine()
                 st.session_state.report = engine.audit(df, dataset_name=report.dataset_name, target_col=q_target)
@@ -739,10 +757,10 @@ else:
         dc1, dc2 = st.columns(2)
         with dc1:
             st.markdown("##### 1. Baseline Data (Train)")
-            st.write(f"Using current: `{report.dataset_name}`")
+            st.write(f"Using current: `{report.dataset_name}` ({active_report.total_rows:,} rows)")
         with dc2:
             st.markdown("##### 2. Upload New Data (Test)")
-            drift_file = st.file_uploader("Upload test dataset (.csv)", type=["csv", "xlsx"], key="drift_quick_file")
+            drift_file = st.file_uploader("Upload test dataset (.csv, .xlsx)", type=["csv", "xlsx"], key="drift_quick_file")
 
         if st.button("🌊 Compare Distributions", type="primary", disabled=drift_file is None):
             try:
@@ -793,8 +811,7 @@ else:
         """, unsafe_allow_html=True)
 
         # 2. Interactive AI Data Doctor Consultation
-        st.markdown("##### 💬 Ask the AI Data Doctor")
-        st.caption("Click any preset inquiry below or ask a custom question about your dataset:")
+        st.markdown("##### 💬 Ask the AI Data Doctor (1-Click Presets):")
 
         # Quick preset buttons in columns
         p1, p2, p3, p4 = st.columns(4)
@@ -848,7 +865,7 @@ else:
         if "active_doctor_answer" in st.session_state:
             st.markdown(f"""
             <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 0.85rem; padding: 1.25rem 1.5rem; margin-top: 1rem; margin-bottom: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-                <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: #38BDF8; letter-spacing: 0.05em; margin-bottom: 0.4rem;">
+                <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: #38BDF8; letter-spacing: 0.05em; margin-bottom: 0.4rem; font-family: 'JetBrains Mono', monospace;">
                     💡 Data Doctor Consultation &nbsp;›&nbsp; <span style="color: #E2E8F0; text-transform: none;">{st.session_state.get('active_doctor_query', '')}</span>
                 </div>
             """, unsafe_allow_html=True)
@@ -869,7 +886,7 @@ else:
             st.download_button(
                 label="🌐 Download Interactive HTML Report",
                 data=html_rep,
-                file_name=f"{report.dataset_name.lower()}_quality_report.html",
+                file_name=f"{report.dataset_name.lower().replace('.csv', '')}_quality_report.html",
                 mime="text/html",
                 use_container_width=True
             )
@@ -878,7 +895,7 @@ else:
             st.download_button(
                 label="🐍 Download Python Cleaning Script (.py)",
                 data=py_pipe,
-                file_name=f"clean_{report.dataset_name.lower()}_pipeline.py",
+                file_name=f"clean_{report.dataset_name.lower().replace('.csv', '')}_pipeline.py",
                 mime="text/x-python",
                 use_container_width=True
             )
