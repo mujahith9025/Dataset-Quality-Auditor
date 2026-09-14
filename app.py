@@ -13,12 +13,15 @@ import streamlit as st
 import plotly.graph_objects as go
 import plotly.express as px
 
+import importlib
 from core.engine import AuditEngine
 from core.cleaner import DatasetCleaner
 from core.report_generator import ReportGenerator
 from core.ml_benchmark import MLBenchmarkEngine
 from core.drift_detector import DriftDetector
 from core.rules_engine import RulesEngine, RuleDefinition
+import core.data_doctor
+importlib.reload(core.data_doctor)
 from core.data_doctor import DataDoctor
 
 # ---------------------------------------------------------
@@ -764,6 +767,17 @@ else:
         doctor = DataDoctor()
         diag = doctor.diagnose(report)
 
+        def query_doctor(q_text: str) -> str:
+            if hasattr(doctor, "answer_query"):
+                return doctor.answer_query(q_text, report)
+            return (
+                f"💡 **AI Executive Overview for '{report.dataset_name}'**:\n\n"
+                f"- **Overall Health**: {report.overall_score:.1f}/100 (Grade {report.grade})\n"
+                f"- **Risk Level**: {diag.risk_level} ({diag.overall_health_badge})\n"
+                f"- **Summary**: {diag.executive_summary}\n\n"
+                f"💡 **Remediation**: Use the **✨ 1-Click Clean** tab to automatically resolve detected issues."
+            )
+
         # 1. Executive Summary & Health Badge
         st.markdown(f"""
         <div class="brand-hero" style="margin-top: 0.5rem; margin-bottom: 1rem; border-color: rgba(99, 102, 241, 0.4);">
@@ -824,11 +838,11 @@ else:
         # If a query is active, store in session_state and answer
         if active_query:
             st.session_state["active_doctor_query"] = active_query
-            st.session_state["active_doctor_answer"] = doctor.answer_query(active_query, report)
+            st.session_state["active_doctor_answer"] = query_doctor(active_query)
         elif "active_doctor_answer" not in st.session_state:
             # Default initial insight
             st.session_state["active_doctor_query"] = "Executive Data Quality Overview"
-            st.session_state["active_doctor_answer"] = doctor.answer_query("executive overview", report)
+            st.session_state["active_doctor_answer"] = query_doctor("executive overview")
 
         # Render Data Doctor's Response Card
         if "active_doctor_answer" in st.session_state:
