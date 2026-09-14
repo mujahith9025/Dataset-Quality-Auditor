@@ -219,7 +219,7 @@ st.markdown("""
 
     /* Stitch Secondary Buttons */
     div.stButton > button:not([kind="primary"]) {
-        background: rgba(18, 33, 49, 0.7) !important;
+        background: rgba(18, 33, 49, 0.75) !important;
         color: #D4E4FA !important;
         border: 1px solid #334155 !important;
         border-radius: 0.5rem !important;
@@ -242,6 +242,33 @@ st.markdown("""
     button[data-baseweb="tab"][aria-selected="true"] {
         color: #4FDBC8 !important;
         border-bottom: 2px solid #14B8A6 !important;
+    }
+
+    /* Stitch File Uploader Styling */
+    [data-testid="stFileUploader"] {
+        background: rgba(18, 33, 49, 0.6) !important;
+        border: 1px dashed rgba(20, 184, 166, 0.4) !important;
+        border-radius: 0.875rem !important;
+        padding: 1.25rem !important;
+        transition: all 0.2s ease !important;
+    }
+    [data-testid="stFileUploader"]:hover {
+        border-color: #4FDBC8 !important;
+        background: rgba(20, 184, 166, 0.08) !important;
+    }
+
+    /* Stitch Expander Styling */
+    [data-testid="stExpander"] {
+        background: rgba(18, 33, 49, 0.65) !important;
+        border: 1px solid rgba(20, 184, 166, 0.2) !important;
+        border-radius: 0.75rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    /* Stitch Sidebar Styling */
+    section[data-testid="stSidebar"] {
+        background-color: #010F1F !important;
+        border-right: 1px solid rgba(20, 184, 166, 0.15) !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -433,36 +460,72 @@ df = st.session_state.df
 
 if report is None:
     # ---------------------------------------------------------
-    # MAIN PAGE: HERO UPLOADER (Clean & Simple)
+    # MAIN PAGE: STITCH HERO & UPLOADER
     # ---------------------------------------------------------
     st.markdown("""
-    <div class="brand-hero">
-        <div>
-            <h1 class="brand-title">🛡️ Dataset Quality Auditor</h1>
-            <p style="color: #94A3B8; font-size: 0.9rem; margin-top: 0.2rem;">
-                Check your dataset health, fix errors in 1 click, and test machine learning readiness.
-            </p>
+    <div class="brand-hero" style="padding: 1.5rem 2rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(20, 184, 166, 0.15); border: 1px solid rgba(20, 184, 166, 0.4); display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 0 16px rgba(20, 184, 166, 0.25);">
+                🛡️
+            </div>
+            <div>
+                <h1 class="brand-title" style="font-size: 1.65rem;">Dataset Quality Auditor</h1>
+                <p style="color: #94A3B8; font-size: 0.9rem; margin-top: 0.2rem; margin-bottom: 0;">
+                    Enterprise Tabular Health Scanner, Automated ML Benchmarks & 1-Click Auto-Clean.
+                </p>
+            </div>
         </div>
-        <div style="background: rgba(20, 184, 166, 0.15); border: 1px solid #14B8A6; color: #2DD4BF; font-weight: 800; font-size: 0.75rem; padding: 0.3rem 0.75rem; border-radius: 9999px;">
-            v2.0 Simple Edition
+        <div style="background: rgba(20, 184, 166, 0.12); border: 1px solid #14B8A6; color: #4FDBC8; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.75rem; padding: 0.35rem 0.85rem; border-radius: 9999px; letter-spacing: 0.05em;">
+            v2.0 CORE
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    # Simple 3-step banner
-    c_s1, c_s2, c_s3 = st.columns(3)
-    with c_s1:
-        st.markdown("<div class='tip-box'><b>1. Upload File 📁</b><br>Drop your CSV, Excel, or Parquet file.</div>", unsafe_allow_html=True)
-    with c_s2:
-        st.markdown("<div class='tip-box'><b>2. View Score 🎯</b><br>See your 0–100 Data Health Score instantly.</div>", unsafe_allow_html=True)
-    with c_s3:
-        st.markdown("<div class='tip-box'><b>3. 1-Click Clean ✨</b><br>Auto-fix errors & download clean data.</div>", unsafe_allow_html=True)
+    # Stitch 3-Step Horizontal Workflow Strip
+    w1, w2, w3 = st.columns(3)
+    with w1:
+        st.markdown("""
+        <div class="kpi-card" style="padding: 1rem 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(20, 184, 166, 0.2); color: #4FDBC8; display: flex; align-items: center; justify-content: center; font-weight: bold; font-family: 'JetBrains Mono', monospace;">1</div>
+                <div>
+                    <div style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem;">Upload File</div>
+                    <div style="font-size: 0.8rem; color: #94A3B8;">CSV, Excel, Parquet, JSON</div>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    with w2:
+        st.markdown("""
+        <div class="kpi-card" style="padding: 1rem 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(123, 208, 255, 0.2); color: #7BD0FF; display: flex; align-items: center; justify-content: center; font-weight: bold; font-family: 'JetBrains Mono', monospace;">2</div>
+                <div>
+                    <div style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem;">View Score</div>
+                    <div style="font-size: 0.8rem; color: #94A3B8;">0–100 Score across 5 Pillars</div>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    with w3:
+        st.markdown("""
+        <div class="kpi-card" style="padding: 1rem 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(52, 211, 153, 0.2); color: #34D399; display: flex; align-items: center; justify-content: center; font-weight: bold; font-family: 'JetBrains Mono', monospace;">3</div>
+                <div>
+                    <div style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem;">1-Click Clean</div>
+                    <div style="font-size: 0.8rem; color: #94A3B8;">Auto-Remediate & Export</div>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
+    st.markdown("<div style='margin-top: 1.5rem;'></div>", unsafe_allow_html=True)
     st.markdown("### 📤 Upload Your Dataset")
     
     with st.container():
         main_uploaded_file = st.file_uploader(
-            "Select or drop your CSV or Excel file:",
+            "Drop your tabular file here (.csv, .xlsx, .parquet, .json):",
             type=["csv", "xlsx", "xls", "parquet", "json", "txt"],
             key="main_page_uploader"
         )
@@ -473,8 +536,22 @@ if report is None:
             try:
                 preview_df = load_uploaded_dataset(main_uploaded_file)
                 detected_cols = list(preview_df.columns)
-                st.success(f"📁 **Loaded:** `{main_uploaded_file.name}` ({len(preview_df):,} rows × {preview_df.shape[1]} columns)")
-                with st.expander("👀 Preview Top 5 Rows", expanded=False):
+                st.markdown(f"""
+                <div class="stitch-card" style="padding: 0.9rem 1.25rem; margin-top: 0.75rem; display: flex; align-items: center; justify-content: space-between; border-color: rgba(20, 184, 166, 0.4);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="font-size: 1.5rem;">📄</span>
+                        <div>
+                            <div style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem;">{main_uploaded_file.name}</div>
+                            <div style="font-size: 0.8rem; color: #94A3B8; font-family: 'JetBrains Mono', monospace;">
+                                {len(preview_df):,} Rows &nbsp;•&nbsp; {preview_df.shape[1]} Columns &nbsp;•&nbsp; In-memory Validated
+                            </div>
+                        </div>
+                    </div>
+                    <div class="score-badge score-grade-a" style="font-size: 0.75rem; padding: 0.25rem 0.65rem;">READY</div>
+                </div>
+                """, unsafe_allow_html=True)
+
+                with st.expander("👀 Preview Top 5 Rows & Schema", expanded=False):
                     st.dataframe(preview_df.head(5), use_container_width=True)
             except Exception as e:
                 st.error(f"Error loading file: {e}")
@@ -520,13 +597,13 @@ if report is None:
         except Exception as e:
             st.error(f"Error: {e}")
 
-    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-top: 1.5rem;'></div>", unsafe_allow_html=True)
 
-    # 1-Click Sample Datasets
-    st.markdown("#### 🧪 Or Test with 1-Click Sample Datasets:")
+    # 1-Click Sample Datasets (Stitch Tile Design)
+    st.markdown("#### 🧪 Or Test Instantly with 1-Click Benchmark Datasets:")
     b1, b2, b3 = st.columns(3)
     with b1:
-        if st.button("📊 Loan Default Dataset (Dirty & Leaky)", use_container_width=True):
+        if st.button("💳 FinTech Loan Default\n(12.4k rows • Dirty & Leaky)", use_container_width=True):
             raw_df = pd.read_csv(os.path.join(SAMPLES_DIR, "loan_approval_dirty.csv"))
             engine = AuditEngine()
             st.session_state.report = engine.audit(raw_df, dataset_name="Loan Approval Sample", target_col="loan_status")
@@ -536,7 +613,7 @@ if report is None:
             st.session_state.benchmark_result = None
             st.rerun()
     with b2:
-        if st.button("📉 Telecom Churn Dataset (Imbalanced)", use_container_width=True):
+        if st.button("📡 Telecom Customer Churn\n(7.2k rows • Class Imbalance)", use_container_width=True):
             raw_df = pd.read_csv(os.path.join(SAMPLES_DIR, "customer_churn_leaky.csv"))
             engine = AuditEngine()
             st.session_state.report = engine.audit(raw_df, dataset_name="Telecom Churn Sample", target_col="churned")
@@ -546,7 +623,7 @@ if report is None:
             st.session_state.benchmark_result = None
             st.rerun()
     with b3:
-        if st.button("🩺 Patient Health Dataset (Outliers)", use_container_width=True):
+        if st.button("🏥 Healthcare Patient Registry\n(10.0k rows • Outliers & Anomalies)", use_container_width=True):
             raw_df = pd.read_csv(os.path.join(SAMPLES_DIR, "medical_patient_anomalous.csv"))
             engine = AuditEngine()
             st.session_state.report = engine.audit(raw_df, dataset_name="Medical Patient Sample", target_col="readmitted")
