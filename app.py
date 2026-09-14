@@ -1,5 +1,5 @@
 """
-Dataset Quality Auditor — Simple, Crisp & Professional Edition
+Dataset Quality Auditor — Dual Theme (Dark & Light Mode) Professional Edition
 An easy-to-use tabular data health scanner, auto-remediation tool, and ML benchmarker.
 """
 
@@ -35,132 +35,10 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------
-# Clean, Professional CSS Styling
-# ---------------------------------------------------------
-st.markdown("""
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-<style>
-    /* Clean Typography & Deep Navy Theme */
-    html, body, [class*="css"], [data-testid="stAppViewContainer"], .stApp {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-        background: radial-gradient(circle at top right, #0F172A 0%, #0B1120 50%, #030712 100%) !important;
-        color: #F8FAFC !important;
-    }
-
-    code, pre, .font-mono, [data-testid="stMetricValue"] {
-        font-family: 'JetBrains Mono', monospace !important;
-    }
-
-    /* Professional Brand Header */
-    .brand-hero {
-        background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
-        border: 1px solid rgba(20, 184, 166, 0.35);
-        border-radius: 1rem;
-        padding: 1.25rem 1.75rem;
-        margin-bottom: 1.25rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    }
-
-    .brand-title {
-        font-size: 1.55rem;
-        font-weight: 800;
-        letter-spacing: -0.02em;
-        background: linear-gradient(to right, #FFFFFF, #E2E8F0, #94A3B8);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin: 0;
-    }
-
-    /* Crisp Quick Card */
-    .tip-box {
-        background: rgba(15, 23, 42, 0.75);
-        border: 1px solid #334155;
-        border-radius: 0.75rem;
-        padding: 0.9rem 1.15rem;
-        margin-bottom: 0.85rem;
-        font-size: 0.875rem;
-        color: #CBD5E1;
-        transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-    .tip-box:hover {
-        border-color: #14B8A6;
-        transform: translateY(-2px);
-    }
-
-    /* Metric & Action Cards */
-    .kpi-card {
-        background: rgba(15, 23, 42, 0.8);
-        border: 1px solid rgba(51, 65, 85, 0.8);
-        border-radius: 0.85rem;
-        padding: 1.1rem 1.25rem;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-        transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-    .kpi-card:hover {
-        border-color: rgba(20, 184, 166, 0.5);
-        transform: translateY(-2px);
-    }
-
-    /* Grade Badges */
-    .score-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        padding: 0.35rem 0.85rem;
-        border-radius: 9999px;
-        font-weight: 800;
-        font-size: 0.85rem;
-        font-family: 'JetBrains Mono', monospace;
-    }
-    .score-grade-a { background: rgba(16, 185, 129, 0.2); color: #34D399; border: 1px solid #10B981; }
-    .score-grade-b { background: rgba(56, 189, 248, 0.2); color: #38BDF8; border: 1px solid #38BDF8; }
-    .score-grade-c { background: rgba(245, 158, 11, 0.2); color: #FBBF24; border: 1px solid #F59E0B; }
-    .score-grade-d { background: rgba(239, 68, 68, 0.2); color: #F87171; border: 1px solid #EF4444; }
-
-    /* Alert Banner Cards */
-    .alert-card-warning {
-        background: rgba(245, 158, 11, 0.1);
-        border-left: 4px solid #F59E0B;
-        border-radius: 0 0.5rem 0.5rem 0;
-        padding: 0.65rem 1rem;
-        margin-bottom: 0.45rem;
-        color: #FEF3C7;
-        font-size: 0.875rem;
-        font-weight: 500;
-    }
-
-    .alert-card-success {
-        background: rgba(16, 185, 129, 0.1);
-        border-left: 4px solid #10B981;
-        border-radius: 0 0.5rem 0.5rem 0;
-        padding: 0.65rem 1rem;
-        margin-bottom: 0.45rem;
-        color: #D1FAE5;
-        font-size: 0.875rem;
-        font-weight: 500;
-    }
-
-    /* Buttons */
-    div.stButton > button[kind="primary"] {
-        background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%) !important;
-        color: #003731 !important;
-        font-weight: 700 !important;
-        border: 1px solid #2DD4BF !important;
-        border-radius: 0.5rem !important;
-        box-shadow: 0 0 16px rgba(20, 184, 166, 0.3) !important;
-    }
-</style>
-""", unsafe_allow_html=True)
-
-# ---------------------------------------------------------
 # Session State Initialization
 # ---------------------------------------------------------
+if "theme_mode" not in st.session_state:
+    st.session_state.theme_mode = "🌙 Dark Mode"
 if "df" not in st.session_state:
     st.session_state.df = None
 if "report" not in st.session_state:
@@ -188,101 +66,29 @@ SAMPLES_DIR = os.path.join(os.path.dirname(__file__), "samples")
 
 
 # ---------------------------------------------------------
-# Clean Plotly Chart Helpers
-# ---------------------------------------------------------
-def create_score_gauge(score: float, grade: str, delta: float = None) -> go.Figure:
-    color = "#10B981" if score >= 85 else ("#38BDF8" if score >= 75 else ("#F59E0B" if score >= 60 else "#EF4444"))
-    
-    fig = go.Figure(go.Indicator(
-        mode="gauge+number" + ("+delta" if delta is not None else ""),
-        value=score,
-        delta={'reference': score - delta, 'increasing': {'color': "#10B981"}} if delta else None,
-        number={'suffix': " / 100", 'font': {'size': 36, 'color': "#FFFFFF", 'family': "JetBrains Mono, monospace"}},
-        gauge={
-            'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': "#94A3B8"},
-            'bar': {'color': color, 'thickness': 0.3},
-            'bgcolor': "rgba(30, 41, 59, 0.6)",
-            'borderwidth': 1,
-            'bordercolor': "#334155",
-            'steps': [
-                {'range': [0, 60], 'color': "rgba(239, 68, 68, 0.15)"},
-                {'range': [60, 75], 'color': "rgba(245, 158, 11, 0.15)"},
-                {'range': [75, 90], 'color': "rgba(56, 189, 248, 0.15)"},
-                {'range': [90, 100], 'color': "rgba(16, 185, 129, 0.15)"}
-            ]
-        }
-    ))
-    fig.update_layout(
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
-        margin=dict(l=15, r=15, t=20, b=5),
-        height=200,
-    )
-    return fig
-
-
-def create_radar_chart(dimension_scores: dict) -> go.Figure:
-    categories = list(dimension_scores.keys())
-    scores = [ds.score for ds in dimension_scores.values()]
-    categories.append(categories[0])
-    scores.append(scores[0])
-    
-    fig = go.Figure()
-    fig.add_trace(go.Scatterpolar(
-        r=scores,
-        theta=categories,
-        fill='toself',
-        fillcolor='rgba(20, 184, 166, 0.25)',
-        line=dict(color='#14B8A6', width=2),
-        marker=dict(size=6, color='#2DD4BF'),
-        hoverinfo='r+theta'
-    ))
-    fig.update_layout(
-        polar=dict(
-            radialaxis=dict(visible=True, range=[0, 100], tickfont=dict(size=9, color='#94A3B8', family="JetBrains Mono"), gridcolor='#334155'),
-            angularaxis=dict(tickfont=dict(size=11, color='#F8FAFC', family="Inter"), gridcolor='#334155'),
-            bgcolor='rgba(15, 23, 42, 0.6)'
-        ),
-        paper_bgcolor='rgba(0,0,0,0)',
-        showlegend=False,
-        margin=dict(l=30, r=30, t=20, b=20),
-        height=230
-    )
-    return fig
-
-
-def create_comparison_bar_chart(initial_report, cleaned_report) -> go.Figure:
-    dims = list(initial_report.dimension_scores.keys())
-    init_scores = [initial_report.dimension_scores[d].score for d in dims]
-    clean_scores = [cleaned_report.dimension_scores[d].score for d in dims]
-    
-    fig = go.Figure(data=[
-        go.Bar(name='Before Cleaning', x=dims, y=init_scores, marker_color='#F59E0B', opacity=0.8),
-        go.Bar(name='After Auto-Clean', x=dims, y=clean_scores, marker_color='#10B981')
-    ])
-    fig.update_layout(
-        barmode='group',
-        title=dict(text="Score Improvement by Category (Before vs. After)", font=dict(color='#F8FAFC', size=13)),
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(15, 23, 42, 0.6)",
-        font=dict(color="#94A3B8", family="Inter"),
-        xaxis=dict(gridcolor="#334155"),
-        yaxis=dict(gridcolor="#334155", range=[0, 105]),
-        legend=dict(font=dict(color="#F8FAFC")),
-        height=280,
-        margin=dict(l=15, r=15, t=35, b=15)
-    )
-    return fig
-
-
-# ---------------------------------------------------------
-# Sidebar
+# Sidebar Theme Controls & Navigation
 # ---------------------------------------------------------
 with st.sidebar:
     st.markdown("### 🛡️ Dataset Auditor")
     st.caption("Simple, Fast & Accurate Data Quality Scanner")
     st.divider()
 
+    # Theme Switcher (Dark Mode / Light Mode)
+    st.markdown("##### 🎨 Display Theme:")
+    selected_theme = st.radio(
+        "Select Theme Mode:",
+        options=["🌙 Dark Mode", "☀️ Light Mode"],
+        index=0 if st.session_state.theme_mode == "🌙 Dark Mode" else 1,
+        horizontal=True,
+        label_visibility="collapsed"
+    )
+    if selected_theme != st.session_state.theme_mode:
+        st.session_state.theme_mode = selected_theme
+        st.rerun()
+
+    is_dark = (st.session_state.theme_mode == "🌙 Dark Mode")
+
+    st.divider()
     st.markdown("##### 💡 Beginner Score Guide:")
     st.markdown("""
     - **90–100 (Grade A)**: 🟢 Production ready!
@@ -303,6 +109,337 @@ with st.sidebar:
             st.rerun()
 
     st.caption("Pure Python • 100% Offline & Private")
+
+
+# ---------------------------------------------------------
+# Dynamic CSS Styling (Dark & Light Mode Aware)
+# ---------------------------------------------------------
+if is_dark:
+    css_theme = """
+    <style>
+        html, body, [class*="css"], [data-testid="stAppViewContainer"], .stApp {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+            background: radial-gradient(circle at top right, #0F172A 0%, #0B1120 50%, #030712 100%) !important;
+            color: #F8FAFC !important;
+        }
+
+        code, pre, .font-mono, [data-testid="stMetricValue"] {
+            font-family: 'JetBrains Mono', monospace !important;
+        }
+
+        .brand-hero {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+            border: 1px solid rgba(20, 184, 166, 0.35);
+            border-radius: 1rem;
+            padding: 1.25rem 1.75rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .brand-title {
+            font-size: 1.55rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, #FFFFFF, #E2E8F0, #94A3B8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+
+        .tip-box {
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid #334155;
+            border-radius: 0.75rem;
+            padding: 0.9rem 1.15rem;
+            margin-bottom: 0.85rem;
+            font-size: 0.875rem;
+            color: #CBD5E1;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .tip-box:hover {
+            border-color: #14B8A6;
+            transform: translateY(-2px);
+        }
+
+        .kpi-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(51, 65, 85, 0.8);
+            border-radius: 0.85rem;
+            padding: 1.1rem 1.25rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .score-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .score-grade-a { background: rgba(16, 185, 129, 0.2); color: #34D399; border: 1px solid #10B981; }
+        .score-grade-b { background: rgba(56, 189, 248, 0.2); color: #38BDF8; border: 1px solid #38BDF8; }
+        .score-grade-c { background: rgba(245, 158, 11, 0.2); color: #FBBF24; border: 1px solid #F59E0B; }
+        .score-grade-d { background: rgba(239, 68, 68, 0.2); color: #F87171; border: 1px solid #EF4444; }
+
+        .alert-card-warning {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #F59E0B;
+            border-radius: 0 0.5rem 0.5rem 0;
+            padding: 0.65rem 1rem;
+            margin-bottom: 0.45rem;
+            color: #FEF3C7;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .alert-card-success {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid #10B981;
+            border-radius: 0 0.5rem 0.5rem 0;
+            padding: 0.65rem 1rem;
+            margin-bottom: 0.45rem;
+            color: #D1FAE5;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        div.stButton > button[kind="primary"] {
+            background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%) !important;
+            color: #003731 !important;
+            font-weight: 700 !important;
+            border: 1px solid #2DD4BF !important;
+            border-radius: 0.5rem !important;
+            box-shadow: 0 0 16px rgba(20, 184, 166, 0.3) !important;
+        }
+    </style>
+    """
+else:
+    css_theme = """
+    <style>
+        html, body, [class*="css"], [data-testid="stAppViewContainer"], .stApp {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+            background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 50%, #E2E8F0 100%) !important;
+            color: #0F172A !important;
+        }
+
+        code, pre, .font-mono, [data-testid="stMetricValue"] {
+            font-family: 'JetBrains Mono', monospace !important;
+        }
+
+        .brand-hero {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F0FDFA 100%);
+            border: 1px solid rgba(20, 184, 166, 0.4);
+            border-radius: 1rem;
+            padding: 1.25rem 1.75rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .brand-title {
+            font-size: 1.55rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #0F172A;
+            margin: 0;
+        }
+
+        .tip-box {
+            background: #FFFFFF;
+            border: 1px solid #CBD5E1;
+            border-radius: 0.75rem;
+            padding: 0.9rem 1.15rem;
+            margin-bottom: 0.85rem;
+            font-size: 0.875rem;
+            color: #334155;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .tip-box:hover {
+            border-color: #0D9488;
+            transform: translateY(-2px);
+        }
+
+        .kpi-card {
+            background: #FFFFFF;
+            border: 1px solid #CBD5E1;
+            border-radius: 0.85rem;
+            padding: 1.1rem 1.25rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .score-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .score-grade-a { background: #DCFCE7; color: #15803D; border: 1px solid #86EFAC; }
+        .score-grade-b { background: #E0F2FE; color: #0369A1; border: 1px solid #7DD3FC; }
+        .score-grade-c { background: #FEF3C7; color: #B45309; border: 1px solid #FCD34D; }
+        .score-grade-d { background: #FEE2E2; color: #B91C1C; border: 1px solid #FCA5A5; }
+
+        .alert-card-warning {
+            background: #FFFBEB;
+            border-left: 4px solid #D97706;
+            border: 1px solid #FDE68A;
+            border-left-width: 4px;
+            border-radius: 0 0.5rem 0.5rem 0;
+            padding: 0.65rem 1rem;
+            margin-bottom: 0.45rem;
+            color: #92400E;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .alert-card-success {
+            background: #F0FDF4;
+            border-left: 4px solid #16A34A;
+            border: 1px solid #BBF7D0;
+            border-left-width: 4px;
+            border-radius: 0 0.5rem 0.5rem 0;
+            padding: 0.65rem 1rem;
+            margin-bottom: 0.45rem;
+            color: #166534;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        div.stButton > button[kind="primary"] {
+            background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%) !important;
+            color: #FFFFFF !important;
+            font-weight: 700 !important;
+            border: 1px solid #0D9488 !important;
+            border-radius: 0.5rem !important;
+            box-shadow: 0 2px 10px rgba(13, 148, 136, 0.25) !important;
+        }
+    </style>
+    """
+
+st.markdown(f"""
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+{css_theme}
+""", unsafe_allow_html=True)
+
+
+# ---------------------------------------------------------
+# Dynamic Plotly Chart Helpers (Theme-Aware)
+# ---------------------------------------------------------
+def create_score_gauge(score: float, grade: str, delta: float = None, is_dark_mode: bool = True) -> go.Figure:
+    color = "#10B981" if score >= 85 else ("#0284C7" if score >= 75 else ("#D97706" if score >= 60 else "#DC2626")) if not is_dark_mode else ("#34D399" if score >= 85 else ("#38BDF8" if score >= 75 else ("#FBBF24" if score >= 60 else "#F87171")))
+    text_color = "#FFFFFF" if is_dark_mode else "#0F172A"
+    tick_color = "#94A3B8" if is_dark_mode else "#64748B"
+    bg_gauge = "rgba(30, 41, 59, 0.6)" if is_dark_mode else "rgba(241, 245, 249, 0.9)"
+    border_color = "#334155" if is_dark_mode else "#CBD5E1"
+    
+    fig = go.Figure(go.Indicator(
+        mode="gauge+number" + ("+delta" if delta is not None else ""),
+        value=score,
+        delta={'reference': score - delta, 'increasing': {'color': color}} if delta else None,
+        number={'suffix': " / 100", 'font': {'size': 36, 'color': text_color, 'family': "JetBrains Mono, monospace"}},
+        gauge={
+            'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': tick_color},
+            'bar': {'color': color, 'thickness': 0.3},
+            'bgcolor': bg_gauge,
+            'borderwidth': 1,
+            'bordercolor': border_color,
+            'steps': [
+                {'range': [0, 60], 'color': "rgba(239, 68, 68, 0.15)"},
+                {'range': [60, 75], 'color': "rgba(245, 158, 11, 0.15)"},
+                {'range': [75, 90], 'color': "rgba(56, 189, 248, 0.15)"},
+                {'range': [90, 100], 'color': "rgba(16, 185, 129, 0.15)"}
+            ]
+        }
+    ))
+    fig.update_layout(
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        margin=dict(l=15, r=15, t=20, b=5),
+        height=200,
+    )
+    return fig
+
+
+def create_radar_chart(dimension_scores: dict, is_dark_mode: bool = True) -> go.Figure:
+    categories = list(dimension_scores.keys())
+    scores = [ds.score for ds in dimension_scores.values()]
+    categories.append(categories[0])
+    scores.append(scores[0])
+    
+    fill_color = 'rgba(20, 184, 166, 0.25)' if is_dark_mode else 'rgba(13, 148, 136, 0.2)'
+    line_color = '#14B8A6' if is_dark_mode else '#0D9488'
+    marker_color = '#2DD4BF' if is_dark_mode else '#14B8A6'
+    grid_color = '#334155' if is_dark_mode else '#CBD5E1'
+    text_color = '#F8FAFC' if is_dark_mode else '#0F172A'
+    bg_color = 'rgba(15, 23, 42, 0.6)' if is_dark_mode else 'rgba(255, 255, 255, 0.8)'
+    
+    fig = go.Figure()
+    fig.add_trace(go.Scatterpolar(
+        r=scores,
+        theta=categories,
+        fill='toself',
+        fillcolor=fill_color,
+        line=dict(color=line_color, width=2.5),
+        marker=dict(size=6, color=marker_color),
+        hoverinfo='r+theta'
+    ))
+    fig.update_layout(
+        polar=dict(
+            radialaxis=dict(visible=True, range=[0, 100], tickfont=dict(size=9, color=grid_color, family="JetBrains Mono"), gridcolor=grid_color),
+            angularaxis=dict(tickfont=dict(size=11, color=text_color, family="Inter"), gridcolor=grid_color),
+            bgcolor=bg_color
+        ),
+        paper_bgcolor='rgba(0,0,0,0)',
+        showlegend=False,
+        margin=dict(l=30, r=30, t=20, b=20),
+        height=230
+    )
+    return fig
+
+
+def create_comparison_bar_chart(initial_report, cleaned_report, is_dark_mode: bool = True) -> go.Figure:
+    dims = list(initial_report.dimension_scores.keys())
+    init_scores = [initial_report.dimension_scores[d].score for d in dims]
+    clean_scores = [cleaned_report.dimension_scores[d].score for d in dims]
+    
+    title_color = '#F8FAFC' if is_dark_mode else '#0F172A'
+    text_color = '#94A3B8' if is_dark_mode else '#475569'
+    grid_color = '#334155' if is_dark_mode else '#E2E8F0'
+    bg_color = 'rgba(15, 23, 42, 0.6)' if is_dark_mode else 'rgba(255, 255, 255, 0.8)'
+    
+    fig = go.Figure(data=[
+        go.Bar(name='Before Cleaning', x=dims, y=init_scores, marker_color='#F59E0B', opacity=0.85),
+        go.Bar(name='After Auto-Clean', x=dims, y=clean_scores, marker_color='#10B981')
+    ])
+    fig.update_layout(
+        barmode='group',
+        title=dict(text="Score Improvement by Category (Before vs. After)", font=dict(color=title_color, size=13)),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor=bg_color,
+        font=dict(color=text_color, family="Inter"),
+        xaxis=dict(gridcolor=grid_color),
+        yaxis=dict(gridcolor=grid_color, range=[0, 105]),
+        legend=dict(font=dict(color=title_color)),
+        height=280,
+        margin=dict(l=15, r=15, t=35, b=15)
+    )
+    return fig
 
 
 # ---------------------------------------------------------
@@ -343,23 +480,22 @@ df = st.session_state.df
 
 if report is None:
     # ---------------------------------------------------------
-    # MAIN PAGE: HERO UPLOADER (Clean, Crisp & Engaging)
+    # MAIN PAGE: HERO UPLOADER (Clean & Simple)
     # ---------------------------------------------------------
     st.markdown("""
     <div class="brand-hero">
         <div>
             <h1 class="brand-title">🛡️ Dataset Quality Auditor</h1>
-            <p style="color: #94A3B8; font-size: 0.95rem; margin-top: 0.25rem; margin-bottom: 0;">
+            <p style="color: #64748B; font-size: 0.95rem; margin-top: 0.25rem; margin-bottom: 0;">
                 Scan data health, auto-remediate issues in 1 click, and test machine learning accuracy uplift.
             </p>
         </div>
-        <div style="background: rgba(20, 184, 166, 0.15); border: 1px solid #14B8A6; color: #2DD4BF; font-weight: 800; font-size: 0.75rem; padding: 0.35rem 0.85rem; border-radius: 9999px; font-family: 'JetBrains Mono', monospace;">
-            v2.0 CORE
+        <div style="background: rgba(20, 184, 166, 0.15); border: 1px solid #14B8A6; color: #0D9488; font-weight: 800; font-size: 0.75rem; padding: 0.35rem 0.85rem; border-radius: 9999px; font-family: 'JetBrains Mono', monospace;">
+            v2.0 DUAL-THEME
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    # 3-Step Simple Workflow Strip
     c_s1, c_s2, c_s3 = st.columns(3)
     with c_s1:
         st.markdown("<div class='tip-box'><b>1. Upload File 📁</b><br>Drop any CSV, Excel, or Parquet file.</div>", unsafe_allow_html=True)
@@ -485,9 +621,9 @@ else:
         st.markdown(f"""
         <div class="brand-hero" style="margin-bottom: 0;">
             <div>
-                <h1 class="brand-title">📋 {escaped_title} {'<span style="color: #34D399; font-size: 0.95rem;">(Cleaned ✨)</span>' if is_cleaned else ''}</h1>
-                <p style="color: #94A3B8; font-size: 0.85rem; margin-top: 0.2rem; font-family: 'JetBrains Mono', monospace;">
-                    Target: <span style="color: #2DD4BF;">{escaped_target}</span> &nbsp;•&nbsp; {active_report.total_rows:,} rows &nbsp;•&nbsp; {active_report.total_columns} columns
+                <h1 class="brand-title">📋 {escaped_title} {'<span style="color: #10B981; font-size: 0.95rem;">(Cleaned ✨)</span>' if is_cleaned else ''}</h1>
+                <p style="color: #64748B; font-size: 0.85rem; margin-top: 0.2rem; font-family: 'JetBrains Mono', monospace;">
+                    Target: <span style="color: #0D9488; font-weight: 600;">{escaped_target}</span> &nbsp;•&nbsp; {active_report.total_rows:,} rows &nbsp;•&nbsp; {active_report.total_columns} columns
                 </p>
             </div>
             <div>
@@ -510,12 +646,12 @@ else:
 
     st.markdown("<div style='margin-top: 1rem;'></div>", unsafe_allow_html=True)
 
-    # Score Gauge & Radar
+    # Score Gauge & Radar (Dynamic Theme Aware)
     g_col1, g_col2 = st.columns([1, 1])
     with g_col1:
-        st.plotly_chart(create_score_gauge(score, grade, delta_pts), use_container_width=True)
+        st.plotly_chart(create_score_gauge(score, grade, delta_pts, is_dark_mode=is_dark), use_container_width=True)
     with g_col2:
-        st.plotly_chart(create_radar_chart(active_report.dimension_scores), use_container_width=True)
+        st.plotly_chart(create_radar_chart(active_report.dimension_scores, is_dark_mode=is_dark), use_container_width=True)
 
     # Key Summary Stats (4 Crisp Native Cards)
     k1, k2, k3, k4 = st.columns(4)
@@ -622,7 +758,9 @@ else:
                 top_c.columns = [sel_col, 'Count']
                 fig = px.bar(top_c, x=sel_col, y='Count', color='Count', color_continuous_scale='Teal')
             
-            fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(15, 23, 42, 0.6)", font=dict(color="#94A3B8"), height=280)
+            p_bg = "rgba(15, 23, 42, 0.6)" if is_dark else "rgba(255, 255, 255, 0.8)"
+            p_text = "#94A3B8" if is_dark else "#475569"
+            fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor=p_bg, font=dict(color=p_text), height=280)
             st.plotly_chart(fig, use_container_width=True)
 
     # ---------------------------------------------------------
@@ -672,7 +810,7 @@ else:
             if st.session_state.cleaned_df is not None:
                 c_rep = st.session_state.cleaned_report
                 st.success(f"🎉 Cleaning Done! Health score improved: **{report.overall_score:.1f}** (Grade {report.grade}) ➡️ **{c_rep.overall_score:.1f}** (Grade {c_rep.grade})!")
-                st.plotly_chart(create_comparison_bar_chart(report, c_rep), use_container_width=True)
+                st.plotly_chart(create_comparison_bar_chart(report, c_rep, is_dark_mode=is_dark), use_container_width=True)
 
                 st.markdown("##### 📥 Download Your Cleaned Data:")
                 d1, d2 = st.columns(2)
@@ -800,10 +938,10 @@ else:
         st.markdown(f"""
         <div class="brand-hero" style="margin-top: 0.5rem; margin-bottom: 1rem; border-color: rgba(99, 102, 241, 0.4);">
             <div>
-                <div style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF; margin-bottom: 0.3rem;">
-                    {diag.overall_health_badge} &nbsp;·&nbsp; <span style="font-size: 0.9rem; color: #94A3B8;">Risk Index: {diag.risk_score}/100 ({diag.risk_level})</span>
+                <div style="font-size: 1.15rem; font-weight: 800; color: {'#FFFFFF' if is_dark else '#0F172A'}; margin-bottom: 0.3rem;">
+                    {diag.overall_health_badge} &nbsp;·&nbsp; <span style="font-size: 0.9rem; color: #64748B;">Risk Index: {diag.risk_score}/100 ({diag.risk_level})</span>
                 </div>
-                <div style="font-size: 0.9rem; color: #CBD5E1; line-height: 1.45;">
+                <div style="font-size: 0.9rem; color: {'#CBD5E1' if is_dark else '#334155'}; line-height: 1.45;">
                     {diag.executive_summary}
                 </div>
             </div>
@@ -863,10 +1001,15 @@ else:
 
         # Render Data Doctor's Response Card
         if "active_doctor_answer" in st.session_state:
+            doc_bg = "rgba(30, 41, 59, 0.75)" if is_dark else "#FFFFFF"
+            doc_border = "rgba(56, 189, 248, 0.4)" if is_dark else "#BAE6FD"
+            doc_title = "#38BDF8" if is_dark else "#0284C7"
+            doc_sub = "#E2E8F0" if is_dark else "#1E293B"
+            
             st.markdown(f"""
-            <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 0.85rem; padding: 1.25rem 1.5rem; margin-top: 1rem; margin-bottom: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-                <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: #38BDF8; letter-spacing: 0.05em; margin-bottom: 0.4rem; font-family: 'JetBrains Mono', monospace;">
-                    💡 Data Doctor Consultation &nbsp;›&nbsp; <span style="color: #E2E8F0; text-transform: none;">{st.session_state.get('active_doctor_query', '')}</span>
+            <div style="background: {doc_bg}; border: 1px solid {doc_border}; border-radius: 0.85rem; padding: 1.25rem 1.5rem; margin-top: 1rem; margin-bottom: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: {doc_title}; letter-spacing: 0.05em; margin-bottom: 0.4rem; font-family: 'JetBrains Mono', monospace;">
+                    💡 Data Doctor Consultation &nbsp;›&nbsp; <span style="color: {doc_sub}; text-transform: none;">{st.session_state.get('active_doctor_query', '')}</span>
                 </div>
             """, unsafe_allow_html=True)
             st.markdown(st.session_state["active_doctor_answer"])
@@ -875,7 +1018,8 @@ else:
         # 3. Step-by-Step Remediation Roadmap
         st.markdown("##### 🗺️ Recommended Action Plan:")
         for step in diag.remediation_roadmap:
-            st.markdown(f"<div style='margin-bottom: 0.35rem; color: #CBD5E1;'>• {step}</div>", unsafe_allow_html=True)
+            step_color = "#CBD5E1" if is_dark else "#334155"
+            st.markdown(f"<div style='margin-bottom: 0.35rem; color: {step_color};'>• {step}</div>", unsafe_allow_html=True)
 
         # 4. Downloads
         st.markdown("---")
