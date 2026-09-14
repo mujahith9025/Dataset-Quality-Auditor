@@ -7,6 +7,7 @@ import os
 import io
 import json
 import html
+import textwrap
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -91,11 +92,11 @@ with st.sidebar:
     st.divider()
     st.markdown("##### 💡 Beginner Score Guide:")
     st.markdown("""
-    - **90–100 (Grade A)**: 🟢 Production ready!
-    - **75–89 (Grade B)**: 🔵 Good, minor fixes recommended.
-    - **60–74 (Grade C)**: 🟡 Needs auto-cleaning.
-    - **0–59 (Grade D/F)**: 🔴 Dirty data, cleaning required.
-    """)
+- **90–100 (Grade A)**: 🟢 Production ready!
+- **75–89 (Grade B)**: 🔵 Good, minor fixes recommended.
+- **60–74 (Grade C)**: 🟡 Needs auto-cleaning.
+- **0–59 (Grade D/F)**: 🔴 Dirty data, cleaning required.
+""")
 
     st.divider()
     if st.session_state.report is not None:
@@ -115,276 +116,286 @@ with st.sidebar:
 # Dynamic CSS Styling (Dark & Light Mode Aware)
 # ---------------------------------------------------------
 if is_dark:
-    css_theme = """
+    css_theme = textwrap.dedent("""
     <style>
-        html, body, [class*="css"], [data-testid="stAppViewContainer"], .stApp {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-            background: radial-gradient(circle at top right, #0F172A 0%, #0B1120 50%, #030712 100%) !important;
-            color: #F8FAFC !important;
-        }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-        code, pre, .font-mono, [data-testid="stMetricValue"] {
-            font-family: 'JetBrains Mono', monospace !important;
-        }
+    html, body, [class*="css"], [data-testid="stAppViewContainer"], .stApp {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        background: radial-gradient(circle at top right, #0F172A 0%, #0B1120 50%, #030712 100%) !important;
+        color: #F8FAFC !important;
+    }
 
-        .brand-hero {
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
-            border: 1px solid rgba(20, 184, 166, 0.35);
-            border-radius: 1rem;
-            padding: 1.25rem 1.75rem;
-            margin-bottom: 1.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-        }
+    code, pre, .font-mono, [data-testid="stMetricValue"] {
+        font-family: 'JetBrains Mono', monospace !important;
+    }
 
-        .brand-title {
-            font-size: 1.55rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            background: linear-gradient(to right, #FFFFFF, #E2E8F0, #94A3B8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 0;
-        }
+    section[data-testid="stSidebar"] {
+        background-color: #0B1120 !important;
+        border-right: 1px solid #1E293B !important;
+    }
 
-        .tip-box {
-            background: rgba(15, 23, 42, 0.75);
-            border: 1px solid #334155;
-            border-radius: 0.75rem;
-            padding: 0.9rem 1.15rem;
-            margin-bottom: 0.85rem;
-            font-size: 0.875rem;
-            color: #CBD5E1;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-        .tip-box:hover {
-            border-color: #14B8A6;
-            transform: translateY(-2px);
-        }
+    .brand-hero {
+        background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+        border: 1px solid rgba(20, 184, 166, 0.35);
+        border-radius: 1rem;
+        padding: 1.25rem 1.75rem;
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
 
-        .kpi-card {
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid rgba(51, 65, 85, 0.8);
-            border-radius: 0.85rem;
-            padding: 1.1rem 1.25rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
+    .brand-title {
+        font-size: 1.55rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        background: linear-gradient(to right, #FFFFFF, #E2E8F0, #94A3B8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0;
+    }
 
-        .score-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.35rem 0.85rem;
-            border-radius: 9999px;
-            font-weight: 800;
-            font-size: 0.85rem;
-            font-family: 'JetBrains Mono', monospace;
-        }
-        .score-grade-a { background: rgba(16, 185, 129, 0.2); color: #34D399; border: 1px solid #10B981; }
-        .score-grade-b { background: rgba(56, 189, 248, 0.2); color: #38BDF8; border: 1px solid #38BDF8; }
-        .score-grade-c { background: rgba(245, 158, 11, 0.2); color: #FBBF24; border: 1px solid #F59E0B; }
-        .score-grade-d { background: rgba(239, 68, 68, 0.2); color: #F87171; border: 1px solid #EF4444; }
+    .tip-box {
+        background: rgba(15, 23, 42, 0.75);
+        border: 1px solid #334155;
+        border-radius: 0.75rem;
+        padding: 0.9rem 1.15rem;
+        margin-bottom: 0.85rem;
+        font-size: 0.875rem;
+        color: #CBD5E1;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .tip-box:hover {
+        border-color: #14B8A6;
+        transform: translateY(-2px);
+    }
 
-        .alert-card-warning {
-            background: rgba(245, 158, 11, 0.1);
-            border-left: 4px solid #F59E0B;
-            border-radius: 0 0.5rem 0.5rem 0;
-            padding: 0.65rem 1rem;
-            margin-bottom: 0.45rem;
-            color: #FEF3C7;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
+    .kpi-card {
+        background: rgba(15, 23, 42, 0.8);
+        border: 1px solid rgba(51, 65, 85, 0.8);
+        border-radius: 0.85rem;
+        padding: 1.1rem 1.25rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
 
-        .alert-card-success {
-            background: rgba(16, 185, 129, 0.1);
-            border-left: 4px solid #10B981;
-            border-radius: 0 0.5rem 0.5rem 0;
-            padding: 0.65rem 1rem;
-            margin-bottom: 0.45rem;
-            color: #D1FAE5;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
+    .score-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.35rem 0.85rem;
+        border-radius: 9999px;
+        font-weight: 800;
+        font-size: 0.85rem;
+        font-family: 'JetBrains Mono', monospace;
+    }
+    .score-grade-a { background: rgba(16, 185, 129, 0.2); color: #34D399; border: 1px solid #10B981; }
+    .score-grade-b { background: rgba(56, 189, 248, 0.2); color: #38BDF8; border: 1px solid #38BDF8; }
+    .score-grade-c { background: rgba(245, 158, 11, 0.2); color: #FBBF24; border: 1px solid #F59E0B; }
+    .score-grade-d { background: rgba(239, 68, 68, 0.2); color: #F87171; border: 1px solid #EF4444; }
 
-        div.stButton > button[kind="primary"] {
-            background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%) !important;
-            color: #003731 !important;
-            font-weight: 700 !important;
-            border: 1px solid #2DD4BF !important;
-            border-radius: 0.5rem !important;
-            box-shadow: 0 0 16px rgba(20, 184, 166, 0.3) !important;
-        }
+    .alert-card-warning {
+        background: rgba(245, 158, 11, 0.1);
+        border-left: 4px solid #F59E0B;
+        border-radius: 0 0.5rem 0.5rem 0;
+        padding: 0.65rem 1rem;
+        margin-bottom: 0.45rem;
+        color: #FEF3C7;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
 
-        div.stButton > button:not([kind="primary"]) {
-            background: rgba(15, 23, 42, 0.8) !important;
-            color: #F8FAFC !important;
-            border: 1px solid #334155 !important;
-            border-radius: 0.5rem !important;
-        }
-        div.stButton > button:not([kind="primary"]):hover {
-            border-color: #14B8A6 !important;
-            color: #2DD4BF !important;
-        }
+    .alert-card-success {
+        background: rgba(16, 185, 129, 0.1);
+        border-left: 4px solid #10B981;
+        border-radius: 0 0.5rem 0.5rem 0;
+        padding: 0.65rem 1rem;
+        margin-bottom: 0.45rem;
+        color: #D1FAE5;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
 
-        button[data-baseweb="tab"][aria-selected="true"] {
-            color: #2DD4BF !important;
-            border-bottom: 2px solid #14B8A6 !important;
-        }
+    div.stButton > button[kind="primary"] {
+        background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%) !important;
+        color: #003731 !important;
+        font-weight: 700 !important;
+        border: 1px solid #2DD4BF !important;
+        border-radius: 0.5rem !important;
+        box-shadow: 0 0 16px rgba(20, 184, 166, 0.3) !important;
+    }
+
+    div.stButton > button:not([kind="primary"]) {
+        background: rgba(15, 23, 42, 0.8) !important;
+        color: #F8FAFC !important;
+        border: 1px solid #334155 !important;
+        border-radius: 0.5rem !important;
+    }
+    div.stButton > button:not([kind="primary"]):hover {
+        border-color: #14B8A6 !important;
+        color: #2DD4BF !important;
+    }
+
+    button[data-baseweb="tab"][aria-selected="true"] {
+        color: #2DD4BF !important;
+        border-bottom: 2px solid #14B8A6 !important;
+    }
+
+    [data-testid="stExpander"] {
+        background: rgba(15, 23, 42, 0.6) !important;
+        border: 1px solid #334155 !important;
+        border-radius: 0.75rem !important;
+    }
     </style>
-    """
+    """).strip()
 else:
-    css_theme = """
+    css_theme = textwrap.dedent("""
     <style>
-        html, body, [class*="css"], [data-testid="stAppViewContainer"], .stApp {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-            background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 50%, #E2E8F0 100%) !important;
-            color: #0F172A !important;
-        }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-        code, pre, .font-mono, [data-testid="stMetricValue"] {
-            font-family: 'JetBrains Mono', monospace !important;
-        }
+    html, body, [class*="css"], [data-testid="stAppViewContainer"], .stApp {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 50%, #E2E8F0 100%) !important;
+        color: #0F172A !important;
+    }
 
-        section[data-testid="stSidebar"] {
-            background-color: #F8FAFC !important;
-            border-right: 1px solid #E2E8F0 !important;
-        }
+    code, pre, .font-mono, [data-testid="stMetricValue"] {
+        font-family: 'JetBrains Mono', monospace !important;
+    }
 
-        .brand-hero {
-            background: linear-gradient(135deg, #FFFFFF 0%, #F0FDFA 100%);
-            border: 1px solid rgba(20, 184, 166, 0.4);
-            border-radius: 1rem;
-            padding: 1.25rem 1.75rem;
-            margin-bottom: 1.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-        }
+    section[data-testid="stSidebar"] {
+        background-color: #F8FAFC !important;
+        border-right: 1px solid #E2E8F0 !important;
+    }
 
-        .brand-title {
-            font-size: 1.55rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: #0F172A;
-            margin: 0;
-        }
+    .brand-hero {
+        background: linear-gradient(135deg, #FFFFFF 0%, #F0FDFA 100%);
+        border: 1px solid rgba(20, 184, 166, 0.4);
+        border-radius: 1rem;
+        padding: 1.25rem 1.75rem;
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
 
-        .tip-box {
-            background: #FFFFFF;
-            border: 1px solid #CBD5E1;
-            border-radius: 0.75rem;
-            padding: 0.9rem 1.15rem;
-            margin-bottom: 0.85rem;
-            font-size: 0.875rem;
-            color: #334155;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-        .tip-box:hover {
-            border-color: #0D9488;
-            transform: translateY(-2px);
-        }
+    .brand-title {
+        font-size: 1.55rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: #0F172A;
+        margin: 0;
+    }
 
-        .kpi-card {
-            background: #FFFFFF;
-            border: 1px solid #CBD5E1;
-            border-radius: 0.85rem;
-            padding: 1.1rem 1.25rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
+    .tip-box {
+        background: #FFFFFF;
+        border: 1px solid #CBD5E1;
+        border-radius: 0.75rem;
+        padding: 0.9rem 1.15rem;
+        margin-bottom: 0.85rem;
+        font-size: 0.875rem;
+        color: #334155;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .tip-box:hover {
+        border-color: #0D9488;
+        transform: translateY(-2px);
+    }
 
-        .score-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.35rem 0.85rem;
-            border-radius: 9999px;
-            font-weight: 800;
-            font-size: 0.85rem;
-            font-family: 'JetBrains Mono', monospace;
-        }
-        .score-grade-a { background: #DCFCE7; color: #15803D; border: 1px solid #86EFAC; }
-        .score-grade-b { background: #E0F2FE; color: #0369A1; border: 1px solid #7DD3FC; }
-        .score-grade-c { background: #FEF3C7; color: #B45309; border: 1px solid #FCD34D; }
-        .score-grade-d { background: #FEE2E2; color: #B91C1C; border: 1px solid #FCA5A5; }
+    .kpi-card {
+        background: #FFFFFF;
+        border: 1px solid #CBD5E1;
+        border-radius: 0.85rem;
+        padding: 1.1rem 1.25rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
 
-        .alert-card-warning {
-            background: #FFFBEB;
-            border-left: 4px solid #D97706;
-            border: 1px solid #FDE68A;
-            border-left-width: 4px;
-            border-radius: 0 0.5rem 0.5rem 0;
-            padding: 0.65rem 1rem;
-            margin-bottom: 0.45rem;
-            color: #92400E;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
+    .score-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.35rem 0.85rem;
+        border-radius: 9999px;
+        font-weight: 800;
+        font-size: 0.85rem;
+        font-family: 'JetBrains Mono', monospace;
+    }
+    .score-grade-a { background: #DCFCE7; color: #15803D; border: 1px solid #86EFAC; }
+    .score-grade-b { background: #E0F2FE; color: #0369A1; border: 1px solid #7DD3FC; }
+    .score-grade-c { background: #FEF3C7; color: #B45309; border: 1px solid #FCD34D; }
+    .score-grade-d { background: #FEE2E2; color: #B91C1C; border: 1px solid #FCA5A5; }
 
-        .alert-card-success {
-            background: #F0FDF4;
-            border-left: 4px solid #16A34A;
-            border: 1px solid #BBF7D0;
-            border-left-width: 4px;
-            border-radius: 0 0.5rem 0.5rem 0;
-            padding: 0.65rem 1rem;
-            margin-bottom: 0.45rem;
-            color: #166534;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
+    .alert-card-warning {
+        background: #FFFBEB;
+        border-left: 4px solid #D97706;
+        border: 1px solid #FDE68A;
+        border-left-width: 4px;
+        border-radius: 0 0.5rem 0.5rem 0;
+        padding: 0.65rem 1rem;
+        margin-bottom: 0.45rem;
+        color: #92400E;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
 
-        div.stButton > button[kind="primary"] {
-            background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%) !important;
-            color: #FFFFFF !important;
-            font-weight: 700 !important;
-            border: 1px solid #0D9488 !important;
-            border-radius: 0.5rem !important;
-            box-shadow: 0 2px 10px rgba(13, 148, 136, 0.25) !important;
-        }
+    .alert-card-success {
+        background: #F0FDF4;
+        border-left: 4px solid #16A34A;
+        border: 1px solid #BBF7D0;
+        border-left-width: 4px;
+        border-radius: 0 0.5rem 0.5rem 0;
+        padding: 0.65rem 1rem;
+        margin-bottom: 0.45rem;
+        color: #166534;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
 
-        div.stButton > button:not([kind="primary"]) {
-            background: #FFFFFF !important;
-            color: #0F172A !important;
-            border: 1px solid #CBD5E1 !important;
-            border-radius: 0.5rem !important;
-        }
-        div.stButton > button:not([kind="primary"]):hover {
-            border-color: #0D9488 !important;
-            color: #0D9488 !important;
-        }
+    div.stButton > button[kind="primary"] {
+        background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%) !important;
+        color: #FFFFFF !important;
+        font-weight: 700 !important;
+        border: 1px solid #0D9488 !important;
+        border-radius: 0.5rem !important;
+        box-shadow: 0 2px 10px rgba(13, 148, 136, 0.25) !important;
+    }
 
-        button[data-baseweb="tab"][aria-selected="true"] {
-            color: #0D9488 !important;
-            border-bottom: 2px solid #0D9488 !important;
-        }
+    div.stButton > button:not([kind="primary"]) {
+        background: #FFFFFF !important;
+        color: #0F172A !important;
+        border: 1px solid #CBD5E1 !important;
+        border-radius: 0.5rem !important;
+    }
+    div.stButton > button:not([kind="primary"]):hover {
+        border-color: #0D9488 !important;
+        color: #0D9488 !important;
+    }
 
-        [data-testid="stExpander"] {
-            background: #FFFFFF !important;
-            border: 1px solid #E2E8F0 !important;
-            border-radius: 0.75rem !important;
-        }
+    button[data-baseweb="tab"][aria-selected="true"] {
+        color: #0D9488 !important;
+        border-bottom: 2px solid #0D9488 !important;
+    }
 
-        [data-testid="stFileUploader"] {
-            background: #FFFFFF !important;
-            border: 1px dashed #94A3B8 !important;
-            border-radius: 0.75rem !important;
-        }
+    [data-testid="stExpander"] {
+        background: #FFFFFF !important;
+        border: 1px solid #E2E8F0 !important;
+        border-radius: 0.75rem !important;
+    }
+
+    [data-testid="stFileUploader"] {
+        background: #FFFFFF !important;
+        border: 1px dashed #94A3B8 !important;
+        border-radius: 0.75rem !important;
+    }
     </style>
-    """
+    """).strip()
 
-st.markdown(f"""
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-{css_theme}
-""", unsafe_allow_html=True)
+st.markdown(css_theme, unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------
@@ -531,7 +542,7 @@ if report is None:
     # ---------------------------------------------------------
     # MAIN PAGE: HERO UPLOADER (Clean & Simple)
     # ---------------------------------------------------------
-    st.markdown(f"""
+    st.markdown(textwrap.dedent(f"""
     <div class="brand-hero">
         <div>
             <h1 class="brand-title">🛡️ Dataset Quality Auditor</h1>
@@ -543,7 +554,7 @@ if report is None:
             v2.0 DUAL-THEME
         </div>
     </div>
-    """, unsafe_allow_html=True)
+    """).strip(), unsafe_allow_html=True)
 
     c_s1, c_s2, c_s3 = st.columns(3)
     with c_s1:
@@ -667,7 +678,7 @@ else:
     with top_col1:
         escaped_title = html.escape(report.dataset_name)
         escaped_target = html.escape(str(report.target_column or 'None (Exploratory)'))
-        st.markdown(f"""
+        st.markdown(textwrap.dedent(f"""
         <div class="brand-hero" style="margin-bottom: 0;">
             <div>
                 <h1 class="brand-title">📋 {escaped_title} {'<span style="color: #10B981; font-size: 0.95rem;">(Cleaned ✨)</span>' if is_cleaned else ''}</h1>
@@ -681,7 +692,7 @@ else:
                 </div>
             </div>
         </div>
-        """, unsafe_allow_html=True)
+        """).strip(), unsafe_allow_html=True)
     with top_col2:
         st.markdown("<div style='height: 8px;'></div>", unsafe_allow_html=True)
         if st.button("📤 Upload Another File", use_container_width=True):
@@ -984,7 +995,7 @@ else:
             )
 
         # 1. Executive Summary & Health Badge
-        st.markdown(f"""
+        st.markdown(textwrap.dedent(f"""
         <div class="brand-hero" style="margin-top: 0.5rem; margin-bottom: 1rem; border-color: rgba(99, 102, 241, 0.4);">
             <div>
                 <div style="font-size: 1.15rem; font-weight: 800; color: {'#FFFFFF' if is_dark else '#0F172A'}; margin-bottom: 0.3rem;">
@@ -995,7 +1006,7 @@ else:
                 </div>
             </div>
         </div>
-        """, unsafe_allow_html=True)
+        """).strip(), unsafe_allow_html=True)
 
         # 2. Interactive AI Data Doctor Consultation
         st.markdown("##### 💬 Ask the AI Data Doctor (1-Click Presets):")
@@ -1055,14 +1066,14 @@ else:
             doc_title = "#38BDF8" if is_dark else "#0284C7"
             doc_sub = "#E2E8F0" if is_dark else "#1E293B"
             
-            st.markdown(f"""
+            st.markdown(textwrap.dedent(f"""
             <div style="background: {doc_bg}; border: 1px solid {doc_border}; border-radius: 0.85rem; padding: 1.25rem 1.5rem; margin-top: 1rem; margin-bottom: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: {doc_title}; letter-spacing: 0.05em; margin-bottom: 0.4rem; font-family: 'JetBrains Mono', monospace;">
+                <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: {doc_title}; letter-spacing: 0.05em; margin-bottom: 0.5rem; font-family: 'JetBrains Mono', monospace;">
                     💡 Data Doctor Consultation &nbsp;›&nbsp; <span style="color: {doc_sub}; text-transform: none;">{st.session_state.get('active_doctor_query', '')}</span>
                 </div>
-            """, unsafe_allow_html=True)
+            </div>
+            """).strip(), unsafe_allow_html=True)
             st.markdown(st.session_state["active_doctor_answer"])
-            st.markdown("</div>", unsafe_allow_html=True)
 
         # 3. Step-by-Step Remediation Roadmap
         st.markdown("##### 🗺️ Recommended Action Plan:")
