@@ -151,7 +151,7 @@ dataset-quality-auditor/
 │   ├── ml_benchmark.py            # Automated ML training & uplift scoring
 │   ├── drift_detector.py          # KS-tests, PSI, and novel category drift
 │   ├── rules_engine.py            # Declarative business assertions runner
-│   ├── data_doctor.py             # Executive diagnostic synthesizer & Gemini AI
+│   ├── data_doctor.py             # 100% Offline AI diagnostic assistant
 │   └── report_generator.py        # Interactive HTML, Python & JSON exporters
 ├── models/
 │   └── schemas.py                 # Pydantic data schemas

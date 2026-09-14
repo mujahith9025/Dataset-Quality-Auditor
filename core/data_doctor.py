@@ -44,59 +44,53 @@ class DataDoctor:
         elif score >= 50 or len(critical_alerts) > 0:
             risk_level = "HIGH"
             risk_score = 75
-            badge = "🟠 HIGH RISK FOR ML DEPLOYMENT"
+            badge = "🟠 HIGH RISK FOR ML"
         else:
             risk_level = "CRITICAL"
             risk_score = 95
-            badge = "🔴 BLOCKED / COMPROMISED DATASET"
+            badge = "🔴 COMPROMISED DATASET"
 
-        # Executive Summary Synthesis
-        summary_lines = [
-            f"Dataset '{report.dataset_name}' received a Quality Score of {score:.1f}/100 (Grade {report.grade})."
-        ]
-        if report.total_rows < 100:
-            summary_lines.append(f"Sample size is critically small ({report.total_rows:,} rows), creating high model variance.")
-        else:
-            summary_lines.append(f"Audited {report.total_rows:,} records across {report.total_columns} columns ({report.memory_usage_mb} MB).")
+        # Crisp Executive Summary
+        summary = f"Quality Score: {score:.1f}/100 (Grade {report.grade}) across {report.total_rows:,} rows and {report.total_columns} columns."
 
-        # Business Impact
+        # Crisp Business Impact
         impact_lines = []
         if any("leakage" in a.lower() for a in report.summary_alerts):
-            impact_lines.append("🚨 **Severe Target Leakage**: Features containing target information will cause catastrophic over-optimistic test scores and silent failure in production.")
+            impact_lines.append("🚨 **Target Leakage**: Gives away predictions, causing false high accuracy.")
         if any("imbalance" in a.lower() for a in report.summary_alerts):
-            impact_lines.append("⚠️ **Class Imbalance Threat**: Minority class will suffer high false negatives without re-sampling or threshold tuning.")
+            impact_lines.append("⚠️ **Class Imbalance**: Minority class will be ignored without re-sampling.")
         if any("missing" in a.lower() for a in report.summary_alerts):
-            impact_lines.append("📉 **Incomplete Records**: Missing fields may lead to biased queries and pipeline crashes.")
+            impact_lines.append("📉 **Missing Data**: Incomplete records will cause errors or bias.")
         if not impact_lines:
-            impact_lines.append("✅ **Low Business Liability**: The dataset shows consistent records and is well-suited for automated ML pipelines.")
+            impact_lines.append("✅ **Clean & Reliable**: Ready for analytics and ML models.")
 
-        # Root Cause Vectors
+        # Root Cause Vectors (Crisp 1-liners)
         root_causes = []
         for check in report.checker_results.values():
             if not check.passed or check.score < 95.0:
                 root_causes.append(f"**{check.checker_name}**: {check.summary}")
 
-        # Compliance & Governance Risks
+        # Governance Risks
         compliance = []
         if any("sentinel" in a.lower() or "-999" in a.lower() for a in report.summary_alerts):
-            compliance.append("Legacy database sentinel values (-999, 9999) corrupt statistical aggregates and analytics.")
+            compliance.append("Legacy error tokens (-999, 9999) corrupt calculations.")
         if any("duplicate" in a.lower() for a in report.summary_alerts):
-            compliance.append("Duplicate identity records can distort customer tracking and inflate KPI metrics.")
+            compliance.append("Duplicate rows distort customer counts and KPIs.")
         if not compliance:
-            compliance.append("No immediate data governance anomalies or corrupted sentinel values detected.")
+            compliance.append("No governance or sentinel errors detected.")
 
-        # Step-by-Step Remediation Roadmap
+        # Crisp Remediation Roadmap
         roadmap = []
-        for idx, rec in enumerate(report.recommended_actions[:5], 1):
-            roadmap.append(f"**Step {idx} ({rec['severity']})**: {rec['title']} — {rec['action']}")
+        for idx, rec in enumerate(report.recommended_actions[:4], 1):
+            roadmap.append(f"**Step {idx}**: {rec['title']} — {rec['action']}")
 
         return ExecutiveDiagnosis(
             overall_health_badge=badge,
             risk_level=risk_level,
             risk_score=risk_score,
-            executive_summary=" ".join(summary_lines),
+            executive_summary=summary,
             business_impact=" ".join(impact_lines),
-            root_cause_vectors=root_causes[:6],
+            root_cause_vectors=root_causes[:5],
             compliance_risks=compliance,
             remediation_roadmap=roadmap
         )
@@ -104,13 +98,13 @@ class DataDoctor:
     def answer_query(self, user_question: str, report: AuditReport) -> str:
         """
         Smart, 100% Offline AI Natural Language Query Engine.
-        Analyzes the user's question against real audit findings and returns a tailored diagnostic response.
+        Returns crisp, simple, beginner-friendly diagnostic answers.
         """
         q = user_question.lower().strip()
         score = report.overall_score
         grade = report.grade
 
-        # 1. Check if user is asking about a specific column (e.g., "explain income", "loan_status", etc.)
+        # 1. Feature-specific inquiry
         for col_name, prof in report.column_profiles.items():
             norm_col = col_name.lower()
             clean_col = re.sub(r'[^a-z0-9]', '', norm_col)
@@ -118,119 +112,100 @@ class DataDoctor:
             
             if norm_col in q or (len(clean_col) >= 3 and clean_col in clean_q.split()):
                 col_issues = prof.issues or []
-                issues_desc = f" Issues flagged: {', '.join(col_issues)}." if col_issues else " No critical issues flagged for this feature."
+                status_text = f"⚠️ {', '.join(col_issues)}" if col_issues else "✅ Clean (No issues)"
                 return (
-                    f"📊 **Feature Diagnostic for '{col_name}'**:\n\n"
-                    f"- **Inferred Type**: `{prof.inferred_type}` (`{prof.physical_dtype}`)\n"
-                    f"- **Missing Data**: {prof.missing_count:,} rows ({prof.missing_percentage:.1f}% missing)\n"
-                    f"- **Distinct Values**: {prof.unique_count:,} unique values ({prof.unique_percentage:.1f}% unique ratio)\n"
-                    f"- **Role**: {'🎯 Target Label (Prediction Target)' if prof.is_target else '📈 Feature Attribute (Predictor)'}\n"
-                    f"- **Health Status**:{issues_desc}"
+                    f"📊 **Feature '{col_name}' Profile**:\n\n"
+                    f"- **Type**: `{prof.inferred_type}`\n"
+                    f"- **Missing**: {prof.missing_count:,} rows ({prof.missing_percentage:.1f}%)\n"
+                    f"- **Unique**: {prof.unique_count:,} distinct values\n"
+                    f"- **Role**: {'🎯 Target Label' if prof.is_target else '📈 Feature'}\n"
+                    f"- **Status**: {status_text}"
                 )
 
-        # 2. Questions about Missing Values / Nulls
+        # 2. Missing Values
         if bool(re.search(r'\b(missing|nulls?|empty|nan|blank|null_values)\b', q)):
             missing_cols = [c for c, p in report.column_profiles.items() if p.missing_count > 0]
             if missing_cols:
-                top_missing = sorted(missing_cols, key=lambda c: report.column_profiles[c].missing_percentage, reverse=True)[:5]
+                top_missing = sorted(missing_cols, key=lambda c: report.column_profiles[c].missing_percentage, reverse=True)[:4]
                 col_list = ", ".join([f"`{c}` ({report.column_profiles[c].missing_percentage:.1f}%)" for c in top_missing])
                 return (
-                    f"📉 **Missing Values Analysis**:\n\n"
-                    f"- Found missing entries across **{len(missing_cols)} columns**.\n"
-                    f"- **Highest missing features**: {col_list}.\n\n"
-                    f"💡 **Remediation**: Use median/mean imputation for numeric columns, mode or 'Unknown' for categories, or drop columns with >40% missing data in the **✨ 1-Click Clean** tab."
+                    f"📉 **Missing Values**:\n\n"
+                    f"- Found in **{len(missing_cols)} columns**: {col_list}\n"
+                    f"- **Quick Fix**: Auto-impute with median or mode under **✨ 1-Click Clean**."
                 )
-            else:
-                return "✅ **No Missing Values Detected**: Your dataset is 100% complete across all attributes!"
+            return "✅ **No Missing Values**: All records are 100% complete!"
 
-        # 3. Questions about Duplicates / Redundancy
+        # 3. Duplicates
         if bool(re.search(r'\b(duplicates?|duplicate rows?|redundant|repetition)\b', q)):
             dup_check = report.checker_results.get("duplicates")
             if dup_check and not dup_check.passed:
-                return (
-                    f"👥 **Duplicate Records Alert**:\n\n"
-                    f"- {dup_check.summary}\n\n"
-                    f"💡 **Impact & Fix**: Duplicates artificially inflate model confidence and distort validation splits. Deduplicate instantly under the **✨ 1-Click Clean** tab."
-                )
-            else:
-                return "✅ **No Duplicates**: All rows in your dataset are unique with zero exact duplicates detected."
+                return f"👥 **Duplicate Rows**:\n\n- {dup_check.summary}\n- **Fix**: Remove duplicate rows in 1-click in **✨ 1-Click Clean**."
+            return "✅ **No Duplicates**: All rows are unique."
 
-        # 4. Questions about Outliers / Anomalies
+        # 4. Outliers
         if bool(re.search(r'\b(outliers?|anomal(y|ies)|extreme|z-score|iqr)\b', q)):
             outlier_check = report.checker_results.get("outliers")
             if outlier_check and not outlier_check.passed:
-                return (
-                    f"✂️ **Outliers & Anomalies Analysis**:\n\n"
-                    f"- {outlier_check.summary}\n\n"
-                    f"💡 **ML Impact**: Extreme outliers distort distance-based models (KNN, SVM, Linear Regression) and neural networks. Outlier capping (IQR 1.5x / 99th percentile) is available in **✨ 1-Click Clean**."
-                )
-            else:
-                return "✅ **Outliers Clean**: Numerical values fall within standard expected statistical distributions."
+                return f"✂️ **Outliers**:\n\n- {outlier_check.summary}\n- **Fix**: Clip extreme values (IQR 1.5x) in **✨ 1-Click Clean**."
+            return "✅ **Outliers Clean**: Numerical values follow normal ranges."
 
-        # 5. Questions about "Why is score low / Grade / Quality"
+        # 5. Why is score low / Grade
         if bool(re.search(r'\b(why|low|score|grade|bad|poor|health|rating)\b', q)):
             lowest_dims = sorted(report.dimension_scores.items(), key=lambda x: x[1].score)
-            failing_checks = [c for c in report.checker_results.values() if not c.passed or c.score < 80.0]
+            failing = [c for c in report.checker_results.values() if not c.passed or c.score < 80.0]
+            reasons = [f"- **{c.checker_name}** ({c.score:.0f}%): {c.summary}" for c in failing[:3]]
+            worst_name = lowest_dims[0][1].dimension.value if lowest_dims else "general quality"
             
-            reasons = []
-            for c in failing_checks[:4]:
-                reasons.append(f"- **{c.checker_name}** ({c.score:.0f}%): {c.summary}")
-            
-            worst_dim = lowest_dims[0][1] if lowest_dims else None
-            worst_dim_str = f"the **{worst_dim.dimension.value}** dimension (Score: {worst_dim.score:.1f}%)" if worst_dim else "several feature-level quality issues"
             return (
-                f"🎯 **Why your score is {score:.1f}/100 (Grade {grade})**:\n\n"
-                f"The primary bottleneck is {worst_dim_str}.\n\n"
-                f"**Top Root Causes**:\n" + ("\n".join(reasons) if reasons else "- Minor statistical variance in numeric features.") +
-                f"\n\n💡 **Solution**: Go to the **✨ 1-Click Clean** tab and click *Apply Selected Fixes* to automatically raise your score to 90+!"
+                f"🎯 **Score Breakdown ({score:.1f}/100 • Grade {grade})**:\n\n"
+                f"- **Main Bottleneck**: {worst_name}\n"
+                f"- **Top Causes**:\n" + ("\n".join(reasons) if reasons else "- Minor numeric variations") + "\n\n"
+                f"💡 **Fix**: Click *Apply Selected Fixes* in **✨ 1-Click Clean** to boost your score to 90+!"
             )
 
-        # 6. Questions about Machine Learning / Models
+        # 6. Machine Learning Impact
         if bool(re.search(r'\b(ml|xgboost|models?|random\s+forest|logistic|algorithms?|training|train|accuracy|overfitting|ai|classifier)\b', q)):
             ml_hazards = []
             if any("leakage" in a.lower() for a in report.summary_alerts):
-                ml_hazards.append("🚨 **Target Leakage**: Features that directly leak the target will cause 99% fake training accuracy and fail completely in production.")
+                ml_hazards.append("- 🚨 **Target Leakage**: Causes fake 99% accuracy and production failure.")
             if any("imbalance" in a.lower() for a in report.summary_alerts):
-                ml_hazards.append("⚠️ **Class Imbalance**: Standard cross-entropy loss will ignore the minority class. Use SMOTE, class weights, or PR-AUC metrics.")
+                ml_hazards.append("- ⚠️ **Class Imbalance**: Standard models will ignore the minority class.")
             if any("outlier" in a.lower() for a in report.summary_alerts):
-                ml_hazards.append("✂️ **Extreme Outliers**: Linear models and neural networks will have distorted gradient updates without outlier clipping.")
+                ml_hazards.append("- ✂️ **Outliers**: Distorts linear models and neural networks.")
             if any("sentinel" in a.lower() or "-999" in a.lower() for a in report.summary_alerts):
-                ml_hazards.append("🔢 **Corrupted Sentinels (-999)**: Tree-based models will treat -999 as a literal number, corrupting split thresholds.")
+                ml_hazards.append("- 🔢 **Corrupted Numbers (-999)**: Causes bad decision splits.")
 
-            hazards_text = "\n".join(ml_hazards) if ml_hazards else "✅ No critical ML blockers detected! Standard tree-based models should train smoothly."
+            hazards = "\n".join(ml_hazards) if ml_hazards else "✅ No ML blockers detected. Data is ready to train!"
             return (
-                f"🤖 **Machine Learning Impact Assessment for '{report.dataset_name}'**:\n\n"
-                f"{hazards_text}\n\n"
-                f"💡 **Recommended Action**: Run the **🚀 ML Accuracy Test** tab to benchmark baseline Random Forest & Logistic Regression accuracy uplift before and after cleaning."
+                f"🤖 **Machine Learning Impact**:\n\n"
+                f"{hazards}\n\n"
+                f"💡 **Test Uplift**: Go to **🚀 ML Accuracy Test** to see accuracy before and after cleaning."
             )
 
-        # 7. Questions about Priority / Remediation
+        # 7. Priority & Remediation
         if bool(re.search(r'\b(priority|first|fix|fixes|clean|cleaning|steps?|recommend(ations?)?|how\s+to|what\s+should)\b', q)):
-            top_recs = report.recommended_actions[:4]
-            recs_text = "\n".join([f"{idx+1}. **{r['title']}** ({r['severity']}): {r['action']}" for idx, r in enumerate(top_recs)])
+            top_recs = report.recommended_actions[:3]
+            recs_text = "\n".join([f"{idx+1}. **{r['title']}**: {r['action']}" for idx, r in enumerate(top_recs)])
             return (
-                f"🛠️ **Top Recommended Action Steps**:\n\n"
+                f"🛠️ **Top Priority Fixes**:\n\n"
                 f"{recs_text}\n\n"
-                f"⚡ **Quick Fix**: All these steps can be executed automatically in 1 click under the **✨ 1-Click Clean** tab!"
+                f"⚡ **Quick Action**: Apply all in 1-click in the **✨ 1-Click Clean** tab."
             )
 
-        # 8. Questions about Business Risk / Security / Compliance
+        # 8. Business & Compliance Risk
         if bool(re.search(r'\b(risks?|business|security|compliance|gdpr|legal|liabilit(y|ies)|governance)\b', q)):
             crit_count = report.severity_counts.get("CRITICAL", 0) + report.severity_counts.get("HIGH", 0)
             return (
-                f"⚖️ **Business & Compliance Risk Assessment**:\n\n"
-                f"- **Overall Risk Level**: {'🔴 HIGH RISK' if crit_count > 0 else '🟢 LOW RISK'} ({crit_count} high/critical defects detected).\n"
-                f"- **Data Integrity**: {report.total_rows:,} records evaluated across {report.total_columns} attributes.\n"
-                f"- **Downstream Liability**: Corrupted sentinels and duplicate entities can bias executive financial dashboards and customer consent registers.\n\n"
-                f"💡 **Governance Recommendation**: Run the quality gate CLI (`python cli.py audit data.csv --min-score 80`) in your automated ingestion pipelines."
+                f"⚖️ **Business Risk Summary**:\n\n"
+                f"- **Risk Rating**: {'🔴 HIGH RISK' if crit_count > 0 else '🟢 LOW RISK'} ({crit_count} high-severity defects)\n"
+                f"- **Data Footprint**: {report.total_rows:,} rows × {report.total_columns} columns\n"
+                f"- **Recommendation**: Clean data before generating executive metrics or training AI."
             )
 
-        # 9. Default Smart Executive Synthesis
-        recs_count = len(report.recommended_actions)
+        # 9. Default Summary
         return (
-            f"💡 **AI Data Doctor Consultation for '{report.dataset_name}'**:\n\n"
-            f"- **Health Rating**: {score:.1f}/100 (Grade {grade})\n"
-            f"- **Dataset Footprint**: {report.total_rows:,} rows × {report.total_columns} columns ({report.memory_usage_mb} MB)\n"
-            f"- **Identified Bottlenecks**: {len(report.summary_alerts)} alert areas with {recs_count} recommended remediations.\n\n"
-            f"**Key Focus**: Address '{report.summary_alerts[0] if report.summary_alerts else 'standard data hygiene'}' to maximize ML reliability and reporting accuracy."
+            f"💡 **Dataset Quality Snapshot**:\n\n"
+            f"- **Health Score**: {score:.1f}/100 (Grade {grade})\n"
+            f"- **Dimensions Checked**: 5 Quality Pillars across 9 automated tests\n"
+            f"- **Key Action**: {report.summary_alerts[0] if report.summary_alerts else 'Apply 1-Click Clean to optimize dataset'}"
         )
