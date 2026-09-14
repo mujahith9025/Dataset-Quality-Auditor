@@ -540,7 +540,7 @@ else:
         "✨ 3. 1-Click Clean",
         "🚀 4. ML Accuracy Test",
         "🌊 5. Compare Datasets",
-        "🩺 6. AI Summary & Export"
+        "🩺 6. AI Data Doctor & Export"
     ])
 
     # ---------------------------------------------------------
@@ -755,27 +755,100 @@ else:
                 st.error(f"Error: {e}")
 
     # ---------------------------------------------------------
-    # Tab 6: AI Summary & Export Reports
+    # Tab 6: AI Data Doctor & Export Reports (100% Offline & Smart Engine)
     # ---------------------------------------------------------
     with tab6:
-        st.markdown("#### 🩺 Executive Summary & Downloads")
+        st.markdown("#### 🩺 AI Data Doctor & Executive Diagnosis")
+        st.caption("100% Offline, Zero-API-Key Diagnostic Engine. Instant root-cause analysis, ML risk evaluations, and exportable reports.")
         
         doctor = DataDoctor()
         diag = doctor.diagnose(report)
 
+        # 1. Executive Summary & Health Badge
         st.markdown(f"""
-        <div class="tip-box">
-            <b>{diag.overall_health_badge} (Risk Level: {diag.risk_level})</b><br>
-            {diag.executive_summary}
+        <div class="brand-hero" style="margin-top: 0.5rem; margin-bottom: 1rem; border-color: rgba(99, 102, 241, 0.4);">
+            <div>
+                <div style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF; margin-bottom: 0.3rem;">
+                    {diag.overall_health_badge} &nbsp;·&nbsp; <span style="font-size: 0.9rem; color: #94A3B8;">Risk Index: {diag.risk_score}/100 ({diag.risk_level})</span>
+                </div>
+                <div style="font-size: 0.9rem; color: #CBD5E1; line-height: 1.45;">
+                    {diag.executive_summary}
+                </div>
+            </div>
         </div>
         """, unsafe_allow_html=True)
 
-        st.markdown("##### 🗺️ Recommended Action Steps:")
-        for step in diag.remediation_roadmap:
-            st.write(f"- {step}")
+        # 2. Interactive AI Data Doctor Consultation
+        st.markdown("##### 💬 Ask the AI Data Doctor")
+        st.caption("Click any preset inquiry below or ask a custom question about your dataset:")
 
+        # Quick preset buttons in columns
+        p1, p2, p3, p4 = st.columns(4)
+        active_query = None
+        with p1:
+            if st.button("❓ Why is score low?", use_container_width=True, key="preset_why"):
+                active_query = "Why is my quality score low?"
+        with p2:
+            if st.button("🤖 ML Model Risks?", use_container_width=True, key="preset_ml"):
+                active_query = "How will this affect ML models and algorithms?"
+        with p3:
+            if st.button("🎯 Top Priority Fix?", use_container_width=True, key="preset_prio"):
+                active_query = "What is my top priority fix to improve quality?"
+        with p4:
+            if st.button("⚖️ Business Risks?", use_container_width=True, key="preset_risk"):
+                active_query = "What are my business and compliance risks?"
+
+        # Feature Diagnostic Dropdown + Ask
+        st.markdown("<div style='margin-top: 0.5rem;'></div>", unsafe_allow_html=True)
+        col_select_col, col_btn_col = st.columns([3, 1])
+        with col_select_col:
+            selected_col_query = st.selectbox(
+                "🔍 Quick Feature Inspection (select column to analyze):",
+                options=list(report.column_profiles.keys()),
+                key="doctor_col_select"
+            )
+        with col_btn_col:
+            st.markdown("<div style='margin-top: 28px;'></div>", unsafe_allow_html=True)
+            if st.button("🔬 Diagnose Column", use_container_width=True, key="preset_col_btn"):
+                active_query = f"Explain feature {selected_col_query}"
+
+        # Custom text inquiry input
+        custom_q = st.text_input(
+            "✍️ Or type a custom question:",
+            placeholder="e.g. 'How to fix missing values?', 'Explain class imbalance', or 'Is this ready for XGBoost?'",
+            key="custom_doctor_query"
+        )
+        if custom_q:
+            active_query = custom_q
+
+        # If a query is active, store in session_state and answer
+        if active_query:
+            st.session_state["active_doctor_query"] = active_query
+            st.session_state["active_doctor_answer"] = doctor.answer_query(active_query, report)
+        elif "active_doctor_answer" not in st.session_state:
+            # Default initial insight
+            st.session_state["active_doctor_query"] = "Executive Data Quality Overview"
+            st.session_state["active_doctor_answer"] = doctor.answer_query("executive overview", report)
+
+        # Render Data Doctor's Response Card
+        if "active_doctor_answer" in st.session_state:
+            st.markdown(f"""
+            <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 0.85rem; padding: 1.25rem 1.5rem; margin-top: 1rem; margin-bottom: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: #38BDF8; letter-spacing: 0.05em; margin-bottom: 0.4rem;">
+                    💡 Data Doctor Consultation &nbsp;›&nbsp; <span style="color: #E2E8F0; text-transform: none;">{st.session_state.get('active_doctor_query', '')}</span>
+                </div>
+            """, unsafe_allow_html=True)
+            st.markdown(st.session_state["active_doctor_answer"])
+            st.markdown("</div>", unsafe_allow_html=True)
+
+        # 3. Step-by-Step Remediation Roadmap
+        st.markdown("##### 🗺️ Recommended Action Plan:")
+        for step in diag.remediation_roadmap:
+            st.markdown(f"<div style='margin-bottom: 0.35rem; color: #CBD5E1;'>• {step}</div>", unsafe_allow_html=True)
+
+        # 4. Downloads
         st.markdown("---")
-        st.markdown("##### 📥 Download Reports:")
+        st.markdown("##### 📥 Export Interactive Reports:")
         exp1, exp2 = st.columns(2)
         with exp1:
             html_rep = ReportGenerator.generate_html_report(report, st.session_state.cleaned_report)

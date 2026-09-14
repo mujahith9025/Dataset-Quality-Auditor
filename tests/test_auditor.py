@@ -142,6 +142,25 @@ def test_data_doctor():
     assert len(diag.root_cause_vectors) > 0
     assert len(diag.remediation_roadmap) > 0
 
+    # Test Offline Q&A Engine
+    ans_why = doctor.answer_query("Why is my score low?", report)
+    assert "Why your score is" in ans_why or "Score" in ans_why
+
+    ans_ml = doctor.answer_query("How does this impact ML models and algorithms?", report)
+    assert "Machine Learning Impact" in ans_ml
+
+    ans_prio = doctor.answer_query("What should I fix first / priority?", report)
+    assert "Recommended Action Steps" in ans_prio
+
+    ans_col = doctor.answer_query("Explain annual_income column", report)
+    assert "annual_income" in ans_col
+
+    ans_missing = doctor.answer_query("Are there missing values?", report)
+    assert "Missing Values" in ans_missing
+
+    ans_risk = doctor.answer_query("What are the business and compliance risks?", report)
+    assert "Business & Compliance Risk" in ans_risk
+
 
 def test_security_xss_and_html_escaping():
     # Inject XSS payload into dataset name and column name

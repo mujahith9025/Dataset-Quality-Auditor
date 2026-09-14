@@ -69,10 +69,11 @@
 - Pre-built templates for **FinTech / Lending**, **E-Commerce**, and **Data Hygiene**.
 - Displays pass rates, violation counts, and sample failing rows for immediate drilldown.
 
-### 6. 🩺 AI "Data Doctor" Executive Diagnostic Engine
-- Offline heuristic briefing summarizing business risk, compliance liability, and root causes.
-- Prioritized engineering remediation roadmap.
-- Optional **Google Gemini API** integration for interactive natural language queries.
+### 6. 🩺 100% Offline AI "Data Doctor" Diagnostic Assistant
+- **Zero-API-Key Intelligent Query Engine**: Instant responses with 0ms latency and 100% offline privacy.
+- **1-Click Preset Diagnostics**: Quick-inquire about score root causes, ML algorithm risks, and priority fixes.
+- **Feature Deep-Dives**: Detailed column-level health diagnostics on demand.
+- **Executive Synthesis**: Comprehensive business liability, compliance risks, and remediation roadmaps.
 
 ### 7. 🛠️ CI/CD Quality Gate & Developer CLI
 - Complete command-line interface with exit codes (`0` on pass, `2` on gate failure).
@@ -88,8 +89,8 @@
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/dataset-quality-auditor.git
-cd dataset-quality-auditor
+git clone https://github.com/mujahith9025/Dataset-Quality-Auditor.git
+cd Dataset-Quality-Auditor
 ```
 
 ### 2. Install Dependencies
