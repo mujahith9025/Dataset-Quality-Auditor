@@ -35,116 +35,213 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------
-# Clean, Crisp CSS Styling
+# Stitch Design System — Deep Teal Precision Theme
 # ---------------------------------------------------------
 st.markdown("""
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-    /* Clean Modern Typography & Gradient */
+    /* Global Typography & Deep Obsidian Background */
     html, body, [class*="css"] {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
     }
     
     .stApp {
-        background: radial-gradient(circle at top right, #0F172A, #0B1120, #030712);
-        color: #F8FAFC;
+        background: radial-gradient(ellipse at top center, #0F172A 0%, #0B1120 50%, #030712 100%) !important;
+        color: #D4E4FA !important;
     }
 
-    /* Crisp Brand Hero Banner */
+    /* Monospaced Precision Elements */
+    code, pre, .mono-text, [data-testid="stMetricValue"] {
+        font-family: 'JetBrains Mono', monospace !important;
+    }
+
+    /* Stitch Brand Hero Banner */
     .brand-hero {
-        background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
-        border: 1px solid rgba(20, 184, 166, 0.3);
+        background: linear-gradient(135deg, rgba(18, 33, 49, 0.85) 0%, rgba(5, 20, 36, 0.95) 100%);
+        border: 1px solid rgba(20, 184, 166, 0.25);
+        border-top: 1px solid rgba(79, 219, 200, 0.4);
         border-radius: 1rem;
         padding: 1.25rem 1.75rem;
         margin-bottom: 1.25rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(16px);
     }
 
     .brand-title {
         font-size: 1.5rem;
-        font-weight: 900;
-        letter-spacing: -0.02em;
+        font-weight: 800;
+        letter-spacing: -0.025em;
         background: linear-gradient(to right, #FFFFFF, #E2E8F0, #94A3B8);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin: 0;
     }
 
-    /* Beginner Quick Tip Card */
-    .tip-box {
-        background: rgba(15, 23, 42, 0.65);
-        border: 1px solid #334155;
-        border-radius: 0.75rem;
-        padding: 0.85rem 1.15rem;
+    /* Stitch Frosted Glass Cards */
+    .stitch-card {
+        background: rgba(18, 33, 49, 0.7);
+        border: 1px solid rgba(20, 184, 166, 0.2);
+        border-top: 1px solid rgba(79, 219, 200, 0.3);
+        border-radius: 0.875rem;
+        padding: 1.25rem 1.5rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(12px);
         margin-bottom: 1rem;
+    }
+
+    /* Beginner Step & Tip Cards */
+    .tip-box {
+        background: rgba(13, 28, 45, 0.75);
+        border: 1px solid rgba(51, 65, 85, 0.8);
+        border-radius: 0.75rem;
+        padding: 0.9rem 1.2rem;
+        margin-bottom: 0.85rem;
         font-size: 0.875rem;
         color: #CBD5E1;
+        backdrop-filter: blur(8px);
     }
 
-    /* Metric Cards */
+    /* Instrument-Grade KPI Metric Cards */
     .kpi-card {
-        background: rgba(15, 23, 42, 0.75);
-        border: 1px solid rgba(51, 65, 85, 0.7);
-        border-radius: 0.85rem;
-        padding: 1rem 1.25rem;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        background: rgba(18, 33, 49, 0.75);
+        border: 1px solid rgba(20, 184, 166, 0.2);
+        border-top: 1px solid rgba(79, 219, 200, 0.3);
+        border-radius: 0.875rem;
+        padding: 1.1rem 1.35rem;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(12px);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .kpi-card:hover {
+        border-color: rgba(20, 184, 166, 0.45);
+        transform: translateY(-2px);
     }
     .kpi-label {
+        font-family: 'JetBrains Mono', monospace;
         font-size: 0.75rem;
         text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: 0.05em;
+        font-weight: 600;
+        letter-spacing: 0.06em;
         color: #94A3B8;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.3rem;
     }
     .kpi-value {
-        font-size: 1.6rem;
-        font-weight: 900;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 1.85rem;
+        font-weight: 700;
         color: #FFFFFF;
+        letter-spacing: -0.02em;
     }
 
-    /* Grade Badges */
+    /* Stitch Grade & Status Badges */
     .score-badge {
         display: inline-flex;
         align-items: center;
-        gap: 0.4rem;
-        padding: 0.35rem 0.85rem;
+        gap: 0.5rem;
+        padding: 0.4rem 1rem;
         border-radius: 9999px;
-        font-weight: 800;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 700;
         font-size: 0.85rem;
+        letter-spacing: 0.02em;
     }
-    .score-grade-a { background: rgba(16, 185, 129, 0.2); color: #34D399; border: 1px solid #10B981; }
-    .score-grade-b { background: rgba(56, 189, 248, 0.2); color: #38BDF8; border: 1px solid #38BDF8; }
-    .score-grade-c { background: rgba(245, 158, 11, 0.2); color: #FBBF24; border: 1px solid #F59E0B; }
-    .score-grade-d { background: rgba(239, 68, 68, 0.2); color: #F87171; border: 1px solid #EF4444; }
+    .score-grade-a { 
+        background: rgba(16, 185, 129, 0.15); 
+        color: #34D399; 
+        border: 1px solid #10B981; 
+        box-shadow: 0 0 16px rgba(16, 185, 129, 0.25);
+    }
+    .score-grade-b { 
+        background: rgba(20, 184, 166, 0.15); 
+        color: #4FDBC8; 
+        border: 1px solid #14B8A6; 
+        box-shadow: 0 0 16px rgba(20, 184, 166, 0.25);
+    }
+    .score-grade-c { 
+        background: rgba(251, 191, 36, 0.15); 
+        color: #FBBF24; 
+        border: 1px solid #F59E0B; 
+        box-shadow: 0 0 16px rgba(245, 158, 11, 0.25);
+    }
+    .score-grade-d { 
+        background: rgba(248, 113, 113, 0.15); 
+        color: #F87171; 
+        border: 1px solid #EF4444; 
+        box-shadow: 0 0 16px rgba(239, 68, 68, 0.25);
+    }
 
-    /* Alert Banner Cards */
+    /* Stitch Semantic Alert Banners */
     .alert-card-warning {
-        background: rgba(245, 158, 11, 0.1);
-        border-left: 4px solid #F59E0B;
+        background: rgba(251, 191, 36, 0.1);
+        border: 1px solid rgba(251, 191, 36, 0.25);
+        border-left: 4px solid #FBBF24;
         border-radius: 0 0.5rem 0.5rem 0;
-        padding: 0.65rem 1rem;
-        margin-bottom: 0.45rem;
+        padding: 0.7rem 1.1rem;
+        margin-bottom: 0.5rem;
         color: #FEF3C7;
         font-size: 0.875rem;
-        font-weight: 600;
+        font-weight: 500;
     }
 
     .alert-card-success {
-        background: rgba(16, 185, 129, 0.1);
-        border-left: 4px solid #10B981;
+        background: rgba(52, 211, 153, 0.1);
+        border: 1px solid rgba(52, 211, 153, 0.25);
+        border-left: 4px solid #34D399;
         border-radius: 0 0.5rem 0.5rem 0;
-        padding: 0.65rem 1rem;
-        margin-bottom: 0.45rem;
+        padding: 0.7rem 1.1rem;
+        margin-bottom: 0.5rem;
         color: #D1FAE5;
         font-size: 0.875rem;
-        font-weight: 600;
+        font-weight: 500;
+    }
+
+    /* Stitch Primary Button Glow */
+    div.stButton > button[kind="primary"] {
+        background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%) !important;
+        color: #003731 !important;
+        font-weight: 700 !important;
+        border: 1px solid #4FDBC8 !important;
+        border-radius: 0.5rem !important;
+        box-shadow: 0 0 16px rgba(20, 184, 166, 0.35) !important;
+        transition: all 0.2s ease !important;
+    }
+    div.stButton > button[kind="primary"]:hover {
+        background: linear-gradient(135deg, #2DD4BF 0%, #14B8A6 100%) !important;
+        box-shadow: 0 0 24px rgba(45, 212, 191, 0.55) !important;
+        transform: translateY(-1px) !important;
+    }
+
+    /* Stitch Secondary Buttons */
+    div.stButton > button:not([kind="primary"]) {
+        background: rgba(18, 33, 49, 0.7) !important;
+        color: #D4E4FA !important;
+        border: 1px solid #334155 !important;
+        border-radius: 0.5rem !important;
+        transition: all 0.2s ease !important;
+    }
+    div.stButton > button:not([kind="primary"]):hover {
+        border-color: #14B8A6 !important;
+        color: #4FDBC8 !important;
+        background: rgba(20, 184, 166, 0.12) !important;
+    }
+
+    /* Stitch Tab Navigation */
+    button[data-baseweb="tab"] {
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 600 !important;
+        font-size: 0.925rem !important;
+        color: #94A3B8 !important;
+        padding-bottom: 0.6rem !important;
+    }
+    button[data-baseweb="tab"][aria-selected="true"] {
+        color: #4FDBC8 !important;
+        border-bottom: 2px solid #14B8A6 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -179,27 +276,27 @@ SAMPLES_DIR = os.path.join(os.path.dirname(__file__), "samples")
 
 
 # ---------------------------------------------------------
-# Clean Plotly Gauge Helper
+# Stitch Plotly Chart Helpers
 # ---------------------------------------------------------
 def create_score_gauge(score: float, grade: str, delta: float = None) -> go.Figure:
-    color = "#10B981" if score >= 85 else ("#38BDF8" if score >= 75 else ("#F59E0B" if score >= 60 else "#EF4444"))
+    color = "#34D399" if score >= 85 else ("#4FDBC8" if score >= 75 else ("#FBBF24" if score >= 60 else "#F87171"))
     
     fig = go.Figure(go.Indicator(
         mode="gauge+number" + ("+delta" if delta is not None else ""),
         value=score,
-        delta={'reference': score - delta, 'increasing': {'color': "#10B981"}} if delta else None,
-        number={'suffix': " / 100", 'font': {'size': 34, 'color': "#FFFFFF", 'family': "Inter, sans-serif"}},
+        delta={'reference': score - delta, 'increasing': {'color': "#34D399"}} if delta else None,
+        number={'suffix': " / 100", 'font': {'size': 34, 'color': "#FFFFFF", 'family': "JetBrains Mono, monospace"}},
         gauge={
-            'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': "#94A3B8"},
+            'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': "#859490"},
             'bar': {'color': color, 'thickness': 0.3},
-            'bgcolor': "rgba(30, 41, 59, 0.6)",
+            'bgcolor': "rgba(18, 33, 49, 0.7)",
             'borderwidth': 1,
             'bordercolor': "#334155",
             'steps': [
-                {'range': [0, 60], 'color': "rgba(239, 68, 68, 0.15)"},
-                {'range': [60, 75], 'color': "rgba(245, 158, 11, 0.15)"},
-                {'range': [75, 90], 'color': "rgba(56, 189, 248, 0.15)"},
-                {'range': [90, 100], 'color': "rgba(16, 185, 129, 0.15)"}
+                {'range': [0, 60], 'color': "rgba(248, 113, 113, 0.15)"},
+                {'range': [60, 75], 'color': "rgba(251, 191, 36, 0.15)"},
+                {'range': [75, 90], 'color': "rgba(79, 219, 200, 0.15)"},
+                {'range': [90, 100], 'color': "rgba(52, 211, 153, 0.15)"}
             ]
         }
     ))
@@ -223,16 +320,16 @@ def create_radar_chart(dimension_scores: dict) -> go.Figure:
         r=scores,
         theta=categories,
         fill='toself',
-        fillcolor='rgba(20, 184, 166, 0.25)',
-        line=dict(color='#14B8A6', width=2),
-        marker=dict(size=6, color='#2DD4BF'),
+        fillcolor='rgba(20, 184, 166, 0.28)',
+        line=dict(color='#2DD4BF', width=2.5),
+        marker=dict(size=6, color='#4FDBC8'),
         hoverinfo='r+theta'
     ))
     fig.update_layout(
         polar=dict(
-            radialaxis=dict(visible=True, range=[0, 100], tickfont=dict(size=9, color='#94A3B8'), gridcolor='#334155'),
-            angularaxis=dict(tickfont=dict(size=11, color='#F8FAFC'), gridcolor='#334155'),
-            bgcolor='rgba(15, 23, 42, 0.6)'
+            radialaxis=dict(visible=True, range=[0, 100], tickfont=dict(size=9, color='#859490', family="JetBrains Mono"), gridcolor='#334155'),
+            angularaxis=dict(tickfont=dict(size=11, color='#D4E4FA', family="Inter"), gridcolor='#334155'),
+            bgcolor='rgba(18, 33, 49, 0.7)'
         ),
         paper_bgcolor='rgba(0,0,0,0)',
         showlegend=False,
