@@ -218,6 +218,22 @@ if is_dark:
             border-radius: 0.5rem !important;
             box-shadow: 0 0 16px rgba(20, 184, 166, 0.3) !important;
         }
+
+        div.stButton > button:not([kind="primary"]) {
+            background: rgba(15, 23, 42, 0.8) !important;
+            color: #F8FAFC !important;
+            border: 1px solid #334155 !important;
+            border-radius: 0.5rem !important;
+        }
+        div.stButton > button:not([kind="primary"]):hover {
+            border-color: #14B8A6 !important;
+            color: #2DD4BF !important;
+        }
+
+        button[data-baseweb="tab"][aria-selected="true"] {
+            color: #2DD4BF !important;
+            border-bottom: 2px solid #14B8A6 !important;
+        }
     </style>
     """
 else:
@@ -231,6 +247,11 @@ else:
 
         code, pre, .font-mono, [data-testid="stMetricValue"] {
             font-family: 'JetBrains Mono', monospace !important;
+        }
+
+        section[data-testid="stSidebar"] {
+            background-color: #F8FAFC !important;
+            border-right: 1px solid #E2E8F0 !important;
         }
 
         .brand-hero {
@@ -326,6 +347,34 @@ else:
             border: 1px solid #0D9488 !important;
             border-radius: 0.5rem !important;
             box-shadow: 0 2px 10px rgba(13, 148, 136, 0.25) !important;
+        }
+
+        div.stButton > button:not([kind="primary"]) {
+            background: #FFFFFF !important;
+            color: #0F172A !important;
+            border: 1px solid #CBD5E1 !important;
+            border-radius: 0.5rem !important;
+        }
+        div.stButton > button:not([kind="primary"]):hover {
+            border-color: #0D9488 !important;
+            color: #0D9488 !important;
+        }
+
+        button[data-baseweb="tab"][aria-selected="true"] {
+            color: #0D9488 !important;
+            border-bottom: 2px solid #0D9488 !important;
+        }
+
+        [data-testid="stExpander"] {
+            background: #FFFFFF !important;
+            border: 1px solid #E2E8F0 !important;
+            border-radius: 0.75rem !important;
+        }
+
+        [data-testid="stFileUploader"] {
+            background: #FFFFFF !important;
+            border: 1px dashed #94A3B8 !important;
+            border-radius: 0.75rem !important;
         }
     </style>
     """
@@ -482,15 +531,15 @@ if report is None:
     # ---------------------------------------------------------
     # MAIN PAGE: HERO UPLOADER (Clean & Simple)
     # ---------------------------------------------------------
-    st.markdown("""
+    st.markdown(f"""
     <div class="brand-hero">
         <div>
             <h1 class="brand-title">🛡️ Dataset Quality Auditor</h1>
-            <p style="color: #64748B; font-size: 0.95rem; margin-top: 0.25rem; margin-bottom: 0;">
+            <p style="color: {'#94A3B8' if is_dark else '#64748B'}; font-size: 0.95rem; margin-top: 0.25rem; margin-bottom: 0;">
                 Scan data health, auto-remediate issues in 1 click, and test machine learning accuracy uplift.
             </p>
         </div>
-        <div style="background: rgba(20, 184, 166, 0.15); border: 1px solid #14B8A6; color: #0D9488; font-weight: 800; font-size: 0.75rem; padding: 0.35rem 0.85rem; border-radius: 9999px; font-family: 'JetBrains Mono', monospace;">
+        <div style="background: rgba(20, 184, 166, 0.15); border: 1px solid #14B8A6; color: {'#2DD4BF' if is_dark else '#0D9488'}; font-weight: 800; font-size: 0.75rem; padding: 0.35rem 0.85rem; border-radius: 9999px; font-family: 'JetBrains Mono', monospace;">
             v2.0 DUAL-THEME
         </div>
     </div>
@@ -622,8 +671,8 @@ else:
         <div class="brand-hero" style="margin-bottom: 0;">
             <div>
                 <h1 class="brand-title">📋 {escaped_title} {'<span style="color: #10B981; font-size: 0.95rem;">(Cleaned ✨)</span>' if is_cleaned else ''}</h1>
-                <p style="color: #64748B; font-size: 0.85rem; margin-top: 0.2rem; font-family: 'JetBrains Mono', monospace;">
-                    Target: <span style="color: #0D9488; font-weight: 600;">{escaped_target}</span> &nbsp;•&nbsp; {active_report.total_rows:,} rows &nbsp;•&nbsp; {active_report.total_columns} columns
+                <p style="color: {'#94A3B8' if is_dark else '#64748B'}; font-size: 0.85rem; margin-top: 0.2rem; font-family: 'JetBrains Mono', monospace;">
+                    Target: <span style="color: {'#2DD4BF' if is_dark else '#0D9488'}; font-weight: 600;">{escaped_target}</span> &nbsp;•&nbsp; {active_report.total_rows:,} rows &nbsp;•&nbsp; {active_report.total_columns} columns
                 </p>
             </div>
             <div>
