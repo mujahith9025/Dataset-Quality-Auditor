@@ -44,25 +44,6 @@ st.markdown("""
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
 
 <style>
-    /* Reset and Root Variables */
-    :root {
-        --color-bg: #051424;
-        --color-surface: #0B1120;
-        --color-surface-container: #122131;
-        --color-surface-container-high: #1C2B3C;
-        --color-surface-container-highest: #273647;
-        --color-primary: #14B8A6;
-        --color-primary-light: #4FDBC8;
-        --color-primary-dim: #2DD4BF;
-        --color-tertiary: #7BD0FF;
-        --color-secondary: #C0C1FF;
-        --color-text-main: #D4E4FA;
-        --color-text-muted: #94A3B8;
-        --color-success: #34D399;
-        --color-warning: #FBBF24;
-        --color-error: #F87171;
-    }
-
     /* Global Typography & Deep Obsidian Background */
     html, body, [class*="css"], [data-testid="stAppViewContainer"], .stApp {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
@@ -199,7 +180,7 @@ st.markdown("""
         box-shadow: 0 0 16px rgba(239, 68, 68, 0.25);
     }
 
-    /* Stitch Semantic Alert Banners */
+    /* Semantic Alert Banners */
     .alert-card-warning {
         background: rgba(251, 191, 36, 0.1);
         border: 1px solid rgba(251, 191, 36, 0.25);
@@ -236,7 +217,7 @@ st.markdown("""
         font-weight: 500;
     }
 
-    /* Stitch Accordion Check Cards */
+    /* Accordion Check Cards */
     .audit-check-card {
         background: rgba(18, 33, 49, 0.75);
         border: 1px solid rgba(20, 184, 166, 0.2);
@@ -331,7 +312,7 @@ st.markdown("""
         font-size: 0.75rem;
     }
 
-    /* Stitch Primary Button Glow */
+    /* Primary Button Glow */
     div.stButton > button[kind="primary"], div.stButton > button:first-child[data-testid="baseButton-primary"] {
         background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%) !important;
         color: #003731 !important;
@@ -347,7 +328,7 @@ st.markdown("""
         transform: translateY(-1px) !important;
     }
 
-    /* Stitch Secondary Buttons */
+    /* Secondary Buttons */
     div.stButton > button:not([kind="primary"]) {
         background: rgba(18, 33, 49, 0.85) !important;
         color: #D4E4FA !important;
@@ -363,7 +344,7 @@ st.markdown("""
         transform: translateY(-1px) !important;
     }
 
-    /* Stitch Tab Navigation */
+    /* Tab Navigation */
     button[data-baseweb="tab"] {
         font-family: 'Inter', sans-serif !important;
         font-weight: 600 !important;
@@ -376,7 +357,7 @@ st.markdown("""
         border-bottom: 2px solid #14B8A6 !important;
     }
 
-    /* Stitch File Uploader Styling */
+    /* File Uploader Styling */
     [data-testid="stFileUploader"] {
         background: rgba(18, 33, 49, 0.6) !important;
         border: 1px dashed rgba(20, 184, 166, 0.4) !important;
@@ -389,7 +370,7 @@ st.markdown("""
         background: rgba(20, 184, 166, 0.08) !important;
     }
 
-    /* Stitch Expander Styling */
+    /* Expander Styling */
     [data-testid="stExpander"] {
         background: rgba(18, 33, 49, 0.65) !important;
         border: 1px solid rgba(20, 184, 166, 0.2) !important;
@@ -397,7 +378,7 @@ st.markdown("""
         margin-bottom: 0.75rem !important;
     }
 
-    /* Stitch Sidebar Styling */
+    /* Sidebar Styling */
     section[data-testid="stSidebar"] {
         background-color: #010F1F !important;
         border-right: 1px solid rgba(20, 184, 166, 0.15) !important;
@@ -884,7 +865,6 @@ else:
     # TAB 1: OVERVIEW & DASHBOARD
     # ---------------------------------------------------------
     with tab_overview:
-        # Two-Column Visual Score Section (Stitch 1:1)
         g_col1, g_col2 = st.columns([5, 7])
         with g_col1:
             st.markdown("""
@@ -921,7 +901,6 @@ else:
             """, unsafe_allow_html=True)
             st.plotly_chart(create_radar_chart(active_report.dimension_scores), use_container_width=True)
 
-            # 5 Dimension Bottom Score Badges
             dims = active_report.dimension_scores
             comp = dims.get('completeness').score if 'completeness' in dims else 100
             uniq = dims.get('uniqueness').score if 'uniqueness' in dims else 100
@@ -957,7 +936,6 @@ else:
 
         st.markdown("<div style='margin-top: 1rem;'></div>", unsafe_allow_html=True)
 
-        # 4 KPI Stat Cards
         k1, k2, k3, k4 = st.columns(4)
         with k1:
             st.markdown(f"""
@@ -1015,7 +993,6 @@ else:
 
         st.markdown("<div style='margin-top: 1.25rem;'></div>", unsafe_allow_html=True)
 
-        # Attention Banner Stream
         st.markdown("##### ⚠️ What Needs Attention:")
         for alert in active_report.summary_alerts:
             if alert.startswith("✓"):
@@ -1098,7 +1075,6 @@ else:
                 </div>
             """, unsafe_allow_html=True)
 
-            # Details
             st.markdown(f"""
                 <div class="check-finding-box">
                     <div style="font-weight: 600; color: #4FDBC8; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.25rem; font-family: 'JetBrains Mono', monospace;">
@@ -1147,7 +1123,6 @@ else:
                 "Inferred Type": p.inferred_type.upper(),
                 "Null Count": f"{p.missing_count} ({p.missing_percentage:.1f}%)",
                 "Unique Values": f"{p.unique_count:,}",
-                "Outliers": f"{p.outlier_count}" if p.outlier_count > 0 else "0",
                 "Health Issues": f"⚠️ {p.issues_count}" if p.issues_count > 0 else "✅ Clean"
             })
         st.dataframe(pd.DataFrame(prof_rows), use_container_width=True)
@@ -1287,7 +1262,6 @@ else:
                     use_container_width=True
                 )
 
-        # Available Fixes Checklist
         fixable_actions = []
         seen_fix = set()
         for r in report.recommended_actions:
@@ -1555,7 +1529,6 @@ else:
             if st.button("⚖️ Business Risks?", use_container_width=True, key="preset_risk"):
                 active_query = "What are my business and compliance risks?"
 
-        # Feature Diagnostic Dropdown + Ask
         st.markdown("<div style='margin-top: 0.5rem;'></div>", unsafe_allow_html=True)
         col_select_col, col_btn_col = st.columns([3, 1])
         with col_select_col:
@@ -1569,7 +1542,6 @@ else:
             if st.button("🔬 Diagnose Column", use_container_width=True, key="preset_col_btn"):
                 active_query = f"Explain feature {selected_col_query}"
 
-        # Custom text inquiry input
         custom_q = st.text_input(
             "✍️ Or type a custom question:",
             placeholder="e.g. 'How to fix missing values?', 'Explain class imbalance', or 'Is this ready for XGBoost?'",
@@ -1585,7 +1557,6 @@ else:
             st.session_state["active_doctor_query"] = "Executive Data Quality Overview"
             st.session_state["active_doctor_answer"] = query_doctor("executive overview")
 
-        # Render Data Doctor's Response Card
         if "active_doctor_answer" in st.session_state:
             st.markdown(f"""
             <div style="background: rgba(18, 33, 49, 0.85); border: 1px solid rgba(123, 208, 255, 0.35); border-radius: 0.85rem; padding: 1.25rem 1.5rem; margin-top: 1rem; margin-bottom: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.35);">
@@ -1596,12 +1567,10 @@ else:
             st.markdown(st.session_state["active_doctor_answer"])
             st.markdown("</div>", unsafe_allow_html=True)
 
-        # 3. Step-by-Step Remediation Roadmap
         st.markdown("##### 🗺️ Recommended Action Plan:")
         for step in diag.remediation_roadmap:
             st.markdown(f"<div style='margin-bottom: 0.35rem; color: #CBD5E1;'>• {step}</div>", unsafe_allow_html=True)
 
-        # 4. Downloads
         st.markdown("<div style='margin-top: 1.25rem;'></div>", unsafe_allow_html=True)
         st.markdown("##### 📥 Export Interactive Reports:")
         exp1, exp2 = st.columns(2)
